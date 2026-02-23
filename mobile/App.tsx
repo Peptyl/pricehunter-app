@@ -1,13 +1,15 @@
 // PriceHunter Mobile App - Main Entry Point
-import React from 'react';
+import React, { useEffect } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { Provider as ReduxProvider } from 'react-redux';
 import { PaperProvider } from 'react-native-paper';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import analytics from '@react-native-firebase/analytics';
 
 import { store } from './src/store';
 import Navigation from './src/navigation';
 import { theme } from './src/theme';
+import { AuthProvider } from './src/auth/AuthProvider';
 
 // React Native Paper theme configuration
 const paperTheme = {
@@ -55,15 +57,38 @@ const paperTheme = {
   },
 };
 
+// App initialization
+const AppInitializer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  useEffect(() => {
+    // Log app open event
+    const logAppOpen = async () => {
+      try {
+        await analytics().logEvent('app_open');
+        console.log('[Analytics] App open event logged');
+      } catch (error) {
+        console.error('[Analytics] Failed to log app open:', error);
+      }
+    };
+
+    logAppOpen();
+  }, []);
+
+  return <>{children}</>;
+};
+
 export default function App() {
   return (
     <ReduxProvider store={store}>
-      <PaperProvider theme={paperTheme}>
-        <SafeAreaProvider>
-          <Navigation />
-          <StatusBar style="light" />
-        </SafeAreaProvider>
-      </PaperProvider>
+      <AuthProvider>
+        <PaperProvider theme={paperTheme}>
+          <SafeAreaProvider>
+            <AppInitializer>
+              <Navigation />
+              <StatusBar style="light" />
+            </AppInitializer>
+          </SafeAreaProvider>
+        </PaperProvider>
+      </AuthProvider>
     </ReduxProvider>
   );
 }

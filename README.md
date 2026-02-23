@@ -1,48 +1,84 @@
 # PriceHunter
 
-**AI-powered fragrance price tracking app**
+**Never overpay for niche perfumes again.**
 
-Track niche perfume prices across retailers, get instant alerts when prices drop.
+PriceHunter tracks fragrance prices across 10+ retailers and alerts you when prices drop.
 
-## Quick Start
+## 🚀 Quick Start
 
 ```bash
-# Start backend
+# Clone
+git clone https://github.com/Peptyl/pricehunter-app.git
+cd pricehunter-app
+
+# Backend
 docker-compose up -d
 
-# Run scrapers
-python3 -m scrapers.run_all
-
-# Deploy mobile app
-cd mobile && expo build:ios
+# Mobile
+cd mobile && npm install && npx expo start
 ```
 
-## Features
+## ✨ Features
 
-- Real-time price monitoring (10+ retailers)
-- Deal alerts via Telegram
-- Wishlist with target prices
-- Price history charts
-- Mobile apps (iOS/Android)
+- **Real-time Price Tracking** — Monitor 10+ retailers (Notino, Douglas, FragranceNet, etc.)
+- **Instant Deal Alerts** — Telegram notifications when prices drop
+- **Price History** — Charts showing 30/90/365 day trends
+- **Wishlist** — Track your favorite fragrances with target prices
+- **Multi-platform** — iOS and Android apps
 
-## Tech Stack
+## 📱 Screenshots
 
-- **Backend:** FastAPI, PostgreSQL, Redis
-- **Mobile:** React Native (Expo)
-- **Scraping:** Scrapling (anti-bot)
-- **Hosting:** Railway/Render
+![Deal Feed](./assets/screenshots/iphone-deal-feed.png)
+![Price History](./assets/screenshots/iphone-price-history.png)
+![Alerts](./assets/screenshots/iphone-alerts.png)
 
-## Status
+## 🛠 Tech Stack
 
-✅ 80% complete — ready for deployment
+| Layer | Technology |
+|-------|------------|
+| **Mobile** | React Native (Expo) |
+| **Backend** | FastAPI, PostgreSQL |
+| **Scraping** | Scrapling (anti-bot) |
+| **Auth** | Clerk |
+| **Payments** | RevenueCat |
+| **Analytics** | Firebase |
+| **Hosting** | Railway/Render |
 
-## Revenue Model
+## 📊 Status
 
-- Affiliate commissions from retailers
-- Freemium subscriptions
-- Target: 100K downloads Year 1
+- [x] Backend API
+- [x] Database schema
+- [x] Price scrapers
+- [x] Mobile app scaffold
+- [x] Telegram alerts
+- [ ] App Store submission ← **Next**
+- [ ] Play Store submission ← **Next**
 
-## Links
+## 💰 Revenue Model
 
-- Main repo: https://github.com/Peptyl/pricehunter-app
-- Workspace: https://github.com/Peptyl/peptyl-workspace
+- **Affiliate commissions** from retailer links
+- **Pro subscription** (£4.99/month) — unlimited tracking
+- **Target:** 100K downloads Year 1
+
+## 📈 Metrics
+
+| Metric | Target |
+|--------|--------|
+| Downloads | 100,000 (Year 1) |
+| DAU | 20,000 |
+| Retention (D7) | 35% |
+| Revenue | £30,000/month |
+
+## 📝 License
+
+MIT © Peptyl Ltd
+
+## 🔗 Links
+
+- Website: https://pricehunter.app
+- Support: support@pricehunter.app
+- Twitter: @PriceHunterApp
+
+---
+
+**Built with ❤️ by the Peptyl team**

@@ -1,5 +1,5 @@
-// Deals Screen - Main feed of active deals
-import React, { useState, useCallback } from 'react';
+// Deals Screen - Main feed of active deals with analytics
+import React, { useState, useCallback, useEffect } from 'react';
 import {
   View,
   Text,
@@ -16,6 +16,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import type { RootStackParamList, Deal } from '../types';
 import { useGetDealsQuery, useLazyGetDealsQuery } from '../api/priceHunterApi';
 import { theme } from '../theme';
+import { useAnalytics, useScreenTracking } from '../hooks/useAnalytics';
 
 import DealCard from '../components/DealCard';
 import { DealCardSkeleton } from '../components/Skeleton';
@@ -27,6 +28,10 @@ const SKELETON_COUNT = 5;
 export const DealsScreen: React.FC = () => {
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
   const [refreshing, setRefreshing] = useState(false);
+  const { logEvent, logSelectContent } = useAnalytics();
+  
+  // Track screen view
+  useScreenTracking('Deals');
   
   const { data: deals, isLoading, isError, refetch } = useGetDealsQuery({
     limit: 50,
@@ -34,17 +39,37 @@ export const DealsScreen: React.FC = () => {
   
   const [triggerRefetch] = useLazyGetDealsQuery();
 
+  // Log deals loaded event
+  useEffect(() => {
+    if (deals && deals.length > 0) {
+      logEvent('deals_loaded', { count: deals.length });
+    }
+  }, [deals, logEvent]);
+
   const onRefresh = useCallback(async () => {
     setRefreshing(true);
+    logEvent('deals_refresh');
     await refetch();
     setRefreshing(false);
-  }, [refetch]);
+  }, [refetch, logEvent]);
 
   const handleDealPress = (deal: Deal) => {
+    logSelectContent('deal', deal.id, deal.perfume);
+    logEvent('deal_view', { 
+      deal_id: deal.id, 
+      perfume: deal.perfume,
+      brand: deal.brand,
+      savings_percent: deal.savings_percent,
+    });
     navigation.navigate('DealDetails', { dealId: deal.id });
   };
 
   const handleBuyNow = (deal: Deal) => {
+    logEvent('deal_buy_now', { 
+      deal_id: deal.id, 
+      retailer: deal.retailer,
+      price: deal.best_price,
+    });
     // Open retailer URL or show options
     console.log('Buy now:', deal.retailer_url);
   };

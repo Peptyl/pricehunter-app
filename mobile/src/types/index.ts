@@ -106,3 +106,18 @@ export type MainTabParamList = {
   Alerts: undefined;
   Profile: undefined;
 };
+
+// Auth Navigation types
+export type AuthStackParamList = {
+  SignIn: undefined;
+  SignUp: undefined;
+};
+
+// Extended root stack with auth
+export type AppStackParamList = {
+  Auth: undefined;
+  Main: undefined;
+  DealDetails: { dealId: string };
+  PerfumeDetails: { perfumeId: string };
+  Settings: undefined;
+};

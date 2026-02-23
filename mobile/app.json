@@ -16,7 +16,8 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.peptyl.pricehunter"
+      "bundleIdentifier": "com.peptyl.pricehunter",
+      "usesAppleSignIn": true
     },
     "android": {
       "adaptiveIcon": {
@@ -35,7 +36,26 @@
           "icon": "./assets/notification-icon.png",
           "color": "#38b2ac"
         }
+      ],
+      [
+        "expo-secure-store"
+      ],
+      [
+        "@react-native-firebase/app"
+      ],
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
       ]
-    ]
+    ],
+    "extra": {
+      "clerkPublishableKey": "pk_test_Y2xlcmsucHJvamVjdHMueHl6JDEyMw",
+      "revenueCatApiKeyIOS": "appl_YOUR_REVENUECAT_IOS_KEY",
+      "revenueCatApiKeyAndroid": "goog_YOUR_REVENUECAT_ANDROID_KEY"
+    }
   }
 }
