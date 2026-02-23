@@ -1,0 +1,129 @@
+{
+  "retail_benchmarks": {
+    "luxury_departments": [
+      {
+        "name": "Harrods",
+        "url": "https://www.harrods.com",
+        "type": "Luxury Department Store",
+        "pricing": "Full MSRP, occasional 10% off",
+        "notes": "Premium shopping experience, full range"
+      },
+      {
+        "name": "Selfridges",
+        "url": "https://www.selfridges.com",
+        "type": "Luxury Department Store",
+        "pricing": "Full MSRP, 10-15% during sales",
+        "notes": "Strong niche selection, good samples"
+      },
+      {
+        "name": "Liberty London",
+        "url": "https://www.libertylondon.com",
+        "type": "Boutique Department Store",
+        "pricing": "Full MSRP, rare discounts",
+        "notes": "Curated selection, indie focus"
+      },
+      {
+        "name": "Jovoy",
+        "url": "https://www.jovoyparis.com",
+        "type": "Niche Specialist",
+        "pricing": "Full MSRP, expert staff",
+        "notes": "Best for discovery, hard-to-find"
+      },
+      {
+        "name": "Creed Boutique",
+        "url": "https://www.creedboutique.com",
+        "type": "Brand Direct",
+        "pricing": "Full MSRP, samples with purchase",
+        "notes": "Latest batches, full range"
+      }
+    ],
+    
+    "mid_tier_retail": [
+      {
+        "name": "John Lewis",
+        "url": "https://www.johnlewis.com",
+        "type": "Department Store",
+        "pricing": "Full MSRP, 20% off codes occasionally",
+        "notes": "Mainstream niche only"
+      },
+      {
+        "name": "House of Fraser",
+        "url": "https://www.houseoffraser.co.uk",
+        "type": "Department Store",
+        "pricing": "Frequent 20-30% off sales",
+        "notes": "Good for mainstream designers"
+      },
+      {
+        "name": "Boots",
+        "url": "https://www.boots.com",
+        "type": "Pharmacy/Beauty",
+        "pricing": "Discounts common, points system",
+        "notes": "Designer only, no niche"
+      }
+    ]
+  },
+  
+  "savings_examples": {
+    "hero_stats": [
+      {
+        "stat": "32%",
+        "label": "Average Savings",
+        "description": "vs Harrods/Selfridges retail"
+      },
+      {
+        "stat": "£58",
+        "label": "Saved Per Bottle",
+        "description": "on average 100ml niche fragrance"
+      },
+      {
+        "stat": "£2,340",
+        "label": "Yearly Savings",
+        "description": "for collectors (40 bottles/year)"
+      },
+      {
+        "stat": "15",
+        "label": "Retailers Compared",
+        "description": "globally, every scan"
+      }
+    ],
+    
+    "example_deals": [
+      {
+        "perfume": "Creed Aventus 100ml",
+        "retail": "£265",
+        "our_price": "£175",
+        "savings": "£90",
+        "savings_percent": "34%",
+        "retailer": "FragranceBuy.ca",
+        "tagline": "Why pay £265 when you can pay £175?"
+      },
+      {
+        "perfume": "Parfums de Marley Layton 125ml",
+        "retail": "£180",
+        "our_price": "£120",
+        "savings": "£60",
+        "savings_percent": "33%",
+        "retailer": "Notino",
+        "tagline": "Same juice, different price. £60 stays in your pocket."
+      },
+      {
+        "perfume": "Tom Ford Tuscan Leather 50ml",
+        "retail": "£240",
+        "our_price": "£165",
+        "savings": "£75",
+        "savings_percent": "31%",
+        "retailer": "MaxAroma",
+        "tagline": "Premium leather, premium savings."
+      },
+      {
+        "perfume": "Le Labo Santal 33 100ml",
+        "retail": "£180",
+        "our_price": "£125",
+        "savings": "£55",
+        "savings_percent": "31%",
+        "retailer": "Sees Scents (Tester)",
+        "tagline": "No box, no cap, all the scent. Save £55."
+      }
+    ]
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "freemium_tiers": {
+    "free": {
+      "name": "Free",
+      "price": "£0",
+      "features": [
+        "Browse top 3 deals daily",
+        "View price comparisons",
+        "See savings calculations",
+        "Basic search (top 10 perfumes only)",
+        "Manual price check (5/day)"
+      ],
+      "limitations": [
+        "No alerts",
+        "Delayed data (6 hour delay)",
+        "Limited to 10 perfumes",
+        "No deal predictions",
+        "No price history"
+      ],
+      "conversion_hook": "See what you're missing - 47 deals found for premium users today"
+    },
+    
+    "premium": {
+      "name": "Premium",
+      "price": "£4.99/month",
+      "features": [
+        "Unlimited price alerts",
+        "INSTANT alerts (no delay)",
+        "All 100+ perfumes tracked",
+        "AI deal predictions",
+        "Price history charts",
+        "Restock alerts",
+        "Priority support",
+        "Exclusive 'hidden gem' deals",
+        "Price drop probability score",
+        "Bulk price tracking (up to 50)",
+        "Export price data"
+      ],
+      "value_props": [
+        "One alert pays for 6 months",
+        "Average user saves £340/year",
+        "Never miss a deal again"
+      ],
+      "trial": "7 days free"
+    },
+    
+    "pro": {
+      "name": "Pro",
+      "price": "£12.99/month",
+      "features": [
+        "Everything in Premium",
+        "VIP deal alerts (1 hour early)",
+        "Flash sale pre-alerts",
+        "Personalized AI recommendations",
+        "WhatsApp/SMS alerts",
+        "Reseller tools (arbitrage)",
+        "API access",
+        "White-label alerts",
+        "Portfolio tracking",
+        "Unlimited bulk tracking"
+      ],
+      "target_users": [
+        "Serious collectors (20+ bottles)",
+        "Fragrance resellers",
+        "Fragrance influencers"
+      ],
+      "roi_example": "Buy 1 BR540 at £170 vs £245 retail = £75 saved = 5.7 months of Pro paid for"
+    }
+  },
+  
+  "hero_examples": {
+    "daily_showcase": [
+      {
+        "perfume": "Creed Aventus 100ml",
+        "retail": "£265",
+        "deal_price": "£175",
+        "savings": "£90 (34%)",
+        "retailer": "FragranceBuy.ca",
+        "time_remaining": "3 hours left",
+        "stock": "Low stock (2 left)",
+        "locked": true,
+        "teaser_text": "🔒 Deal locked - Sign up to unlock"
+      },
+      {
+        "perfume": "Parfums de Marley Layton 125ml",
+        "retail": "£180",
+        "deal_price": "£135",
+        "savings": "£45 (25%)",
+        "retailer": "Notino",
+        "time_remaining": "6 hours left",
+        "stock": "In stock",
+        "locked": true,
+        "teaser_text": "🔒 Premium members saw this 6 hours ago"
+      },
+      {
+        "perfume": "MFK Baccarat Rouge 540 70ml",
+        "retail": "£245",
+        "deal_price": "£195",
+        "savings": "£50 (20%)",
+        "retailer": "MaxAroma",
+        "time_remaining": "12 hours left",
+        "stock": "High stock",
+        "locked": false,
+        "teaser_text": "✅ Free to view - Sign up for alerts"
+      }
+    ],
+    
+    "yesterday_for_free_users": {
+      "deals_missed": 12,
+      "total_savings_missed": "£540",
+      "top_missed": "Creed Aventus £90 off - Sold out",
+      "conversion_hook": "12 deals yesterday. You saw 0. Premium users saved £540."
+    }
+  },
+  
+  "intelligent_features": {
+    "ai_deal_prediction": {
+      "name": "Deal Forecaster",
+      "description": "AI predicts when prices will drop based on historical patterns",
+      "example": "BR540 typically drops 15% in March (spring sale). Set alert for £200?",
+      "accuracy": "78% prediction accuracy",
+      "tiers": ["premium", "pro"]
+    },
+    
+    "personalized_recommendations": {
+      "name": "Scent Match",
+      "description": "AI suggests deals based on your preferences and purchase history",
+      "example": "You bought Layton → You might like Carlisle (now £45 off)",
+      "tiers": ["premium", "pro"]
+    },
+    
+    "arbitrage_detector": {
+      "name": "Flip Finder",
+      "description": "Finds perfumes cheaper in one market that sell for more in another",
+      "example": "Buy: £120 (Poland) → Sell: £180 (UK) = £60 profit",
+      "tiers": ["pro"],
+      "disclaimer": "For educational purposes. Check local laws."
+    },
+    
+    "restock_predictor": {
+      "name": "Restock Radar",
+      "description": "Predicts when sold-out items will return",
+      "example": "Creed Viking Cologne out of stock → Restock predicted: 5 days",
+      "tiers": ["premium", "pro"]
+    },
+    
+    "batch_code_analyzer": {
+      "name": "Freshness Check",
+      "description": "Decodes batch codes to tell you production date",
+      "example": "Batch A4211 = Produced April 2021 (2 years old)",
+      "tiers": ["premium", "pro"]
+    },
+    
+    "market_sentiment": {
+      "name": "Hype Meter",
+      "description": "Tracks social media buzz around fragrances",
+      "example": "BR540 mentions up 340% on TikTok → Price likely to rise",
+      "tiers": ["premium", "pro"]
+    }
+  },
+  
+  "additional_monetization": {
+    "affiliate_revenue": {
+      "name": "Retailer Commissions",
+      "description": "Earn 5-15% on purchases through our links",
+      "projected_monthly": "£3,000-8,000",
+      "models": [
+        "CPC (per click)",
+        "CPA (per purchase)",
+        "Hybrid (click + purchase)"
+      ]
+    },
+    
+    "data_licensing": {
+      "name": "Market Intelligence",
+      "description": "Sell anonymized price trend data to brands",
+      "buyers": [
+        "Fragrance brands (Creed, PDM)",
+        "Market research firms",
+        "Investment funds"
+      ],
+      "value": "Real-time pricing intelligence worth £1,000s/month"
+    },
+    
+    "white_label": {
+      "name": "B2B Solution",
+      "description": "White-label our scraper for other industries",
+      "applications": [
+        "Wine/spirits price tracking",
+        "Luxury watches",
+        "Designer handbags",
+        "Electronics"
+      ],
+      "pricing": "£500-2,000/month per client"
+    },
+    
+    "sponsored_alerts": {
+      "name": "Featured Deals",
+      "description": "Retailers pay for priority placement",
+      "format": "'Featured by Notino' badge",
+      "pricing": "£200-500/month per retailer",
+      "transparency": "Clearly labeled as sponsored"
+    },
+    
+    "referral_program": {
+      "name": "Refer & Earn",
+      "description": "Users earn credit for referrals",
+      "mechanics": [
+        "Free user refers → Gets 1 month Premium free",
+        "Premium refers → Gets £5 credit",
+        "Referred user gets 20% off first month"
+      ],
+      "viral_coefficient": "Target 1.3x (each user brings 1.3 new users)"
+    },
+    
+    "partnerships": {
+      "name": "Strategic Partners",
+      "description": "Revenue share with complementary services",
+      "partners": [
+        "Fragrance subscription boxes",
+        "Perfume sample/decant sellers",
+        "Fragrance storage/accessories",
+        "Fragrance communities/forums"
+      ],
+      "model": "10-20% revenue share on referred sales"
+    }
+  }
+}

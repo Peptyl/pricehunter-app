@@ -1,0 +1,40 @@
+{
+  "name": "pricehunter-mobile",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "test": "jest",
+    "lint": "eslint src --ext .ts,.tsx",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@expo/metro-runtime": "^6.1.2",
+    "@react-navigation/bottom-tabs": "^6.5.0",
+    "@react-navigation/native": "^6.1.0",
+    "@react-navigation/stack": "^6.3.0",
+    "@reduxjs/toolkit": "^2.0.0",
+    "axios": "^1.6.0",
+    "expo": "^54.0.33",
+    "expo-notifications": "^0.29.0",
+    "expo-status-bar": "^3.0.9",
+    "react": "18.3.1",
+    "react-native": "^0.84.0",
+    "react-native-chart-kit": "^6.12.0",
+    "react-native-gesture-handler": "~2.20.0",
+    "react-native-paper": "^5.11.0",
+    "react-native-safe-area-context": "4.12.0",
+    "react-native-screens": "~4.1.0",
+    "react-native-web": "^0.21.2",
+    "react-redux": "^9.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@types/react": "~18.3.12",
+    "typescript": "^5.3.0"
+  },
+  "private": true
+}

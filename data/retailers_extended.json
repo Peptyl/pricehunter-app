@@ -1,0 +1,253 @@
+{
+  "global_retailers": {
+    "tier_1_grey_market": [
+      {
+        "name": "FragranceBuy.ca",
+        "url": "https://fragrancebuy.ca",
+        "region": "Canada (ships global)",
+        "pricing": "Cheapest for niche, often 30-50% below retail",
+        "shipping": "Worldwide, $15-25",
+        "notes": "Grey market, authentic but no box sometimes",
+        "scraping": {
+          "difficulty": "Medium",
+          "anti_bot": true,
+          "requires_proxy": true,
+          "sitemap": "/collections/all",
+          "search_url": "/search?q={query}"
+        }
+      },
+      {
+        "name": "MaxAroma",
+        "url": "https://maxaroma.com",
+        "region": "USA (ships global)",
+        "pricing": "Very competitive, frequent sales 20-40% off",
+        "shipping": "Free US over $75, international $25-40",
+        "notes": "Legit retailer, great for discovery sets",
+        "scraping": {
+          "difficulty": "Easy",
+          "anti_bot": false,
+          "api_endpoints": true,
+          "search_url": "/search?q={query}"
+        }
+      },
+      {
+        "name": "FragranceNet",
+        "url": "https://fragrancenet.com",
+        "region": "USA (ships global)",
+        "pricing": "Classic grey market, 20-40% off retail",
+        "shipping": "Free US over $59, international varies",
+        "notes": "Sometimes older stock (check batch codes)",
+        "scraping": {
+          "difficulty": "Medium",
+          "anti_bot": true,
+          "json_api": true,
+          "search_url": "/search?search={query}"
+        }
+      },
+      {
+        "name": "FragranceX",
+        "url": "https://fragrancex.com",
+        "region": "USA (ships global)",
+        "pricing": "Similar to FragranceNet, competitive",
+        "shipping": "Free US over $35, international $15-30",
+        "notes": "Good for vintage/discontinued",
+        "scraping": {
+          "difficulty": "Medium",
+          "anti_bot": false,
+          "requires_session": true,
+          "search_url": "/search?q={query}"
+        }
+      },
+      {
+        "name": "Jomashop",
+        "url": "https://jomashop.com/fragrances.html",
+        "region": "USA (ships global)",
+        "pricing": "Up to 80% off retail (flash sales)",
+        "shipping": "Free US, international $20-50",
+        "notes": "Watch for flash sales, limited stock",
+        "scraping": {
+          "difficulty": "Hard",
+          "anti_bot": true,
+          "dynamic_js": true,
+          "search_url": "/catalogsearch/result/?q={query}"
+        }
+      },
+      {
+        "name": "Sees Scents",
+        "url": "https://seesscents.com",
+        "region": "USA (ships global)",
+        "pricing": "40-60% off retail (testers/unboxed)",
+        "shipping": "$5-10 US, international $20-35",
+        "notes": "Specializes in testers and unboxed, great value, authentic",
+        "scraping": {
+          "difficulty": "Medium",
+          "anti_bot": false,
+          "shopify": true,
+          "search_url": "/search?q={query}"
+        }
+      }
+    ],
+    
+    "tier_2_eu_retailers": [
+      {
+        "name": "NicheGallerie",
+        "url": "https://nichegallerie.com",
+        "region": "UK (ships global)",
+        "pricing": "20-35% below retail, niche specialist",
+        "shipping": "Free UK over £100, international £15-25",
+        "notes": "UK niche specialist, hard-to-find fragrances",
+        "scraping": {
+          "difficulty": "Easy",
+          "anti_bot": false,
+          "shopify": true,
+          "search_url": "/search?q={query}"
+        }
+      },
+      {
+        "name": "Notino",
+        "url": "https://notino.co.uk",
+        "region": "UK/EU",
+        "pricing": "20-30% below retail, frequent 15% off codes",
+        "shipping": "Free UK over £40, EU varies",
+        "notes": "Legitimate, fast shipping",
+        "scraping": {
+          "difficulty": "Medium",
+          "anti_bot": true,
+          "json_ld": true,
+          "search_url": "/search?q={query}"
+        }
+      },
+      {
+        "name": "Douglas",
+        "url": "https://douglas.co.uk",
+        "region": "UK/DE/FR/NL",
+        "pricing": "Retail but good sales (20-30% off)",
+        "shipping": "Free over £50, EU wide",
+        "notes": "Official retailer, gift wrapping",
+        "scraping": {
+          "difficulty": "Easy",
+          "anti_bot": false,
+          "api_available": true,
+          "search_url": "/search?q={query}"
+        }
+      },
+      {
+        "name": "Parfumdreams",
+        "url": "https://parfumdreams.co.uk",
+        "region": "UK/EU",
+        "pricing": "20-35% off retail",
+        "shipping": "Free UK over £30",
+        "notes": "German company, reliable",
+        "scraping": {
+          "difficulty": "Medium",
+          "anti_bot": false,
+          "structured_data": true,
+          "search_url": "/search?q={query}"
+        }
+      },
+      {
+        "name": "Escentual",
+        "url": "https://escentual.com",
+        "region": "UK",
+        "pricing": "Retail but 20% off sales quarterly",
+        "shipping": "Free UK over £30",
+        "notes": "UK-based, great CS",
+        "scraping": {
+          "difficulty": "Easy",
+          "anti_bot": false,
+          "search_url": "/search?q={query}"
+        }
+      },
+      {
+        "name": "AllBeauty",
+        "url": "https://allbeauty.com",
+        "region": "UK/EU",
+        "pricing": "25-40% off retail",
+        "shipping": "Free UK over £20",
+        "notes": "Fast shipping, good stock",
+        "scraping": {
+          "difficulty": "Easy",
+          "anti_bot": false,
+          "search_url": "/search?q={query}"
+        }
+      }
+    ],
+    
+    "tier_3_specialty": [
+      {
+        "name": "LuckyScent",
+        "url": "https://luckyscent.com",
+        "region": "USA (ships global)",
+        "pricing": "Retail but rare hard-to-find",
+        "shipping": "$6 US, international $25-45",
+        "notes": "Indie/niche specialist, discovery sets",
+        "scraping": {
+          "difficulty": "Medium",
+          "anti_bot": false,
+          "dynamic_loading": true,
+          "search_url": "/search?q={query}"
+        }
+      },
+      {
+        "name": "Surrender to Chance",
+        "url": "https://surrendertochance.com",
+        "region": "USA (ships global)",
+        "pricing": "Decants/samples cheap, bottles retail",
+        "shipping": "$4 US, international varies",
+        "notes": "Best for samples before committing",
+        "scraping": {
+          "difficulty": "Hard",
+          "anti_bot": true,
+          "custom_platform": true,
+          "search_url": "/search?q={query}"
+        }
+      },
+      {
+        "name": "ScentSplit",
+        "url": "https://scentsplit.com",
+        "region": "USA",
+        "pricing": "Decants only, $5-30 per sample",
+        "shipping": "$4 US",
+        "notes": "Trusted decanter, good for testing",
+        "scraping": {
+          "difficulty": "Medium",
+          "anti_bot": false,
+          "search_url": "/search?q={query}"
+        }
+      },
+      {
+        "name": "eBay (Trusted Sellers)",
+        "url": "https://ebay.com/sch/i.html",
+        "region": "Global",
+        "pricing": "Variable, auctions can be cheap",
+        "shipping": "Varies by seller",
+        "notes": "Risky but great deals from trusted sellers",
+        "scraping": {
+          "difficulty": "Very Hard",
+          "anti_bot": true,
+          "api_restricted": true,
+          "search_url": "/sch/i.html?_nkw={query}"
+        }
+      },
+      {
+        "name": "Facebook Groups (Reddit/FragSwap)",
+        "url": "https://facebook.com/groups",
+        "region": "Global (peer-to-peer)",
+        "pricing": "Often cheapest, no tax",
+        "shipping": "PayPal G&S only",
+        "notes": "Risky but community vetted",
+        "scraping": {
+          "difficulty": "Impossible",
+          "requires_manual_monitoring": true
+        }
+      }
+    ]
+  },
+  
+  "scraping_priority": {
+    "immediate": ["Sees Scents", "NicheGallerie", "FragranceBuy.ca", "MaxAroma", "Notino", "Douglas"],
+    "this_week": ["FragranceNet", "FragranceX", "Parfumdreams", "AllBeauty"],
+    "next_week": ["Jomashop", "LuckyScent", "Escentual"],
+    "manual_only": ["eBay", "Facebook Groups"]
+  }
+}

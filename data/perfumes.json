@@ -1,0 +1,132 @@
+{
+  "top_10_niche_perfumes": [
+    {
+      "rank": 1,
+      "brand": "Parfums de Marley",
+      "name": "Layton",
+      "name_variants": ["Layton", "Layton Exclusif"],
+      "sizes_ml": [75, 125],
+      "concentration": "EDP",
+      "retail_prices": {
+        "harrods": 180,
+        "selfridges": 180,
+        "jovoy": 175,
+        "notino": 145,
+        "average_retail": 178
+      },
+      "typical_retail_gbp": 180,
+      "good_deal_threshold_gbp": 140,
+      "high_alert_threshold_gbp": 120,
+      "why_trending": "Versatile masculine, Reddit favorite",
+      "avg_savings_example": "Our users save £58 (32%) vs Harrods"
+    },
+    {
+      "rank": 2,
+      "brand": "Parfums de Marley",
+      "name": "Carlisle",
+      "name_variants": ["Carlisle"],
+      "sizes_ml": [75, 125],
+      "concentration": "EDP",
+      "typical_retail_gbp": 190,
+      "good_deal_threshold_gbp": 150,
+      "high_alert_threshold_gbp": 130,
+      "why_trending": "Premium PDM, exclusive vibe"
+    },
+    {
+      "rank": 3,
+      "brand": "Creed",
+      "name": "Aventus",
+      "name_variants": ["Aventus", "Aventus Cologne", "Aventus for Her"],
+      "sizes_ml": [50, 100, 250],
+      "concentration": "EDP",
+      "typical_retail_gbp": 250,
+      "good_deal_threshold_gbp": 200,
+      "high_alert_threshold_gbp": 170,
+      "why_trending": "King of fragrances, batch variations"
+    },
+    {
+      "rank": 4,
+      "brand": "Creed",
+      "name": "Green Irish Tweed",
+      "name_variants": ["Green Irish Tweed", "GIT"],
+      "sizes_ml": [50, 100, 250],
+      "concentration": "EDP",
+      "typical_retail_gbp": 230,
+      "good_deal_threshold_gbp": 180,
+      "high_alert_threshold_gbp": 150,
+      "why_trending": "Classic masculine, professional"
+    },
+    {
+      "rank": 5,
+      "brand": "Tom Ford",
+      "name": "Tuscan Leather",
+      "name_variants": ["Tuscan Leather", "Tuscan Leather Intense"],
+      "sizes_ml": [50, 100, 250],
+      "concentration": "EDP",
+      "typical_retail_gbp": 240,
+      "good_deal_threshold_gbp": 190,
+      "high_alert_threshold_gbp": 160,
+      "why_trending": "Bold leather, statement scent"
+    },
+    {
+      "rank": 6,
+      "brand": "Tom Ford",
+      "name": "Oud Wood",
+      "name_variants": ["Oud Wood", "Oud Wood Intense"],
+      "sizes_ml": [30, 50, 100],
+      "concentration": "EDP",
+      "typical_retail_gbp": 220,
+      "good_deal_threshold_gbp": 170,
+      "high_alert_threshold_gbp": 140,
+      "why_trending": "Most accessible TF oud"
+    },
+    {
+      "rank": 7,
+      "brand": "Amouage",
+      "name": "Reflection Man",
+      "name_variants": ["Reflection Man", "Reflection 45"],
+      "sizes_ml": [50, 100],
+      "concentration": "EDP",
+      "typical_retail_gbp": 260,
+      "good_deal_threshold_gbp": 200,
+      "high_alert_threshold_gbp": 170,
+      "why_trending": "Luxury Middle Eastern, jasmine prominent"
+    },
+    {
+      "rank": 8,
+      "brand": "Byredo",
+      "name": "Mojave Ghost",
+      "name_variants": ["Mojave Ghost", "Mojave Ghost Absolu"],
+      "sizes_ml": [50, 100],
+      "concentration": "EDP",
+      "typical_retail_gbp": 160,
+      "good_deal_threshold_gbp": 130,
+      "high_alert_threshold_gbp": 110,
+      "why_trending": "Trendy, Instagram favorite"
+    },
+    {
+      "rank": 9,
+      "brand": "Le Labo",
+      "name": "Santal 33",
+      "name_variants": ["Santal 33"],
+      "sizes_ml": [15, 50, 100],
+      "concentration": "EDP",
+      "typical_retail_gbp": 180,
+      "good_deal_threshold_gbp": 140,
+      "high_alert_threshold_gbp": 120,
+      "why_trending": "Cult following, signature scent"
+    },
+    {
+      "rank": 10,
+      "brand": "Maison Francis Kurkdjian",
+      "name": "Baccarat Rouge 540",
+      "name_variants": ["Baccarat Rouge 540", "BR540", "Baccarat Extrait"],
+      "sizes_ml": [35, 70, 200],
+      "concentration": "EDP",
+      "typical_retail_gbp": 245,
+      "good_deal_threshold_gbp": 195,
+      "high_alert_threshold_gbp": 170,
+      "why_trending": "Viral TikTok fame, most wanted"
+    }
+  ]
+}

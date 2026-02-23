@@ -1,0 +1,265 @@
+// PriceHunter Mobile App (React Native)
+// Simplified MVP - focuses on deal alerts and price tracking
+
+import React, { useState, useEffect } from 'react';
+import {
+  View,
+  Text,
+  FlatList,
+  TouchableOpacity,
+  StyleSheet,
+  TextInput,
+  Alert
+} from 'react-native';
+
+const API_URL = 'http://localhost:8001/api'; // Change to your server
+
+// Main App Component
+export default function PriceHunterApp() {
+  const [screen, setScreen] = useState('home'); // home, perfumes, alerts, deals
+  const [perfumes, setPerfumes] = useState([]);
+  const [deals, setDeals] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    loadPerfumes();
+    loadDeals();
+  }, []);
+
+  const loadPerfumes = async () => {
+    try {
+      const resp = await fetch(`${API_URL}/perfumes`);
+      const data = await resp.json();
+      setPerfumes(data);
+    } catch (e) {
+      console.error('Failed to load perfumes:', e);
+    }
+  };
+
+  const loadDeals = async () => {
+    try {
+      const resp = await fetch(`${API_URL}/deals`);
+      const data = await resp.json();
+      setDeals(data.deals || []);
+    } catch (e) {
+      console.error('Failed to load deals:', e);
+    }
+  };
+
+  // Screen: Home
+  const HomeScreen = () => (
+    <View style={styles.container}>
+      <Text style={styles.title}>🎯 PriceHunter</Text>
+      <Text style={styles.subtitle}>Niche perfume deal alerts</Text>
+      
+      <TouchableOpacity 
+        style={styles.button}
+        onPress={() => setScreen('deals')}
+      >
+        <Text style={styles.buttonText}>🔥 Today's Deals ({deals.length})</Text>
+      </TouchableOpacity>
+      
+      <TouchableOpacity 
+        style={styles.button}
+        onPress={() => setScreen('perfumes')}
+      >
+        <Text style={styles.buttonText}>🔍 Browse Perfumes</Text>
+      </TouchableOpacity>
+      
+      <TouchableOpacity 
+        style={styles.button}
+        onPress={() => setScreen('alerts')}
+      >
+        <Text style={styles.buttonText}>🚨 My Alerts</Text>
+      </TouchableOpacity>
+    </View>
+  );
+
+  // Screen: Perfumes List
+  const PerfumesScreen = () => (
+    <View style={styles.container}>
+      <Text style={styles.title}>Niche Perfumes</Text>
+      <FlatList
+        data={perfumes}
+        keyExtractor={(item) => item.name}
+        renderItem={({ item }) => (
+          <View style={styles.perfumeCard}>
+            <Text style={styles.brand}>{item.brand}</Text>
+            <Text style={styles.name}>{item.name}</Text>
+            <Text style={styles.price}>
+              Retail: £{item.typical_retail_gbp} → 
+              Target: £{item.good_deal_threshold_gbp}
+            </Text>
+            <TouchableOpacity 
+              style={styles.smallButton}
+              onPress={() => Alert.alert('Set Alert', `Alert for ${item.name}`)}
+            >
+              <Text>Set Price Alert</Text>
+            </TouchableOpacity>
+          </View>
+        )}
+      />
+      <TouchableOpacity onPress={() => setScreen('home')}>
+        <Text style={styles.back}>← Back</Text>
+      </TouchableOpacity>
+    </View>
+  );
+
+  // Screen: Deals
+  const DealsScreen = () => (
+    <View style={styles.container}>
+      <Text style={styles.title}>🔥 Active Deals</Text>
+      {deals.length === 0 ? (
+        <Text>No deals found. Check back at 12pm & 6pm.</Text>
+      ) : (
+        <FlatList
+          data={deals}
+          keyExtractor={(item, idx) => idx.toString()}
+          renderItem={({ item }) => (
+            <View style={styles.dealCard}>
+              <Text style={styles.dealTitle}>{item.perfume}</Text>
+              <Text style={styles.dealPrice}>
+                £{item.best_price} @ {item.retailer}
+              </Text>
+              <Text style={styles.savings}>
+                Save £{item.savings} (Retail: £{item.retail_price})
+              </Text>
+              <TouchableOpacity style={styles.buyButton}>
+                <Text style={styles.buyButtonText}>Buy Now</Text>
+              </TouchableOpacity>
+            </View>
+          )}
+        />
+      )}
+      <TouchableOpacity onPress={() => setScreen('home')}>
+        <Text style={styles.back}>← Back</Text>
+      </TouchableOpacity>
+    </View>
+  );
+
+  // Screen: My Alerts
+  const AlertsScreen = () => (
+    <View style={styles.container}>
+      <Text style={styles.title}>My Price Alerts</Text>
+      <Text>You'll be notified when prices drop to your target.</Text>
+      {/* Would show user's alerts here */}
+      <TouchableOpacity onPress={() => setScreen('home')}>
+        <Text style={styles.back}>← Back</Text>
+      </TouchableOpacity>
+    </View>
+  );
+
+  // Render current screen
+  switch(screen) {
+    case 'perfumes': return <PerfumesScreen />;
+    case 'deals': return <DealsScreen />;
+    case 'alerts': return <AlertsScreen />;
+    default: return <HomeScreen />;
+  }
+}
+
+// Styles
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 20,
+    backgroundColor: '#f5f5f5'
+  },
+  title: {
+    fontSize: 28,
+    fontWeight: 'bold',
+    marginBottom: 10,
+    color: '#1a365d'
+  },
+  subtitle: {
+    fontSize: 16,
+    color: '#666',
+    marginBottom: 30
+  },
+  button: {
+    backgroundColor: '#38b2ac',
+    padding: 15,
+    borderRadius: 8,
+    marginVertical: 10
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold',
+    textAlign: 'center'
+  },
+  perfumeCard: {
+    backgroundColor: 'white',
+    padding: 15,
+    marginVertical: 8,
+    borderRadius: 8,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1
+  },
+  brand: {
+    fontSize: 12,
+    color: '#666',
+    textTransform: 'uppercase'
+  },
+  name: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginVertical: 5
+  },
+  price: {
+    fontSize: 14,
+    color: '#38b2ac'
+  },
+  smallButton: {
+    backgroundColor: '#e2e8f0',
+    padding: 8,
+    borderRadius: 5,
+    marginTop: 10,
+    alignSelf: 'flex-start'
+  },
+  dealCard: {
+    backgroundColor: 'white',
+    padding: 15,
+    marginVertical: 8,
+    borderRadius: 8,
+    borderLeftWidth: 4,
+    borderLeftColor: '#38b2ac'
+  },
+  dealTitle: {
+    fontSize: 16,
+    fontWeight: 'bold'
+  },
+  dealPrice: {
+    fontSize: 20,
+    color: '#38b2ac',
+    fontWeight: 'bold',
+    marginVertical: 5
+  },
+  savings: {
+    fontSize: 14,
+    color: '#48bb78'
+  },
+  buyButton: {
+    backgroundColor: '#1a365d',
+    padding: 10,
+    borderRadius: 5,
+    marginTop: 10
+  },
+  buyButtonText: {
+    color: 'white',
+    textAlign: 'center',
+    fontWeight: 'bold'
+  },
+  back: {
+    color: '#38b2ac',
+    fontSize: 16,
+    marginTop: 20
+  }
+});
+
+// To run:
+// 1. npm install -g expo-cli
+// 2. expo init pricehunter-mobile
+// 3. Copy this code to App.js
+// 4. expo start
