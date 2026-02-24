@@ -13,6 +13,8 @@ services:
         value: AIzaSyDUFIFFPRLhUy2IfT5BDCKqbZsGphYWL2Y
       - key: CLERK_PUBLISHABLE_KEY
         value: pk_test_YWRhcHRlZC1lbGYtMjMuY2xlcmsuYWNjb3VudHMuZGV2JA
+      - key: CLERK_SECRET_KEY
+        sync: false
       - key: REVENUECAT_API_KEY
         value: sk_funIsfnYUqsOUzcVbQmHwncNpqBQw
       - key: DATABASE_URL
