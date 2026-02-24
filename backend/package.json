@@ -1,0 +1,14 @@
+{
+  "name": "PriceHunter API",
+  "version": "2.0.0",
+  "description": "PriceHunter Backend with Firebase, Clerk & RevenueCat",
+  "main": "main.py",
+  "scripts": {
+    "start": "python main.py",
+    "dev": "uvicorn main:app --reload --host 0.0.0.0 --port 8000",
+    "test": "pytest"
+  },
+  "engines": {
+    "python": "3.11"
+  }
+}

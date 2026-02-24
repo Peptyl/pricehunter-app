@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: pricehunter-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.8
+      - key: PORT
+        value: 8000
+      - key: FIREBASE_API_KEY
+        value: AIzaSyDUFIFFPRLhUy2IfT5BDCKqbZsGphYWL2Y
+      - key: CLERK_PUBLISHABLE_KEY
+        value: pk_test_YWRhcHRlZC1lbGYtMjMuY2xlcmsuYWNjb3VudHMuZGV2JA
+      - key: REVENUECAT_API_KEY
+        value: sk_funIsfnYUqsOUzcVbQmHwncNpqBQw
+      - key: DATABASE_URL
+        fromDatabase:
+          name: pricehunter-db
+          property: connectionString
+      - key: REDIS_URL
+        fromService:
+          type: redis
+          name: pricehunter-redis
+          property: connectionString
+
+databases:
+  - name: pricehunter-db
+    databaseName: pricehunter
+    user: pricehunter
+
+redis:
+  - name: pricehunter-redis

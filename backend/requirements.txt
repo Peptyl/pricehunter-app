@@ -1,0 +1,17 @@
+# PriceHunter Backend Dependencies
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+pydantic==2.5.0
+python-jose[cryptography]==3.3.0
+httpx==0.26.0
+python-multipart==0.0.6
+firebase-admin==6.3.0
+psycopg2-binary==2.9.9
+redis==5.0.1
+requests==2.31.0
+stripe==7.10.0
+python-dotenv==1.0.0
+
+# RevenueCat SDK (use REST API directly)
+# Clerk SDK via PyPI
+clerk-backend-api==0.5.0
