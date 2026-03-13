@@ -1,0 +1,629 @@
+{
+  "catalog_version": "1.0",
+  "last_updated": "2026-03-13",
+  "catalog_description": "Top 20 Niche Fragrances - UK Collector Favorites",
+  "products": [
+    {
+      "id": "pdm-layton-125-edp",
+      "brand": "Parfums de Marly",
+      "name": "Layton",
+      "size_ml": 125,
+      "concentration": "EDP",
+      "typical_retail_gbp": 195,
+      "good_deal_threshold_gbp": 155,
+      "hot_deal_threshold_gbp": 140,
+      "aliases": [
+        "PDM Layton",
+        "Parfums De Marly Layton",
+        "Parfums de Marly Layton Royal Essence",
+        "Layton EDP"
+      ],
+      "size_variants_ml": [75, 125],
+      "gender": "unisex",
+      "retailer_urls": {
+        "notino": "https://www.notino.co.uk/parfums-de-marly/layton-eau-de-parfum-for-men/",
+        "nichegallerie": "https://nichegallerie.com/products/parfums-de-marly-layton",
+        "douglas_de": "https://www.douglas.de/de/p/00093098",
+        "fragrancebuy": "https://fragrancebuy.ca/products/parfums-de-marly-layton-125ml-edp",
+        "maxaroma": "https://www.maxaroma.com/parfums-de-marly/layton-edp-125ml",
+        "jomashop": "https://www.jomashop.com/parfums-de-marly-layton-edp-125ml.html",
+        "fragrancenet": "https://www.fragrancenet.com/parfums-de-marly-layton-edp-125ml"
+      },
+      "notes": {
+        "top": ["apple", "bergamot", "mandarin", "grapefruit"],
+        "heart": ["jasmine", "violet", "geranium", "rose"],
+        "base": ["vanilla", "sandalwood", "pepper", "oakmoss"]
+      }
+    },
+    {
+      "id": "pdm-carlisle-125-edp",
+      "brand": "Parfums de Marly",
+      "name": "Carlisle",
+      "size_ml": 125,
+      "concentration": "EDP",
+      "typical_retail_gbp": 215,
+      "good_deal_threshold_gbp": 170,
+      "hot_deal_threshold_gbp": 155,
+      "aliases": [
+        "PDM Carlisle",
+        "Parfums De Marly Carlisle",
+        "Carlisle EDP"
+      ],
+      "size_variants_ml": [75, 125],
+      "gender": "male",
+      "retailer_urls": {
+        "notino": "https://www.notino.co.uk/parfums-de-marly/carlisle-eau-de-parfum/",
+        "nichegallerie": "https://nichegallerie.com/products/parfums-de-marly-carlisle",
+        "douglas_de": "https://www.douglas.de/de/p/00093099",
+        "fragrancebuy": "https://fragrancebuy.ca/products/parfums-de-marly-carlisle-125ml-edp",
+        "maxaroma": "https://www.maxaroma.com/parfums-de-marly/carlisle-edp-125ml",
+        "jomashop": "https://www.jomashop.com/parfums-de-marly-carlisle-edp-125ml.html",
+        "fragrancenet": "https://www.fragrancenet.com/parfums-de-marly-carlisle-edp-125ml"
+      },
+      "notes": {
+        "top": ["lemon", "bergamot", "grapefruit"],
+        "heart": ["lavender", "clary sage", "geranium"],
+        "base": ["cedarwood", "vetiver", "amber", "musk"]
+      }
+    },
+    {
+      "id": "creed-aventus-100-edp",
+      "brand": "Creed",
+      "name": "Aventus",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 310,
+      "good_deal_threshold_gbp": 245,
+      "hot_deal_threshold_gbp": 220,
+      "aliases": [
+        "Creed Aventus",
+        "Aventus EDP",
+        "Creed Aventus For Men"
+      ],
+      "size_variants_ml": [50, 100, 120],
+      "gender": "male",
+      "retailer_urls": {
+        "notino": "https://www.notino.co.uk/creed/aventus-eau-de-parfum/",
+        "nichegallerie": "https://nichegallerie.com/products/creed-aventus",
+        "douglas_de": "https://www.douglas.de/de/p/creed-aventus",
+        "fragrancebuy": "https://fragrancebuy.ca/products/creed-aventus-100ml-edp",
+        "maxaroma": "https://www.maxaroma.com/creed/aventus-edp-100ml",
+        "jomashop": "https://www.jomashop.com/creed-aventus-edp-100ml.html",
+        "fragrancenet": "https://www.fragrancenet.com/creed-aventus-edp-100ml"
+      },
+      "notes": {
+        "top": ["pineapple", "bergamot", "blackcurrant"],
+        "heart": ["labdanum", "ambroxan", "jasmine"],
+        "base": ["oak moss", "sandalwood", "musk"]
+      }
+    },
+    {
+      "id": "creed-green-irish-tweed-100-edp",
+      "brand": "Creed",
+      "name": "Green Irish Tweed",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 230,
+      "good_deal_threshold_gbp": 185,
+      "hot_deal_threshold_gbp": 165,
+      "aliases": [
+        "Creed GIT",
+        "Green Irish Tweed EDP",
+        "Creed Green Irish Tweed"
+      ],
+      "size_variants_ml": [50, 100, 120],
+      "gender": "male",
+      "retailer_urls": {
+        "notino": "https://www.notino.co.uk/creed/green-irish-tweed-eau-de-parfum/",
+        "nichegallerie": "https://nichegallerie.com/products/creed-green-irish-tweed",
+        "douglas_de": "https://www.douglas.de/de/p/green-irish-tweed",
+        "fragrancebuy": "https://fragrancebuy.ca/products/creed-green-irish-tweed-100ml-edp",
+        "maxaroma": "https://www.maxaroma.com/creed/green-irish-tweed-edp-100ml",
+        "jomashop": "https://www.jomashop.com/creed-green-irish-tweed-edp-100ml.html",
+        "fragrancenet": "https://www.fragrancenet.com/creed-green-irish-tweed-edp-100ml"
+      },
+      "notes": {
+        "top": ["verbena", "lemon", "grapefruit"],
+        "heart": ["geranium", "iris", "jasmine"],
+        "base": ["sandalwood", "cedar", "oak moss"]
+      }
+    },
+    {
+      "id": "creed-silver-mountain-water-100-edp",
+      "brand": "Creed",
+      "name": "Silver Mountain Water",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 230,
+      "good_deal_threshold_gbp": 185,
+      "hot_deal_threshold_gbp": 165,
+      "aliases": [
+        "Creed SMW",
+        "Silver Mountain Water EDP",
+        "SMW Creed"
+      ],
+      "size_variants_ml": [50, 100, 120],
+      "gender": "unisex",
+      "retailer_urls": {
+        "notino": "https://www.notino.co.uk/creed/silver-mountain-water-eau-de-parfum/",
+        "nichegallerie": "https://nichegallerie.com/products/creed-silver-mountain-water",
+        "douglas_de": "https://www.douglas.de/de/p/silver-mountain-water",
+        "fragrancebuy": "https://fragrancebuy.ca/products/creed-silver-mountain-water-100ml-edp",
+        "maxaroma": "https://www.maxaroma.com/creed/silver-mountain-water-edp-100ml",
+        "jomashop": "https://www.jomashop.com/creed-silver-mountain-water-edp-100ml.html",
+        "fragrancenet": "https://www.fragrancenet.com/creed-silver-mountain-water-edp-100ml"
+      },
+      "notes": {
+        "top": ["grapefruit", "lemon", "bergamot"],
+        "heart": ["geranium", "lavender"],
+        "base": ["sandalwood", "oak moss", "musk"]
+      }
+    },
+    {
+      "id": "tf-tuscan-leather-100-edp",
+      "brand": "Tom Ford",
+      "name": "Tuscan Leather",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 270,
+      "good_deal_threshold_gbp": 215,
+      "hot_deal_threshold_gbp": 195,
+      "aliases": [
+        "Tom Ford Tuscan Leather",
+        "TF Tuscan Leather",
+        "Tuscan Leather EDP"
+      ],
+      "size_variants_ml": [50, 100],
+      "gender": "male",
+      "retailer_urls": {
+        "notino": "https://www.notino.co.uk/tom-ford/tuscan-leather-eau-de-parfum/",
+        "nichegallerie": "https://nichegallerie.com/products/tom-ford-tuscan-leather",
+        "douglas_de": "https://www.douglas.de/de/p/tuscan-leather-edp",
+        "fragrancebuy": "https://fragrancebuy.ca/products/tom-ford-tuscan-leather-100ml-edp",
+        "maxaroma": "https://www.maxaroma.com/tom-ford/tuscan-leather-edp-100ml",
+        "jomashop": "https://www.jomashop.com/tom-ford-tuscan-leather-edp-100ml.html",
+        "fragrancenet": "https://www.fragrancenet.com/tom-ford-tuscan-leather-edp-100ml"
+      },
+      "notes": {
+        "top": ["galbanum", "hedione"],
+        "heart": ["leather", "birch", "incense"],
+        "base": ["sandalwood", "vetiver", "cedar"]
+      }
+    },
+    {
+      "id": "tf-oud-wood-100-edp",
+      "brand": "Tom Ford",
+      "name": "Oud Wood",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 240,
+      "good_deal_threshold_gbp": 190,
+      "hot_deal_threshold_gbp": 170,
+      "aliases": [
+        "Tom Ford Oud Wood",
+        "TF Oud Wood",
+        "Oud Wood EDP"
+      ],
+      "size_variants_ml": [50, 100],
+      "gender": "unisex",
+      "retailer_urls": {
+        "notino": "https://www.notino.co.uk/tom-ford/oud-wood-eau-de-parfum/",
+        "nichegallerie": "https://nichegallerie.com/products/tom-ford-oud-wood",
+        "douglas_de": "https://www.douglas.de/de/p/oud-wood-edp",
+        "fragrancebuy": "https://fragrancebuy.ca/products/tom-ford-oud-wood-100ml-edp",
+        "maxaroma": "https://www.maxaroma.com/tom-ford/oud-wood-edp-100ml",
+        "jomashop": "https://www.jomashop.com/tom-ford-oud-wood-edp-100ml.html",
+        "fragrancenet": "https://www.fragrancenet.com/tom-ford-oud-wood-edp-100ml"
+      },
+      "notes": {
+        "top": ["cardamom", "rosewood"],
+        "heart": ["agarwood", "oud"],
+        "base": ["sandalwood", "cedar", "vetiver"]
+      }
+    },
+    {
+      "id": "tf-tobacco-vanille-100-edp",
+      "brand": "Tom Ford",
+      "name": "Tobacco Vanille",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 270,
+      "good_deal_threshold_gbp": 215,
+      "hot_deal_threshold_gbp": 195,
+      "aliases": [
+        "Tom Ford Tobacco Vanille",
+        "TF Tobacco Vanille",
+        "Tobacco Vanille EDP"
+      ],
+      "size_variants_ml": [50, 100],
+      "gender": "unisex",
+      "retailer_urls": {
+        "notino": "https://www.notino.co.uk/tom-ford/tobacco-vanille-eau-de-parfum/",
+        "nichegallerie": "https://nichegallerie.com/products/tom-ford-tobacco-vanille",
+        "douglas_de": "https://www.douglas.de/de/p/tobacco-vanille-edp",
+        "fragrancebuy": "https://fragrancebuy.ca/products/tom-ford-tobacco-vanille-100ml-edp",
+        "maxaroma": "https://www.maxaroma.com/tom-ford/tobacco-vanille-edp-100ml",
+        "jomashop": "https://www.jomashop.com/tom-ford-tobacco-vanille-edp-100ml.html",
+        "fragrancenet": "https://www.fragrancenet.com/tom-ford-tobacco-vanille-edp-100ml"
+      },
+      "notes": {
+        "top": ["cinnamon", "spices"],
+        "heart": ["tobacco", "vanilla", "cocoa"],
+        "base": ["cedar", "sandalwood", "amber"]
+      }
+    },
+    {
+      "id": "mfk-baccarat-rouge-540-70-edp",
+      "brand": "Maison Francis Kurkdjian",
+      "name": "Baccarat Rouge 540",
+      "size_ml": 70,
+      "concentration": "EDP",
+      "typical_retail_gbp": 255,
+      "good_deal_threshold_gbp": 205,
+      "hot_deal_threshold_gbp": 185,
+      "aliases": [
+        "MFK Baccarat Rouge 540",
+        "Baccarat Rouge 540 EDP",
+        "Francis Kurkdjian Baccarat"
+      ],
+      "size_variants_ml": [11, 70],
+      "gender": "unisex",
+      "retailer_urls": {
+        "notino": "https://www.notino.co.uk/maison-francis-kurkdjian/baccarat-rouge-540-eau-de-parfum/",
+        "nichegallerie": "https://nichegallerie.com/products/maison-francis-kurkdjian-baccarat-rouge-540",
+        "douglas_de": "https://www.douglas.de/de/p/baccarat-rouge-540",
+        "fragrancebuy": "https://fragrancebuy.ca/products/maison-francis-kurkdjian-baccarat-rouge-540-70ml-edp",
+        "maxaroma": "https://www.maxaroma.com/maison-francis-kurkdjian/baccarat-rouge-540-edp-70ml",
+        "jomashop": "https://www.jomashop.com/maison-francis-kurkdjian-baccarat-rouge-540-edp-70ml.html",
+        "fragrancenet": "https://www.fragrancenet.com/maison-francis-kurkdjian-baccarat-rouge-540-edp-70ml"
+      },
+      "notes": {
+        "top": ["saffron", "orange blossom"],
+        "heart": ["ambroxan", "jasmine"],
+        "base": ["cedar", "sandalwood", "amber"]
+      }
+    },
+    {
+      "id": "mfk-grand-soir-70-edp",
+      "brand": "Maison Francis Kurkdjian",
+      "name": "Grand Soir",
+      "size_ml": 70,
+      "concentration": "EDP",
+      "typical_retail_gbp": 205,
+      "good_deal_threshold_gbp": 165,
+      "hot_deal_threshold_gbp": 150,
+      "aliases": [
+        "MFK Grand Soir",
+        "Grand Soir EDP",
+        "Francis Kurkdjian Grand Soir"
+      ],
+      "size_variants_ml": [70],
+      "gender": "unisex",
+      "retailer_urls": {
+        "notino": "https://www.notino.co.uk/maison-francis-kurkdjian/grand-soir-eau-de-parfum/",
+        "nichegallerie": "https://nichegallerie.com/products/maison-francis-kurkdjian-grand-soir",
+        "douglas_de": "https://www.douglas.de/de/p/grand-soir",
+        "fragrancebuy": "https://fragrancebuy.ca/products/maison-francis-kurkdjian-grand-soir-70ml-edp",
+        "maxaroma": "https://www.maxaroma.com/maison-francis-kurkdjian/grand-soir-edp-70ml",
+        "jomashop": "https://www.jomashop.com/maison-francis-kurkdjian-grand-soir-edp-70ml.html",
+        "fragrancenet": "https://www.fragrancenet.com/maison-francis-kurkdjian-grand-soir-edp-70ml"
+      },
+      "notes": {
+        "top": ["saffron", "ginger"],
+        "heart": ["leather", "incense", "spices"],
+        "base": ["sandalwood", "cedar", "musk"]
+      }
+    },
+    {
+      "id": "amouage-reflection-man-100-edp",
+      "brand": "Amouage",
+      "name": "Reflection Man",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 280,
+      "good_deal_threshold_gbp": 225,
+      "hot_deal_threshold_gbp": 205,
+      "aliases": [
+        "Amouage Reflection Man",
+        "Reflection Man EDP",
+        "Amouage Reflection"
+      ],
+      "size_variants_ml": [50, 100],
+      "gender": "male",
+      "retailer_urls": {
+        "notino": "https://www.notino.co.uk/amouage/reflection-man-eau-de-parfum/",
+        "nichegallerie": "https://nichegallerie.com/products/amouage-reflection-man",
+        "douglas_de": "https://www.douglas.de/de/p/reflection-man",
+        "fragrancebuy": "https://fragrancebuy.ca/products/amouage-reflection-man-100ml-edp",
+        "maxaroma": "https://www.maxaroma.com/amouage/reflection-man-edp-100ml",
+        "jomashop": "https://www.jomashop.com/amouage-reflection-man-edp-100ml.html",
+        "fragrancenet": "https://www.fragrancenet.com/amouage-reflection-man-edp-100ml"
+      },
+      "notes": {
+        "top": ["lemon", "bergamot", "cardamom"],
+        "heart": ["jasmine", "rose", "incense"],
+        "base": ["sandalwood", "amber", "musk"]
+      }
+    },
+    {
+      "id": "amouage-interlude-man-100-edp",
+      "brand": "Amouage",
+      "name": "Interlude Man",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 280,
+      "good_deal_threshold_gbp": 225,
+      "hot_deal_threshold_gbp": 205,
+      "aliases": [
+        "Amouage Interlude Man",
+        "Interlude Man EDP",
+        "Amouage Interlude"
+      ],
+      "size_variants_ml": [50, 100],
+      "gender": "male",
+      "retailer_urls": {
+        "notino": "https://www.notino.co.uk/amouage/interlude-man-eau-de-parfum/",
+        "nichegallerie": "https://nichegallerie.com/products/amouage-interlude-man",
+        "douglas_de": "https://www.douglas.de/de/p/interlude-man",
+        "fragrancebuy": "https://fragrancebuy.ca/products/amouage-interlude-man-100ml-edp",
+        "maxaroma": "https://www.maxaroma.com/amouage/interlude-man-edp-100ml",
+        "jomashop": "https://www.jomashop.com/amouage-interlude-man-edp-100ml.html",
+        "fragrancenet": "https://www.fragrancenet.com/amouage-interlude-man-edp-100ml"
+      },
+      "notes": {
+        "top": ["cardamom", "ginger", "pepper"],
+        "heart": ["leather", "incense"],
+        "base": ["oud", "sandalwood", "amber"]
+      }
+    },
+    {
+      "id": "initio-oud-for-greatness-90-edp",
+      "brand": "Initio",
+      "name": "Oud for Greatness",
+      "size_ml": 90,
+      "concentration": "EDP",
+      "typical_retail_gbp": 260,
+      "good_deal_threshold_gbp": 210,
+      "hot_deal_threshold_gbp": 190,
+      "aliases": [
+        "Initio Oud For Greatness",
+        "Oud For Greatness EDP",
+        "Initio OFG"
+      ],
+      "size_variants_ml": [90],
+      "gender": "unisex",
+      "retailer_urls": {
+        "notino": "https://www.notino.co.uk/initio/oud-for-greatness-eau-de-parfum/",
+        "nichegallerie": "https://nichegallerie.com/products/initio-oud-for-greatness",
+        "douglas_de": "https://www.douglas.de/de/p/oud-for-greatness",
+        "fragrancebuy": "https://fragrancebuy.ca/products/initio-oud-for-greatness-90ml-edp",
+        "maxaroma": "https://www.maxaroma.com/initio/oud-for-greatness-edp-90ml",
+        "jomashop": "https://www.jomashop.com/initio-oud-for-greatness-edp-90ml.html",
+        "fragrancenet": "https://www.fragrancenet.com/initio-oud-for-greatness-edp-90ml"
+      },
+      "notes": {
+        "top": ["pepper", "cardamom"],
+        "heart": ["oud", "incense"],
+        "base": ["sandalwood", "ambroxan", "musk"]
+      }
+    },
+    {
+      "id": "initio-side-effect-90-edp",
+      "brand": "Initio",
+      "name": "Side Effect",
+      "size_ml": 90,
+      "concentration": "EDP",
+      "typical_retail_gbp": 260,
+      "good_deal_threshold_gbp": 210,
+      "hot_deal_threshold_gbp": 190,
+      "aliases": [
+        "Initio Side Effect",
+        "Side Effect EDP",
+        "Initio SE"
+      ],
+      "size_variants_ml": [90],
+      "gender": "unisex",
+      "retailer_urls": {
+        "notino": "https://www.notino.co.uk/initio/side-effect-eau-de-parfum/",
+        "nichegallerie": "https://nichegallerie.com/products/initio-side-effect",
+        "douglas_de": "https://www.douglas.de/de/p/side-effect",
+        "fragrancebuy": "https://fragrancebuy.ca/products/initio-side-effect-90ml-edp",
+        "maxaroma": "https://www.maxaroma.com/initio/side-effect-edp-90ml",
+        "jomashop": "https://www.jomashop.com/initio-side-effect-edp-90ml.html",
+        "fragrancenet": "https://www.fragrancenet.com/initio-side-effect-edp-90ml"
+      },
+      "notes": {
+        "top": ["bergamot", "lemon"],
+        "heart": ["heliotrope", "almond", "tonka"],
+        "base": ["sandalwood", "vanilla", "ambroxan"]
+      }
+    },
+    {
+      "id": "xerjoff-naxos-100-edp",
+      "brand": "Xerjoff",
+      "name": "Naxos",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 235,
+      "good_deal_threshold_gbp": 190,
+      "hot_deal_threshold_gbp": 170,
+      "aliases": [
+        "Xerjoff Naxos",
+        "Naxos EDP",
+        "Xerjoff Naxos The Golden Vault"
+      ],
+      "size_variants_ml": [100],
+      "gender": "unisex",
+      "retailer_urls": {
+        "notino": "https://www.notino.co.uk/xerjoff/naxos-eau-de-parfum/",
+        "nichegallerie": "https://nichegallerie.com/products/xerjoff-naxos",
+        "douglas_de": "https://www.douglas.de/de/p/naxos",
+        "fragrancebuy": "https://fragrancebuy.ca/products/xerjoff-naxos-100ml-edp",
+        "maxaroma": "https://www.maxaroma.com/xerjoff/naxos-edp-100ml",
+        "jomashop": "https://www.jomashop.com/xerjoff-naxos-edp-100ml.html",
+        "fragrancenet": "https://www.fragrancenet.com/xerjoff-naxos-edp-100ml"
+      },
+      "notes": {
+        "top": ["honey", "nuts", "caramel"],
+        "heart": ["vanilla", "tonka", "almond"],
+        "base": ["sandalwood", "cedar", "amber"]
+      }
+    },
+    {
+      "id": "xerjoff-erba-pura-100-edp",
+      "brand": "Xerjoff",
+      "name": "Erba Pura",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 210,
+      "good_deal_threshold_gbp": 170,
+      "hot_deal_threshold_gbp": 155,
+      "aliases": [
+        "Xerjoff Erba Pura",
+        "Erba Pura EDP",
+        "Xerjoff Pure Herbs"
+      ],
+      "size_variants_ml": [100],
+      "gender": "unisex",
+      "retailer_urls": {
+        "notino": "https://www.notino.co.uk/xerjoff/erba-pura-eau-de-parfum/",
+        "nichegallerie": "https://nichegallerie.com/products/xerjoff-erba-pura",
+        "douglas_de": "https://www.douglas.de/de/p/erba-pura",
+        "fragrancebuy": "https://fragrancebuy.ca/products/xerjoff-erba-pura-100ml-edp",
+        "maxaroma": "https://www.maxaroma.com/xerjoff/erba-pura-edp-100ml",
+        "jomashop": "https://www.jomashop.com/xerjoff-erba-pura-edp-100ml.html",
+        "fragrancenet": "https://www.fragrancenet.com/xerjoff-erba-pura-edp-100ml"
+      },
+      "notes": {
+        "top": ["herbs", "green tea", "ginger"],
+        "heart": ["herbs", "geranium"],
+        "base": ["cedarwood", "vetiver", "moss"]
+      }
+    },
+    {
+      "id": "lelabo-santal-33-100-edp",
+      "brand": "Le Labo",
+      "name": "Santal 33",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 225,
+      "good_deal_threshold_gbp": 180,
+      "hot_deal_threshold_gbp": 165,
+      "aliases": [
+        "Le Labo Santal 33",
+        "Santal 33 EDP",
+        "Le Labo Santalwood"
+      ],
+      "size_variants_ml": [50, 100],
+      "gender": "unisex",
+      "retailer_urls": {
+        "notino": "https://www.notino.co.uk/le-labo/santal-33-eau-de-parfum/",
+        "nichegallerie": "https://nichegallerie.com/products/le-labo-santal-33",
+        "douglas_de": "https://www.douglas.de/de/p/santal-33",
+        "fragrancebuy": "https://fragrancebuy.ca/products/le-labo-santal-33-100ml-edp",
+        "maxaroma": "https://www.maxaroma.com/le-labo/santal-33-edp-100ml",
+        "jomashop": "https://www.jomashop.com/le-labo-santal-33-edp-100ml.html",
+        "fragrancenet": "https://www.fragrancenet.com/le-labo-santal-33-edp-100ml"
+      },
+      "notes": {
+        "top": ["cardamom", "spice"],
+        "heart": ["iris", "violet", "leather"],
+        "base": ["sandalwood", "cedar", "vetiver"]
+      }
+    },
+    {
+      "id": "byredo-mojave-ghost-100-edp",
+      "brand": "Byredo",
+      "name": "Mojave Ghost",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 195,
+      "good_deal_threshold_gbp": 155,
+      "hot_deal_threshold_gbp": 140,
+      "aliases": [
+        "Byredo Mojave Ghost",
+        "Mojave Ghost EDP",
+        "Byredo Desert Ghost"
+      ],
+      "size_variants_ml": [50, 100],
+      "gender": "unisex",
+      "retailer_urls": {
+        "notino": "https://www.notino.co.uk/byredo/mojave-ghost-eau-de-parfum/",
+        "nichegallerie": "https://nichegallerie.com/products/byredo-mojave-ghost",
+        "douglas_de": "https://www.douglas.de/de/p/mojave-ghost",
+        "fragrancebuy": "https://fragrancebuy.ca/products/byredo-mojave-ghost-100ml-edp",
+        "maxaroma": "https://www.maxaroma.com/byredo/mojave-ghost-edp-100ml",
+        "jomashop": "https://www.jomashop.com/byredo-mojave-ghost-edp-100ml.html",
+        "fragrancenet": "https://www.fragrancenet.com/byredo-mojave-ghost-edp-100ml"
+      },
+      "notes": {
+        "top": ["ambrette seed", "sandalwood"],
+        "heart": ["florals", "vanilla"],
+        "base": ["musk", "sandalwood", "cedar"]
+      }
+    },
+    {
+      "id": "pdm-pegasus-125-edp",
+      "brand": "Parfums de Marly",
+      "name": "Pegasus",
+      "size_ml": 125,
+      "concentration": "EDP",
+      "typical_retail_gbp": 195,
+      "good_deal_threshold_gbp": 155,
+      "hot_deal_threshold_gbp": 140,
+      "aliases": [
+        "PDM Pegasus",
+        "Parfums De Marly Pegasus",
+        "Pegasus EDP"
+      ],
+      "size_variants_ml": [75, 125],
+      "gender": "male",
+      "retailer_urls": {
+        "notino": "https://www.notino.co.uk/parfums-de-marly/pegasus-eau-de-parfum/",
+        "nichegallerie": "https://nichegallerie.com/products/parfums-de-marly-pegasus",
+        "douglas_de": "https://www.douglas.de/de/p/pegasus",
+        "fragrancebuy": "https://fragrancebuy.ca/products/parfums-de-marly-pegasus-125ml-edp",
+        "maxaroma": "https://www.maxaroma.com/parfums-de-marly/pegasus-edp-125ml",
+        "jomashop": "https://www.jomashop.com/parfums-de-marly-pegasus-edp-125ml.html",
+        "fragrancenet": "https://www.fragrancenet.com/parfums-de-marly-pegasus-edp-125ml"
+      },
+      "notes": {
+        "top": ["citrus", "grapefruit"],
+        "heart": ["florals", "jasmine"],
+        "base": ["sandalwood", "amber", "musk"]
+      }
+    },
+    {
+      "id": "pdm-herod-125-edp",
+      "brand": "Parfums de Marly",
+      "name": "Herod",
+      "size_ml": 125,
+      "concentration": "EDP",
+      "typical_retail_gbp": 195,
+      "good_deal_threshold_gbp": 155,
+      "hot_deal_threshold_gbp": 140,
+      "aliases": [
+        "PDM Herod",
+        "Parfums De Marly Herod",
+        "Herod EDP",
+        "Parfums de Marly Herod Eau de Parfum"
+      ],
+      "size_variants_ml": [75, 125],
+      "gender": "male",
+      "retailer_urls": {
+        "notino": "https://www.notino.co.uk/parfums-de-marly/herod-eau-de-parfum/",
+        "nichegallerie": "https://nichegallerie.com/products/parfums-de-marly-herod",
+        "douglas_de": "https://www.douglas.de/de/p/herod",
+        "fragrancebuy": "https://fragrancebuy.ca/products/parfums-de-marly-herod-125ml-edp",
+        "maxaroma": "https://www.maxaroma.com/parfums-de-marly/herod-edp-125ml",
+        "jomashop": "https://www.jomashop.com/parfums-de-marly-herod-edp-125ml.html",
+        "fragrancenet": "https://www.fragrancenet.com/parfums-de-marly-herod-edp-125ml"
+      },
+      "notes": {
+        "top": ["lemon", "bergamot"],
+        "heart": ["jasmine", "geranium"],
+        "base": ["amber", "cedar", "vanilla"]
+      }
+    }
+  ]
+}
