@@ -1,0 +1,43 @@
+# PriceHunter Backend Requirements
+
+# Core API Framework
+fastapi==0.104.1
+uvicorn==0.24.0
+pydantic==2.5.0
+
+# Database & Caching
+psycopg2-binary==2.9.9
+redis==5.0.1
+
+# Authentication & Security
+python-jose==3.3.0
+PyJWT==2.8.1
+httpx==0.25.1
+firebase-admin==6.2.0
+
+# Payments & Subscriptions
+requests==2.31.0
+
+# Web Scraping & NLP
+beautifulsoup4==4.12.2
+rapidfuzz==3.4.0
+requests-html==0.10.0
+
+# Scheduling
+APScheduler==3.10.4
+
+# Environment & Configuration
+python-dotenv==1.0.0
+
+# Logging & Monitoring
+python-json-logger==2.0.7
+
+# Testing
+pytest==7.4.3
+pytest-cov==4.1.0
+pytest-asyncio==0.21.1
+
+# Development
+flake8==6.1.0
+black==23.12.1
+isort==5.13.2
