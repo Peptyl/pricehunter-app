@@ -716,14 +716,14 @@ class DouglasScraper(RetailerScraper):
 
 
 class FragranceBuyScraper(RetailerScraper):
-    """FragranceBuy scraper - with anti-bot handling"""
+    """FragranceBuy scraper - Shopify JSON API (Canadian niche retailer)"""
 
     def __init__(self):
         super().__init__(name="fragrancebuy", ships_to_uk=True)
         self.request_delay = 2  # seconds between requests
 
     def scrape_product(self, sku: ProductSKU) -> Optional[ScrapedResult]:
-        """Scrape product from FragranceBuy"""
+        """Scrape product using Shopify JSON API (fragrancebuy.ca is Shopify)"""
         url = sku.retailer_urls.get("fragrancebuy")
         if not url:
             return None
@@ -731,27 +731,47 @@ class FragranceBuyScraper(RetailerScraper):
         try:
             time.sleep(self.request_delay)  # Be respectful
 
-            response = self.session.get(url, timeout=10)
-            response.raise_for_status()
-            soup = BeautifulSoup(response.text, 'html.parser')
-
-            # Extract product details
-            product_title = None
-            price = None
-
-            title_elem = soup.find('h1', {'class': re.compile(r'product.*title', re.I)})
-            if title_elem:
-                product_title = title_elem.get_text().strip()
-
-            price_elem = soup.find('span', {'class': re.compile(r'price|sale', re.I)})
-            if price_elem:
-                price = self._parse_price(price_elem.get_text(), "CAD")
-
-            if not price or not product_title:
-                logger.warning(f"Failed to extract data from FragranceBuy: {url}")
+            import re
+            match = re.search(r'/products/([^/?]+)', url)
+            if not match:
                 return None
 
-            size_ml = self._extract_size_from_text(product_title)
+            handle = match.group(1)
+            api_url = f"https://fragrancebuy.ca/products/{handle}.json"
+
+            response = self.session.get(api_url, timeout=10)
+            response.raise_for_status()
+            data = response.json()
+
+            product = data.get('product', {})
+            if not product:
+                return None
+
+            product_title = product.get('title', '')
+
+            # Find variant matching target size
+            variants = product.get('variants', [])
+            if not variants:
+                return None
+
+            target_size = sku.size_ml
+            best_variant = None
+
+            for variant in variants:
+                vtitle = variant.get('title', '')
+                vsize = self._extract_size_from_text(vtitle)
+                if vsize and target_size and abs(vsize - target_size) < 2:
+                    best_variant = variant
+                    break
+
+            if not best_variant:
+                best_variant = variants[0]
+
+            # Shopify storefront JSON returns prices as strings like "299.00"
+            price = float(best_variant.get('price', '0'))
+            size_ml = self._extract_size_from_text(best_variant.get('title', ''))
+
+            in_stock = best_variant.get('available', False)
 
             return ScrapedResult(
                 retailer="fragrancebuy",
@@ -759,10 +779,10 @@ class FragranceBuyScraper(RetailerScraper):
                 extracted_size_ml=size_ml,
                 price=price,
                 currency="CAD",
-                in_stock=self._check_stock(soup),
+                in_stock=in_stock,
                 url=url,
                 scraped_at=datetime.now(),
-                raw_html_snippet=response.text[:500],
+                raw_html_snippet=json.dumps(product)[:500],
             )
 
         except Exception as e:
@@ -1001,6 +1021,224 @@ class SeeScentsScraper(RetailerScraper):
 
 
 # ============================================================================
+# PLAYWRIGHT SCRAPER (JS-rendered sites: Jomashop, MaxAroma, Douglas)
+# ============================================================================
+
+class PlaywrightScraper:
+    """
+    Headless browser scraper for JS-rendered sites.
+    Falls back to requests+BeautifulSoup if Playwright not installed.
+
+    Install: pip install playwright && playwright install chromium
+    """
+
+    _browser = None
+    _playwright = None
+
+    @classmethod
+    def is_available(cls) -> bool:
+        try:
+            import playwright
+            return True
+        except ImportError:
+            return False
+
+    @classmethod
+    def _get_browser(cls):
+        if cls._browser is None:
+            try:
+                from playwright.sync_api import sync_playwright
+                cls._playwright = sync_playwright().start()
+                cls._browser = cls._playwright.chromium.launch(headless=True)
+            except Exception as e:
+                logger.warning(f"Playwright unavailable: {e}")
+                return None
+        return cls._browser
+
+    @classmethod
+    def fetch_rendered_html(cls, url: str, wait_selector: str = None, timeout_ms: int = 15000) -> Optional[str]:
+        """Fetch fully-rendered HTML using headless Chromium"""
+        browser = cls._get_browser()
+        if not browser:
+            return None
+
+        try:
+            page = browser.new_page(
+                user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            )
+            page.goto(url, timeout=timeout_ms, wait_until="networkidle")
+
+            if wait_selector:
+                page.wait_for_selector(wait_selector, timeout=5000)
+
+            html = page.content()
+            page.close()
+            return html
+        except Exception as e:
+            logger.error(f"Playwright fetch error for {url}: {e}")
+            return None
+
+    @classmethod
+    def extract_json_ld(cls, html: str) -> Optional[dict]:
+        """Extract JSON-LD product data from rendered HTML"""
+        soup = BeautifulSoup(html, 'html.parser')
+        for script in soup.find_all('script', {'type': 'application/ld+json'}):
+            try:
+                data = json.loads(script.string)
+                if isinstance(data, list):
+                    data = next((d for d in data if d.get('@type') == 'Product'), data[0] if data else {})
+                if data.get('@type') == 'Product' or 'offers' in data:
+                    return data
+            except (json.JSONDecodeError, TypeError):
+                continue
+        return None
+
+
+class JomashopPlaywrightScraper(RetailerScraper):
+    """
+    Jomashop scraper with Playwright for JS rendering.
+    Jomashop is a React SPA — prices are loaded dynamically.
+    Falls back to requests-based if Playwright not available.
+    """
+
+    def __init__(self):
+        super().__init__(name="jomashop", ships_to_uk=False)
+
+    def scrape_product(self, sku: ProductSKU) -> Optional[ScrapedResult]:
+        url = sku.retailer_urls.get("jomashop")
+        if not url:
+            return None
+
+        try:
+            html = None
+            product_title = None
+            price = None
+            size_ml = None
+
+            # Try Playwright first (JS rendering)
+            if PlaywrightScraper.is_available():
+                html = PlaywrightScraper.fetch_rendered_html(url, wait_selector='[class*="price"]')
+
+            # Fall back to requests
+            if not html:
+                response = self.session.get(url, timeout=15)
+                response.raise_for_status()
+                html = response.text
+
+            soup = BeautifulSoup(html, 'html.parser')
+
+            # Method 1: JSON-LD (most reliable)
+            json_ld = PlaywrightScraper.extract_json_ld(html) if html else None
+            if json_ld:
+                product_title = json_ld.get('name', '')
+                offers = json_ld.get('offers', {})
+                if isinstance(offers, list):
+                    offers = offers[0] if offers else {}
+                price = float(offers.get('price', 0))
+
+            # Method 2: Meta tags (fallback)
+            if not price:
+                meta_price = soup.find('meta', {'property': 'product:price:amount'})
+                if meta_price:
+                    price = float(meta_price.get('content', 0))
+
+            if not product_title:
+                meta_title = soup.find('meta', {'property': 'og:title'})
+                if meta_title:
+                    product_title = meta_title.get('content', '')
+                else:
+                    h1 = soup.find('h1')
+                    if h1:
+                        product_title = h1.get_text().strip()
+
+            if not price or not product_title:
+                return None
+
+            size_ml = self._extract_size_from_text(product_title)
+
+            return ScrapedResult(
+                retailer="jomashop",
+                product_title=product_title,
+                extracted_size_ml=size_ml,
+                price=price,
+                currency="USD",
+                in_stock=self._check_stock(soup),
+                url=url,
+                scraped_at=datetime.now(),
+                raw_html_snippet=html[:500] if html else "",
+            )
+
+        except Exception as e:
+            logger.error(f"JomashopScraper error for {sku.id}: {e}")
+            return None
+
+
+# ============================================================================
+# RETRY WRAPPER
+# ============================================================================
+
+def retry_scrape(scraper, sku: ProductSKU, max_retries: int = 3, backoff_base: float = 2.0) -> Optional[ScrapedResult]:
+    """Retry scraping with exponential backoff"""
+    for attempt in range(max_retries):
+        try:
+            result = scraper.scrape_product(sku)
+            if result is not None:
+                return result
+            # Result was None but no exception — don't retry parse failures
+            if attempt == 0:
+                return None
+        except Exception as e:
+            wait_time = backoff_base ** attempt
+            logger.warning(f"Attempt {attempt+1}/{max_retries} failed for {sku.id} from {scraper.name}: {e}. Waiting {wait_time}s...")
+            time.sleep(wait_time)
+
+    logger.error(f"All {max_retries} attempts failed for {sku.id} from {scraper.name}")
+    return None
+
+
+# ============================================================================
+# CIRCUIT BREAKER
+# ============================================================================
+
+class CircuitBreaker:
+    """Stops hitting a retailer that keeps failing"""
+
+    def __init__(self, failure_threshold: int = 5, reset_timeout_seconds: int = 3600):
+        self.failure_threshold = failure_threshold
+        self.reset_timeout = reset_timeout_seconds
+        self._failure_counts: Dict[str, int] = {}
+        self._last_failure_time: Dict[str, float] = {}
+        self._open_circuits: Dict[str, bool] = {}
+
+    def is_open(self, retailer: str) -> bool:
+        """Check if circuit is open (retailer should be skipped)"""
+        if not self._open_circuits.get(retailer, False):
+            return False
+
+        # Check if reset timeout has elapsed
+        last_fail = self._last_failure_time.get(retailer, 0)
+        if time.time() - last_fail > self.reset_timeout:
+            self._open_circuits[retailer] = False
+            self._failure_counts[retailer] = 0
+            logger.info(f"Circuit breaker reset for {retailer}")
+            return False
+
+        return True
+
+    def record_success(self, retailer: str):
+        self._failure_counts[retailer] = 0
+        self._open_circuits[retailer] = False
+
+    def record_failure(self, retailer: str):
+        self._failure_counts[retailer] = self._failure_counts.get(retailer, 0) + 1
+        self._last_failure_time[retailer] = time.time()
+
+        if self._failure_counts[retailer] >= self.failure_threshold:
+            self._open_circuits[retailer] = True
+            logger.warning(f"Circuit breaker OPEN for {retailer} after {self._failure_counts[retailer]} failures. Will retry in {self.reset_timeout}s.")
+
+
+# ============================================================================
 # ORCHESTRATOR ENGINE
 # ============================================================================
 
@@ -1014,7 +1252,7 @@ class PriceHunterEngine:
             "douglas_de": DouglasScraper(),
             "fragrancebuy": FragranceBuyScraper(),
             "maxaroma": MaxAromaScraper(),
-            "jomashop": JomashopScraper(),
+            "jomashop": JomashopPlaywrightScraper(),  # Upgraded: Playwright with requests fallback
             "fragrancenet": FragranceNetScraper(),
             "seescents": SeeScentsScraper(),
         }
@@ -1022,6 +1260,7 @@ class PriceHunterEngine:
         self.currency = CurrencyConverter()
         self.shipping = ShippingCalculator()
         self.forwarder = FreightForwarder()
+        self.circuit_breaker = CircuitBreaker(failure_threshold=5, reset_timeout_seconds=3600)
 
     def scan_product(self, sku: ProductSKU) -> ProductPriceReport:
         """Scan all retailers for a single product"""
@@ -1030,12 +1269,21 @@ class PriceHunterEngine:
 
         for retailer_name, scraper in self.scrapers.items():
             try:
+                # Circuit breaker: skip retailers that keep failing
+                if self.circuit_breaker.is_open(retailer_name):
+                    logger.info(f"Skipping {retailer_name} (circuit breaker open)")
+                    continue
+
                 logger.info(f"Scanning {sku.id} from {retailer_name}...")
 
-                raw = scraper.scrape_product(sku)
+                # Use retry wrapper for resilience
+                raw = retry_scrape(scraper, sku, max_retries=2, backoff_base=2.0)
                 if raw is None:
+                    self.circuit_breaker.record_failure(retailer_name)
                     logger.debug(f"No result from {retailer_name}")
                     continue
+
+                self.circuit_breaker.record_success(retailer_name)
 
                 # Validate
                 validated = self.validator.validate(sku, raw)
