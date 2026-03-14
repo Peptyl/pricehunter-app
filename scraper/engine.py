@@ -900,6 +900,77 @@ class FragranceNetScraper(RetailerScraper):
             return None
 
 
+class SeeScentsScraper(RetailerScraper):
+    """SeeScents scraper - Shopify JSON API (UK niche specialist)"""
+
+    def __init__(self):
+        super().__init__(name="seescents", ships_to_uk=True)
+
+    def scrape_product(self, sku: ProductSKU) -> Optional[ScrapedResult]:
+        """Scrape product using Shopify JSON API"""
+        url = sku.retailer_urls.get("seescents")
+        if not url:
+            return None
+
+        try:
+            import re
+            match = re.search(r'/products/([^/?]+)', url)
+            if not match:
+                return None
+
+            handle = match.group(1)
+            api_url = f"https://www.seescents.co.uk/products/{handle}.json"
+
+            response = self.session.get(api_url, timeout=10)
+            response.raise_for_status()
+            data = response.json()
+
+            product = data.get('product', {})
+            if not product:
+                return None
+
+            product_title = product.get('title', '')
+
+            # Find the matching variant by size
+            variants = product.get('variants', [])
+            if not variants:
+                return None
+
+            # Try to match the target size from SKU
+            best_variant = None
+            target_size = sku.size_variants[0] if sku.size_variants else None
+
+            for variant in variants:
+                vtitle = variant.get('title', '')
+                vsize = self._extract_size_from_text(vtitle)
+                if target_size and vsize and abs(vsize - target_size) < 1:
+                    best_variant = variant
+                    break
+
+            if not best_variant:
+                best_variant = variants[0]
+
+            price = float(best_variant.get('price', '0'))
+            size_ml = self._extract_size_from_text(best_variant.get('title', ''))
+            in_stock = best_variant.get('available', False)
+
+            return ScrapedResult(
+                retailer="seescents",
+                product_title=product_title,
+                extracted_size_ml=size_ml,
+                price=price,
+                currency="GBP",
+                in_stock=in_stock,
+                url=url,
+                scraped_at=datetime.now(),
+                raw_html_snippet=json.dumps(product)[:500],
+            )
+
+        except Exception as e:
+            logger.error(f"SeeScentsScraper error for {sku.id}: {e}")
+            return None
+
+
 # ============================================================================
 # ORCHESTRATOR ENGINE
 # ============================================================================
@@ -916,6 +987,7 @@ class PriceHunterEngine:
             "maxaroma": MaxAromaScraper(),
             "jomashop": JomashopScraper(),
             "fragrancenet": FragranceNetScraper(),
+            "seescents": SeeScentsScraper(),
         }
         self.validator = MatchValidator()
         self.currency = CurrencyConverter()

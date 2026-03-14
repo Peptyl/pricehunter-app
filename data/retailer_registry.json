@@ -290,6 +290,47 @@
       "notes": "US grey market with direct UK shipping. Older domain, steady presence. Good backup option when others are out of stock."
     },
     {
+      "id": "seescents_uk",
+      "name": "SeeScents",
+      "domain": "seescents.co.uk",
+      "country": "UK",
+      "currency": "GBP",
+      "ships_to_uk": true,
+      "direct_shipping": true,
+      "type": "authorized_reseller",
+      "tier": 1,
+      "trust_score": 84,
+      "trust_signals": {
+        "domain_age_years": 4,
+        "trustpilot_score": 4.7,
+        "trustpilot_reviews": 3500,
+        "ssl_valid": true,
+        "has_return_policy": true,
+        "payment_methods": ["visa", "mastercard", "paypal", "klarna"],
+        "company_registered": true,
+        "physical_address": true,
+        "phone_support": false
+      },
+      "pricing": {
+        "avg_discount_vs_rrp_pct": 22,
+        "price_competitiveness_rank": 2,
+        "free_shipping_threshold_local": 50,
+        "shipping_cost_gbp": 3.95
+      },
+      "scraper_config": {
+        "status": "active",
+        "method": "html_parse",
+        "difficulty": "low",
+        "needs_proxy": false,
+        "rate_limit_rpm": 25,
+        "avg_response_ms": 700,
+        "last_successful_scrape": null,
+        "success_rate_30d": null,
+        "url_pattern": "https://www.seescents.co.uk/products/{product-handle}/"
+      },
+      "notes": "UK niche fragrance specialist. Very competitive pricing on PDM, Creed, MFK. Strong community reputation in UK frag circles. Often cheapest UK option."
+    },
+    {
       "id": "allbeauty_uk",
       "name": "All Beauty",
       "domain": "allbeauty.com",
