@@ -292,7 +292,7 @@
     {
       "id": "seescents_uk",
       "name": "SeeScents",
-      "domain": "seescents.co.uk",
+      "domain": "seescents.com",
       "country": "UK",
       "currency": "GBP",
       "ships_to_uk": true,
@@ -326,7 +326,7 @@
         "avg_response_ms": 700,
         "last_successful_scrape": null,
         "success_rate_30d": null,
-        "url_pattern": "https://www.seescents.co.uk/products/{product-handle}/"
+        "url_pattern": "https://www.seescents.com/products/{product-handle}/"
       },
       "notes": "UK niche fragrance specialist. Very competitive pricing on PDM, Creed, MFK. Strong community reputation in UK frag circles. Often cheapest UK option."
     },

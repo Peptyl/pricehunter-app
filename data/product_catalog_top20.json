@@ -1,6 +1,6 @@
 {
   "catalog_version": "1.0",
-  "last_updated": "2026-03-13",
+  "last_updated": "2026-03-14",
   "catalog_description": "Top 20 Niche Fragrances - UK Collector Favorites",
   "products": [
     {
@@ -27,11 +27,11 @@
         "notino": "https://www.notino.co.uk/parfums-de-marly/layton-eau-de-parfum-for-men/",
         "nichegallerie": "https://nichegallerie.com/products/parfums-de-marly-layton",
         "douglas_de": "https://www.douglas.de/de/p/00093098",
-        "fragrancebuy": "https://fragrancebuy.ca/products/parfums-de-marly-layton-125ml-edp",
-        "maxaroma": "https://www.maxaroma.com/parfums-de-marly/layton-edp-125ml",
-        "jomashop": "https://www.jomashop.com/parfums-de-marly-layton-edp-125ml.html",
-        "fragrancenet": "https://www.fragrancenet.com/parfums-de-marly-layton-edp-125ml",
-        "seescents": "https://www.seescents.co.uk/products/parfums-de-marly-layton"
+        "fragrancebuy": "https://fragrancebuy.ca/products/parfumsdemarlylayton-man",
+        "maxaroma": "https://www.maxaroma.com/fragrance/niche-fragrances/parfums-de-marly-layton/pid/14225/2",
+        "jomashop": "https://www.jomashop.com/parfums-de-marly-mens-layton-edp-spray-4-2-oz-fragrances-3700578518002.html",
+        "fragrancenet": "https://www.fragrancenet.com/fragrances/parfums-de-marly/parfums-de-marly-layton/eau-de-parfum",
+        "seescents": "https://seescents.com/products/parfums-de-marly-layton"
       },
       "notes": {
         "top": [
@@ -77,11 +77,11 @@
         "notino": "https://www.notino.co.uk/parfums-de-marly/carlisle-eau-de-parfum/",
         "nichegallerie": "https://nichegallerie.com/products/parfums-de-marly-carlisle",
         "douglas_de": "https://www.douglas.de/de/p/00093099",
-        "fragrancebuy": "https://fragrancebuy.ca/products/parfums-de-marly-carlisle-125ml-edp",
-        "maxaroma": "https://www.maxaroma.com/parfums-de-marly/carlisle-edp-125ml",
+        "fragrancebuy": "https://fragrancebuy.ca/products/parfumsdemarlycarlisle-man",
+        "maxaroma": "https://www.maxaroma.com/fragrance/niche-fragrances/parfums-de-marly-carlisle/pid/14221/2",
         "jomashop": "https://www.jomashop.com/parfums-de-marly-carlisle-edp-125ml.html",
         "fragrancenet": "https://www.fragrancenet.com/parfums-de-marly-carlisle-edp-125ml",
-        "seescents": "https://www.seescents.co.uk/products/parfums-de-marly-carlisle"
+        "seescents": "https://seescents.com/products/parfums-de-marly-carlisle"
       },
       "notes": {
         "top": [
@@ -126,11 +126,11 @@
         "notino": "https://www.notino.co.uk/creed/aventus-eau-de-parfum/",
         "nichegallerie": "https://nichegallerie.com/products/creed-aventus",
         "douglas_de": "https://www.douglas.de/de/p/creed-aventus",
-        "fragrancebuy": "https://fragrancebuy.ca/products/creed-aventus-100ml-edp",
+        "fragrancebuy": "https://fragrancebuy.ca/products/creedaventus-man",
         "maxaroma": "https://www.maxaroma.com/creed/aventus-edp-100ml",
         "jomashop": "https://www.jomashop.com/creed-aventus-edp-100ml.html",
-        "fragrancenet": "https://www.fragrancenet.com/creed-aventus-edp-100ml",
-        "seescents": "https://www.seescents.co.uk/products/creed-aventus"
+        "fragrancenet": "https://www.fragrancenet.com/fragrances/creed/creed-aventus/eau-de-parfum",
+        "seescents": "https://seescents.com/products/creed-aventus"
       },
       "notes": {
         "top": [
@@ -270,7 +270,7 @@
         "maxaroma": "https://www.maxaroma.com/tom-ford/tuscan-leather-edp-100ml",
         "jomashop": "https://www.jomashop.com/tom-ford-tuscan-leather-edp-100ml.html",
         "fragrancenet": "https://www.fragrancenet.com/tom-ford-tuscan-leather-edp-100ml",
-        "seescents": "https://www.seescents.co.uk/products/tom-ford-tuscan-leather"
+        "seescents": "https://seescents.com/products/tom-ford-tuscan-leather"
       },
       "notes": {
         "top": [
@@ -316,7 +316,7 @@
         "maxaroma": "https://www.maxaroma.com/tom-ford/oud-wood-edp-100ml",
         "jomashop": "https://www.jomashop.com/tom-ford-oud-wood-edp-100ml.html",
         "fragrancenet": "https://www.fragrancenet.com/tom-ford-oud-wood-edp-100ml",
-        "seescents": "https://www.seescents.co.uk/products/tom-ford-oud-wood"
+        "seescents": "https://seescents.com/products/tom-ford-oud-wood"
       },
       "notes": {
         "top": [
@@ -361,7 +361,7 @@
         "maxaroma": "https://www.maxaroma.com/tom-ford/tobacco-vanille-edp-100ml",
         "jomashop": "https://www.jomashop.com/tom-ford-tobacco-vanille-edp-100ml.html",
         "fragrancenet": "https://www.fragrancenet.com/tom-ford-tobacco-vanille-edp-100ml",
-        "seescents": "https://www.seescents.co.uk/products/tom-ford-tobacco-vanille"
+        "seescents": "https://seescents.com/products/tom-ford-tobacco-vanille"
       },
       "notes": {
         "top": [
@@ -450,7 +450,7 @@
         "maxaroma": "https://www.maxaroma.com/maison-francis-kurkdjian/grand-soir-edp-70ml",
         "jomashop": "https://www.jomashop.com/maison-francis-kurkdjian-grand-soir-edp-70ml.html",
         "fragrancenet": "https://www.fragrancenet.com/maison-francis-kurkdjian-grand-soir-edp-70ml",
-        "seescents": "https://www.seescents.co.uk/products/maison-francis-kurkdjian-grand-soir"
+        "seescents": "https://seescents.com/products/maison-francis-kurkdjian-grand-soir"
       },
       "notes": {
         "top": [
@@ -629,7 +629,7 @@
         "maxaroma": "https://www.maxaroma.com/initio/side-effect-edp-90ml",
         "jomashop": "https://www.jomashop.com/initio-side-effect-edp-90ml.html",
         "fragrancenet": "https://www.fragrancenet.com/initio-side-effect-edp-90ml",
-        "seescents": "https://www.seescents.co.uk/products/initio-side-effect"
+        "seescents": "https://seescents.com/products/initio-side-effect"
       },
       "notes": {
         "top": [
@@ -674,7 +674,7 @@
         "maxaroma": "https://www.maxaroma.com/xerjoff/naxos-edp-100ml",
         "jomashop": "https://www.jomashop.com/xerjoff-naxos-edp-100ml.html",
         "fragrancenet": "https://www.fragrancenet.com/xerjoff-naxos-edp-100ml",
-        "seescents": "https://www.seescents.co.uk/products/xerjoff-naxos"
+        "seescents": "https://seescents.com/products/xerjoff-naxos"
       },
       "notes": {
         "top": [
@@ -720,7 +720,7 @@
         "maxaroma": "https://www.maxaroma.com/xerjoff/erba-pura-edp-100ml",
         "jomashop": "https://www.jomashop.com/xerjoff-erba-pura-edp-100ml.html",
         "fragrancenet": "https://www.fragrancenet.com/xerjoff-erba-pura-edp-100ml",
-        "seescents": "https://www.seescents.co.uk/products/xerjoff-erba-pura"
+        "seescents": "https://seescents.com/products/xerjoff-erba-pura"
       },
       "notes": {
         "top": [
@@ -811,7 +811,7 @@
         "maxaroma": "https://www.maxaroma.com/byredo/mojave-ghost-edp-100ml",
         "jomashop": "https://www.jomashop.com/byredo-mojave-ghost-edp-100ml.html",
         "fragrancenet": "https://www.fragrancenet.com/byredo-mojave-ghost-edp-100ml",
-        "seescents": "https://www.seescents.co.uk/products/byredo-mojave-ghost"
+        "seescents": "https://seescents.com/products/byredo-mojave-ghost"
       },
       "notes": {
         "top": [
@@ -852,11 +852,11 @@
         "notino": "https://www.notino.co.uk/parfums-de-marly/pegasus-eau-de-parfum/",
         "nichegallerie": "https://nichegallerie.com/products/parfums-de-marly-pegasus",
         "douglas_de": "https://www.douglas.de/de/p/pegasus",
-        "fragrancebuy": "https://fragrancebuy.ca/products/parfums-de-marly-pegasus-125ml-edp",
-        "maxaroma": "https://www.maxaroma.com/parfums-de-marly/pegasus-edp-125ml",
+        "fragrancebuy": "https://fragrancebuy.ca/products/parfumsdemarlypegasus-man",
+        "maxaroma": "https://www.maxaroma.com/fragrance/niche-fragrances/parfums-de-marly-pegasus/pid/14226/2",
         "jomashop": "https://www.jomashop.com/parfums-de-marly-pegasus-edp-125ml.html",
         "fragrancenet": "https://www.fragrancenet.com/parfums-de-marly-pegasus-edp-125ml",
-        "seescents": "https://www.seescents.co.uk/products/parfums-de-marly-pegasus"
+        "seescents": "https://seescents.com/products/parfums-de-marly-pegasus"
       },
       "notes": {
         "top": [
@@ -898,11 +898,11 @@
         "notino": "https://www.notino.co.uk/parfums-de-marly/herod-eau-de-parfum/",
         "nichegallerie": "https://nichegallerie.com/products/parfums-de-marly-herod",
         "douglas_de": "https://www.douglas.de/de/p/herod",
-        "fragrancebuy": "https://fragrancebuy.ca/products/parfums-de-marly-herod-125ml-edp",
-        "maxaroma": "https://www.maxaroma.com/parfums-de-marly/herod-edp-125ml",
+        "fragrancebuy": "https://fragrancebuy.ca/products/parfumsdemarlyherod-man",
+        "maxaroma": "https://www.maxaroma.com/fragrance/niche-fragrances/parfums-de-marly-herod/pid/14223/2",
         "jomashop": "https://www.jomashop.com/parfums-de-marly-herod-edp-125ml.html",
         "fragrancenet": "https://www.fragrancenet.com/parfums-de-marly-herod-edp-125ml",
-        "seescents": "https://www.seescents.co.uk/products/parfums-de-marly-herod"
+        "seescents": "https://seescents.com/products/parfums-de-marly-herod"
       },
       "notes": {
         "top": [

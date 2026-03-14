@@ -247,14 +247,15 @@ class MatchValidator:
     def _check_price_sanity(self, sku: ProductSKU, price: float, currency: str) -> Dict:
         """Sanity check price against RRP"""
         # Assume rough conversion for checking
+        # Rough conversion for sanity check (divide by units-per-GBP)
         if currency == "GBP":
             price_gbp = price
         elif currency == "USD":
-            price_gbp = price * 0.79
+            price_gbp = price / 1.27
         elif currency == "EUR":
-            price_gbp = price * 1.08
+            price_gbp = price / 1.17
         elif currency == "CAD":
-            price_gbp = price * 0.59
+            price_gbp = price / 1.70
         else:
             price_gbp = price
 
@@ -326,11 +327,13 @@ class CurrencyConverter:
         except Exception as e:
             logger.warning(f"Failed to fetch live exchange rate for {currency}: {e}")
 
-        # Fallback to hardcoded rates
+        # Fallback to hardcoded rates (units-per-GBP, matching API format)
+        # 1 GBP = X units of foreign currency
         fallback_rates = {
-            "USD": 0.79,
-            "EUR": 1.08,
-            "CAD": 0.59,
+            "USD": 1.27,
+            "EUR": 1.17,
+            "CAD": 1.70,
+            "AED": 4.67,
         }
         rate = fallback_rates.get(currency, 1.0)
         return amount / rate, rate
@@ -347,6 +350,7 @@ class ShippingCalculator:
         "maxaroma": {"base_gbp": 14, "free_over_usd": 100, "delivery_days": "7-14", "ships_to_uk": True},
         "jomashop": {"base_gbp": 0, "free_over_usd": 0, "ships_to_uk": False, "delivery_days": "N/A"},
         "fragrancenet": {"base_gbp": 6.99, "free_over_usd": 59, "delivery_days": "5-10", "ships_to_uk": True},
+        "seescents": {"base_gbp": 3.95, "free_over_gbp": 50, "delivery_days": "1-3", "ships_to_uk": True},
     }
 
     UK_VAT_RATE = 0.20
@@ -517,15 +521,26 @@ class NotinoScraper(RetailerScraper):
             price = None
             product_title = None
 
-            json_ld = soup.find('script', {'type': 'application/ld+json'})
-            if json_ld:
+            # Extract from ALL JSON-LD blocks (some pages have multiple)
+            json_ld_tags = soup.find_all('script', {'type': 'application/ld+json'})
+            for json_ld in json_ld_tags:
                 try:
                     data = json.loads(json_ld.string)
-                    if 'offers' in data and len(data['offers']) > 0:
-                        price = float(data['offers'][0].get('price', 0))
-                    if 'name' in data:
+                    # Handle list or single object
+                    if isinstance(data, list):
+                        data = next((d for d in data if d.get('@type') == 'Product'), data[0] if data else {})
+
+                    if 'offers' in data:
+                        offers = data['offers']
+                        # offers can be a dict OR a list
+                        if isinstance(offers, dict):
+                            offers = [offers]
+                        if len(offers) > 0:
+                            price = float(offers[0].get('price', 0))
+
+                    if 'name' in data and not product_title:
                         product_title = data['name']
-                except (json.JSONDecodeError, KeyError, ValueError):
+                except (json.JSONDecodeError, KeyError, ValueError, TypeError):
                     pass
 
             # Fallback: extract from page text
@@ -600,13 +615,27 @@ class NicheGallerieScraper(RetailerScraper):
             if not variants:
                 return None
 
-            variant = variants[0]
-            price = float(variant.get('price', 0)) / 100  # Shopify stores in cents
+            # Find the variant matching our target size
+            target_size = sku.size_ml
+            best_variant = None
+
+            for variant in variants:
+                vtitle = variant.get('title', '')
+                vsize = self._extract_size_from_text(vtitle)
+                if vsize and target_size and abs(vsize - target_size) < 1:
+                    best_variant = variant
+                    break
+
+            if not best_variant:
+                best_variant = variants[0]
+
+            # Shopify storefront JSON returns prices as strings like "149.00"
+            price = float(best_variant.get('price', '0'))
 
             # Extract size from variant title
-            size_ml = self._extract_size_from_text(variant.get('title', ''))
+            size_ml = self._extract_size_from_text(best_variant.get('title', ''))
 
-            in_stock = variant.get('available', False)
+            in_stock = best_variant.get('available', False)
 
             return ScrapedResult(
                 retailer="nichegallerie",
@@ -919,7 +948,7 @@ class SeeScentsScraper(RetailerScraper):
                 return None
 
             handle = match.group(1)
-            api_url = f"https://www.seescents.co.uk/products/{handle}.json"
+            api_url = f"https://seescents.com/products/{handle}.json"
 
             response = self.session.get(api_url, timeout=10)
             response.raise_for_status()
@@ -938,7 +967,7 @@ class SeeScentsScraper(RetailerScraper):
 
             # Try to match the target size from SKU
             best_variant = None
-            target_size = sku.size_variants[0] if sku.size_variants else None
+            target_size = sku.size_ml  # Use the actual target size, not the first variant
 
             for variant in variants:
                 vtitle = variant.get('title', '')
@@ -1020,7 +1049,10 @@ class PriceHunterEngine:
                 logger.info(f"Valid match from {retailer_name}: £{validated.price} ({validated.currency})")
 
                 # Calculate costs
-                if scrapers[retailer_name].ships_to_uk:
+                # UK retailers (GBP prices) already include VAT — don't double-charge
+                is_uk_domestic = validated.currency == "GBP"
+
+                if self.scrapers[retailer_name].ships_to_uk:
                     # Direct shipping available
                     shipping = self.shipping.get_shipping(retailer_name, validated.price, validated.currency)
 
@@ -1031,7 +1063,11 @@ class PriceHunterEngine:
                         converter = self.currency
                         price_gbp, exchange_rate = converter.to_gbp(validated.price, validated.currency)
 
-                    vat = (price_gbp + shipping) * 0.20
+                    # Only apply import VAT on non-UK purchases
+                    if is_uk_domestic:
+                        vat = 0.0  # VAT already included in GBP retail price
+                    else:
+                        vat = (price_gbp + shipping) * 0.20
                     total = price_gbp + shipping + vat
 
                     results.append(PriceOption(
