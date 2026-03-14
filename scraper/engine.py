@@ -536,7 +536,21 @@ class NotinoScraper(RetailerScraper):
                         if isinstance(offers, dict):
                             offers = [offers]
                         if len(offers) > 0:
-                            price = float(offers[0].get('price', 0))
+                            # Find the offer matching our target size
+                            target_size = sku.size_ml
+                            matched_offer = None
+                            for offer in offers:
+                                offer_text = offer.get('name', '') + offer.get('description', '') + offer.get('sku', '')
+                                osize = self._extract_size_from_text(offer_text)
+                                if osize and target_size and abs(osize - target_size) < 2:
+                                    matched_offer = offer
+                                    break
+                            if matched_offer:
+                                price = float(matched_offer.get('price', 0))
+                            else:
+                                # Fallback: take the most expensive (likely the largest)
+                                best = max(offers, key=lambda o: float(o.get('price', 0)))
+                                price = float(best.get('price', 0))
 
                     if 'name' in data and not product_title:
                         product_title = data['name']
@@ -578,75 +592,104 @@ class NotinoScraper(RetailerScraper):
 
 
 class NicheGallerieScraper(RetailerScraper):
-    """NicheGallerie scraper - Shopify JSON API"""
+    """NicheGallerie scraper - WooCommerce HTML parser.
+
+    IMPORTANT: NicheGallerie is WordPress/WooCommerce (Elementor), NOT Shopify.
+    URL pattern: /perfume/{slug}/ (not /products/{handle})
+    Prices are in GBP and extracted from WooCommerce structured data or HTML.
+    """
 
     def __init__(self):
         super().__init__(name="nichegallerie", ships_to_uk=True)
 
     def scrape_product(self, sku: ProductSKU) -> Optional[ScrapedResult]:
-        """Scrape product using Shopify JSON API"""
+        """Scrape product from NicheGallerie WooCommerce site"""
         url = sku.retailer_urls.get("nichegallerie")
         if not url:
             return None
 
         try:
-            # Convert URL to Shopify JSON API format
-            # Shopify URLs: /products/{handle}.json
             import re
-            match = re.search(r'/products/([^/?]+)', url)
-            if not match:
-                return None
 
-            handle = match.group(1)
-            api_url = f"https://nichegallerie.com/products/{handle}.json"
-
-            response = self.session.get(api_url, timeout=10)
+            response = self.session.get(url, timeout=15)
             response.raise_for_status()
-            data = response.json()
+            html = response.text
 
-            product = data.get('product', {})
-            if not product:
+            product_title = None
+            price = None
+            in_stock = True
+            size_ml = None
+
+            # Strategy 1: JSON-LD structured data (WooCommerce outputs this)
+            soup = BeautifulSoup(html, 'html.parser')
+            json_ld_tags = soup.find_all('script', {'type': 'application/ld+json'})
+            for tag in json_ld_tags:
+                try:
+                    data = json.loads(tag.string)
+                    if isinstance(data, list):
+                        data = data[0]
+                    if data.get('@type') == 'Product' or 'offers' in data:
+                        product_title = data.get('name', '')
+                        offers = data.get('offers', {})
+                        if isinstance(offers, list):
+                            # Multiple offers = multiple variants, find matching size
+                            for offer in offers:
+                                offer_desc = offer.get('name', '') + offer.get('description', '')
+                                osize = self._extract_size_from_text(offer_desc)
+                                if osize and sku.size_ml and abs(osize - sku.size_ml) < 2:
+                                    price = float(offer.get('price', 0))
+                                    break
+                            if not price and offers:
+                                price = float(offers[0].get('price', 0))
+                        else:
+                            price = float(offers.get('price', 0))
+                        in_stock = 'InStock' in str(offers.get('availability', ''))
+                        break
+                except (json.JSONDecodeError, ValueError, TypeError, KeyError):
+                    continue
+
+            # Strategy 2: WooCommerce price HTML elements
+            if not price or price == 0:
+                # WooCommerce uses <p class="price"> or <span class="woocommerce-Price-amount">
+                price_el = soup.find('p', class_='price')
+                if price_el:
+                    price_text = price_el.get_text()
+                    price_match = re.search(r'£([\d,.]+)', price_text)
+                    if price_match:
+                        price = float(price_match.group(1).replace(',', ''))
+
+            # Strategy 3: Regex fallback on raw HTML
+            if not price or price == 0:
+                price_match = re.search(r'£([\d,.]+)', html)
+                if price_match:
+                    price = float(price_match.group(1).replace(',', ''))
+
+            # Extract product title from page if not from JSON-LD
+            if not product_title:
+                title_tag = soup.find('h1')
+                if title_tag:
+                    product_title = title_tag.get_text(strip=True)
+
+            # Extract size from product title or URL
+            if not size_ml and product_title:
+                size_ml = self._extract_size_from_text(product_title)
+            if not size_ml:
+                size_ml = self._extract_size_from_text(url)
+
+            if not price or price == 0:
+                logger.warning(f"NicheGallerie: No price found for {sku.id} at {url}")
                 return None
-
-            product_title = product.get('title', '')
-
-            # Get the first variant (or find the right size)
-            variants = product.get('variants', [])
-            if not variants:
-                return None
-
-            # Find the variant matching our target size
-            target_size = sku.size_ml
-            best_variant = None
-
-            for variant in variants:
-                vtitle = variant.get('title', '')
-                vsize = self._extract_size_from_text(vtitle)
-                if vsize and target_size and abs(vsize - target_size) < 1:
-                    best_variant = variant
-                    break
-
-            if not best_variant:
-                best_variant = variants[0]
-
-            # Shopify storefront JSON returns prices as strings like "149.00"
-            price = float(best_variant.get('price', '0'))
-
-            # Extract size from variant title
-            size_ml = self._extract_size_from_text(best_variant.get('title', ''))
-
-            in_stock = best_variant.get('available', False)
 
             return ScrapedResult(
                 retailer="nichegallerie",
-                product_title=product_title,
+                product_title=product_title or '',
                 extracted_size_ml=size_ml,
                 price=price,
                 currency="GBP",
                 in_stock=in_stock,
                 url=url,
                 scraped_at=datetime.now(),
-                raw_html_snippet=json.dumps(product)[:500],
+                raw_html_snippet=html[:500],
             )
 
         except Exception as e:
@@ -771,7 +814,13 @@ class FragranceBuyScraper(RetailerScraper):
             price = float(best_variant.get('price', '0'))
             size_ml = self._extract_size_from_text(best_variant.get('title', ''))
 
-            in_stock = best_variant.get('available', False)
+            # FragranceBuy stock check: uses inventory_quantity + inventory_policy
+            # The 'available' field may be undefined on some variants
+            in_stock = best_variant.get('available', True)
+            inv_qty = best_variant.get('inventory_quantity')
+            inv_policy = best_variant.get('inventory_policy', '')
+            if inv_qty is not None:
+                in_stock = inv_qty > 0 or inv_policy == 'continue'
 
             return ScrapedResult(
                 retailer="fragrancebuy",
@@ -997,11 +1046,25 @@ class SeeScentsScraper(RetailerScraper):
                     break
 
             if not best_variant:
+                # SeeScents often uses "Default Title" for variant title
+                # In this case, size must be extracted from product title instead
                 best_variant = variants[0]
 
             price = float(best_variant.get('price', '0'))
+
+            # Extract size: try variant title first, fallback to product title
             size_ml = self._extract_size_from_text(best_variant.get('title', ''))
-            in_stock = best_variant.get('available', False)
+            if not size_ml or best_variant.get('title', '').lower().strip() in ('default title', 'default'):
+                # Variant title is useless (e.g. "Default Title"), extract from product title
+                size_ml = self._extract_size_from_text(product_title)
+
+            # Stock check: SeeScents may not have 'available' field on all variants
+            # Check inventory_quantity and inventory_policy as fallback
+            in_stock = best_variant.get('available', True)
+            inv_qty = best_variant.get('inventory_quantity')
+            inv_policy = best_variant.get('inventory_policy', '')
+            if inv_qty is not None:
+                in_stock = inv_qty > 0 or inv_policy == 'continue'
 
             return ScrapedResult(
                 retailer="seescents",

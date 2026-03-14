@@ -24,8 +24,8 @@
       ],
       "gender": "unisex",
       "retailer_urls": {
-        "notino": "https://www.notino.co.uk/parfums-de-marly/layton-eau-de-parfum-for-men/",
-        "nichegallerie": "https://nichegallerie.com/products/parfums-de-marly-layton",
+        "notino": "https://www.notino.co.uk/parfums-de-marly/layton-royal-essence-eau-de-parfum-unisex/",
+        "nichegallerie": "https://nichegallerie.com/perfume/parfums-de-marly-layton-eau-de-parfum-125ml/",
         "douglas_de": "https://www.douglas.de/de/p/00093098",
         "fragrancebuy": "https://fragrancebuy.ca/products/parfumsdemarlylayton-man",
         "maxaroma": "https://www.maxaroma.com/fragrance/niche-fragrances/parfums-de-marly-layton/pid/14225/2",
@@ -74,14 +74,14 @@
       ],
       "gender": "male",
       "retailer_urls": {
-        "notino": "https://www.notino.co.uk/parfums-de-marly/carlisle-eau-de-parfum/",
-        "nichegallerie": "https://nichegallerie.com/products/parfums-de-marly-carlisle",
+        "notino": "https://www.notino.co.uk/parfums-de-marly/carlisle-eau-de-parfum-unisex/",
+        "nichegallerie": "https://nichegallerie.com/perfume/parfums-de-marly-carlisle-edp-125ml/",
         "douglas_de": "https://www.douglas.de/de/p/00093099",
         "fragrancebuy": "https://fragrancebuy.ca/products/carlislemarly-man",
         "maxaroma": "https://www.maxaroma.com/fragrance/niche-fragrances/parfums-de-marly-carlisle/pid/14221/2",
         "jomashop": "https://www.jomashop.com/parfums-de-marly-unisex-carlisle-edp-spray-4-2-oz-fragrances-3700578519009.html",
         "fragrancenet": "https://www.fragrancenet.com/parfums-de-marly-carlisle-edp-125ml",
-        "seescents": "https://seescents.com/products/parfums-de-marly-carlisle"
+        "seescents": "https://seescents.com/products/parfums-de-marly-carlisle-125ml"
       },
       "notes": {
         "top": [
@@ -123,8 +123,8 @@
       ],
       "gender": "male",
       "retailer_urls": {
-        "notino": "https://www.notino.co.uk/creed/aventus-eau-de-parfum/",
-        "nichegallerie": "https://nichegallerie.com/products/creed-aventus",
+        "notino": "https://www.notino.co.uk/creed/aventus-eau-de-parfum-for-men/",
+        "nichegallerie": "https://nichegallerie.com/perfume/creed-aventus-edp-100ml/",
         "douglas_de": "https://www.douglas.de/de/p/creed-aventus",
         "fragrancebuy": "https://fragrancebuy.ca/products/creedaventus-man",
         "maxaroma": "https://www.maxaroma.com/creed/aventus-edp-100ml",
@@ -171,8 +171,8 @@
       ],
       "gender": "male",
       "retailer_urls": {
-        "notino": "https://www.notino.co.uk/creed/green-irish-tweed-eau-de-parfum/",
-        "nichegallerie": "https://nichegallerie.com/products/creed-green-irish-tweed",
+        "notino": "https://www.notino.co.uk/creed/green-irish-tweed-eau-de-parfum-for-men/",
+        "nichegallerie": "https://nichegallerie.com/perfume/creed-green-irish-tweed-edp-100ml/",
         "douglas_de": "https://www.douglas.de/de/p/green-irish-tweed",
         "fragrancebuy": "https://fragrancebuy.ca/products/creedgreenirish-man",
         "maxaroma": "https://www.maxaroma.com/creed/green-irish-tweed-edp-100ml",
@@ -218,8 +218,8 @@
       ],
       "gender": "unisex",
       "retailer_urls": {
-        "notino": "https://www.notino.co.uk/creed/silver-mountain-water-eau-de-parfum/",
-        "nichegallerie": "https://nichegallerie.com/products/creed-silver-mountain-water",
+        "notino": "https://www.notino.co.uk/creed/silver-mountain-water-eau-de-parfum-for-men/",
+        "nichegallerie": "https://nichegallerie.com/perfume/creed-silver-mountain-water-edp-100ml/",
         "douglas_de": "https://www.douglas.de/de/p/silver-mountain-water",
         "fragrancebuy": "https://fragrancebuy.ca/products/creedsilvermountain-man",
         "maxaroma": "https://www.maxaroma.com/creed/silver-mountain-water-edp-100ml",
@@ -263,14 +263,12 @@
       ],
       "gender": "male",
       "retailer_urls": {
-        "notino": "https://www.notino.co.uk/tom-ford/tuscan-leather-eau-de-parfum/",
-        "nichegallerie": "https://nichegallerie.com/products/tom-ford-tuscan-leather",
+        "nichegallerie": "https://nichegallerie.com/perfume/tom-ford-tuscan-leather-edp-100ml/",
         "douglas_de": "https://www.douglas.de/de/p/tuscan-leather-edp",
         "fragrancebuy": "https://fragrancebuy.ca/products/tomfordtuscanleather-man",
         "maxaroma": "https://www.maxaroma.com/tom-ford/tuscan-leather-edp-100ml",
         "jomashop": "https://www.jomashop.com/tom-ford-unisex-tuscan-leather-edp-spray-3-4-oz-fragrances-888066004459.html",
-        "fragrancenet": "https://www.fragrancenet.com/tom-ford-tuscan-leather-edp-100ml",
-        "seescents": "https://seescents.com/products/tom-ford-tuscan-leather"
+        "fragrancenet": "https://www.fragrancenet.com/tom-ford-tuscan-leather-edp-100ml"
       },
       "notes": {
         "top": [
@@ -309,14 +307,12 @@
       ],
       "gender": "unisex",
       "retailer_urls": {
-        "notino": "https://www.notino.co.uk/tom-ford/oud-wood-eau-de-parfum/",
-        "nichegallerie": "https://nichegallerie.com/products/tom-ford-oud-wood",
+        "nichegallerie": "https://nichegallerie.com/perfume/tom-ford-oud-wood-eau-de-parfum-100ml/",
         "douglas_de": "https://www.douglas.de/de/p/oud-wood-edp",
         "fragrancebuy": "https://fragrancebuy.ca/products/tomfordoudwood-man",
         "maxaroma": "https://www.maxaroma.com/tom-ford/oud-wood-edp-100ml",
-        "jomashop": "https://www.jomashop.com/tom-ford-unisex-oud-wood-edp-spray-3-4-oz-fragrances-888066024099.html",
-        "fragrancenet": "https://www.fragrancenet.com/tom-ford-oud-wood-edp-100ml",
-        "seescents": "https://seescents.com/products/tom-ford-oud-wood"
+        "jomashop": "https://www.jomashop.com/tom-ford-private-blend-oud-wood-eau-de-parfum-spray-100ml-3-4oz-888066004510.html",
+        "fragrancenet": "https://www.fragrancenet.com/tom-ford-oud-wood-edp-100ml"
       },
       "notes": {
         "top": [
@@ -354,14 +350,12 @@
       ],
       "gender": "unisex",
       "retailer_urls": {
-        "notino": "https://www.notino.co.uk/tom-ford/tobacco-vanille-eau-de-parfum/",
-        "nichegallerie": "https://nichegallerie.com/products/tom-ford-tobacco-vanille",
         "douglas_de": "https://www.douglas.de/de/p/tobacco-vanille-edp",
         "fragrancebuy": "https://fragrancebuy.ca/products/tomfordtobaccovanille-man",
         "maxaroma": "https://www.maxaroma.com/tom-ford/tobacco-vanille-edp-100ml",
         "jomashop": "https://www.jomashop.com/tom-ford-unisex-tobacco-vanille-edp-spray-3-4-oz-fragrances-888066004503.html",
         "fragrancenet": "https://www.fragrancenet.com/tom-ford-tobacco-vanille-edp-100ml",
-        "seescents": "https://seescents.com/products/tom-ford-tobacco-vanille"
+        "seescents": "https://seescents.com/products/tom-ford-tobacco-vanille-100ml-eau-de-parfum-black-friday"
       },
       "notes": {
         "top": [
@@ -400,8 +394,7 @@
       ],
       "gender": "unisex",
       "retailer_urls": {
-        "notino": "https://www.notino.co.uk/maison-francis-kurkdjian/baccarat-rouge-540-eau-de-parfum/",
-        "nichegallerie": "https://nichegallerie.com/products/maison-francis-kurkdjian-baccarat-rouge-540",
+        "nichegallerie": "https://nichegallerie.com/perfume/maison-francis-kurkdjian-baccarat-rouge-540-edp-70ml/",
         "douglas_de": "https://www.douglas.de/de/p/baccarat-rouge-540",
         "fragrancebuy": "https://fragrancebuy.ca/products/franciskurkdjian540baccaratrouge-man",
         "maxaroma": "https://www.maxaroma.com/maison-francis-kurkdjian/baccarat-rouge-540-edp-70ml",
@@ -443,14 +436,11 @@
       ],
       "gender": "unisex",
       "retailer_urls": {
-        "notino": "https://www.notino.co.uk/maison-francis-kurkdjian/grand-soir-eau-de-parfum/",
-        "nichegallerie": "https://nichegallerie.com/products/maison-francis-kurkdjian-grand-soir",
         "douglas_de": "https://www.douglas.de/de/p/grand-soir",
         "fragrancebuy": "https://fragrancebuy.ca/products/maison-francis-kurkdjian-grand-soir-70ml-edp",
         "maxaroma": "https://www.maxaroma.com/maison-francis-kurkdjian/grand-soir-edp-70ml",
-        "jomashop": "https://www.jomashop.com/maison-francis-kurkdjian-grand-soir-edp-70ml.html",
-        "fragrancenet": "https://www.fragrancenet.com/maison-francis-kurkdjian-grand-soir-edp-70ml",
-        "seescents": "https://seescents.com/products/maison-francis-kurkdjian-grand-soir"
+        "jomashop": "https://www.jomashop.com/maison-francis-kurkdjian-unisex-grand-soir-edp-2-4-oz-fragrances-3700559604212.html",
+        "fragrancenet": "https://www.fragrancenet.com/maison-francis-kurkdjian-grand-soir-edp-70ml"
       },
       "notes": {
         "top": [
@@ -489,8 +479,8 @@
       ],
       "gender": "male",
       "retailer_urls": {
-        "notino": "https://www.notino.co.uk/amouage/reflection-man-eau-de-parfum/",
-        "nichegallerie": "https://nichegallerie.com/products/amouage-reflection-man",
+        "notino": "https://www.notino.co.uk/amouage/reflection-eau-de-parfum-for-men/",
+        "nichegallerie": "https://nichegallerie.com/perfume/amouage-reflection-man-edp-100ml/",
         "douglas_de": "https://www.douglas.de/de/p/reflection-man",
         "fragrancebuy": "https://fragrancebuy.ca/products/amouagereflectioncologne-man",
         "maxaroma": "https://www.maxaroma.com/amouage/reflection-man-edp-100ml",
@@ -535,8 +525,8 @@
       ],
       "gender": "male",
       "retailer_urls": {
-        "notino": "https://www.notino.co.uk/amouage/interlude-man-eau-de-parfum/",
-        "nichegallerie": "https://nichegallerie.com/products/amouage-interlude-man",
+        "notino": "https://www.notino.co.uk/amouage/interlude-eau-de-parfum-for-men/",
+        "nichegallerie": "https://nichegallerie.com/perfume/amouage-interlude-man-edp-100ml/",
         "douglas_de": "https://www.douglas.de/de/p/interlude-man",
         "fragrancebuy": "https://fragrancebuy.ca/products/amouageinterlude-man",
         "maxaroma": "https://www.maxaroma.com/amouage/interlude-man-edp-100ml",
@@ -579,8 +569,8 @@
       ],
       "gender": "unisex",
       "retailer_urls": {
-        "notino": "https://www.notino.co.uk/initio/oud-for-greatness-eau-de-parfum/",
-        "nichegallerie": "https://nichegallerie.com/products/initio-oud-for-greatness",
+        "notino": "https://www.notino.co.uk/initio-parfums-prives/oud-for-greatness-eau-de-parfum-unisex/",
+        "nichegallerie": "https://nichegallerie.com/perfume/initio-parfums-prives-oud-for-greatness-edp-90ml/",
         "douglas_de": "https://www.douglas.de/de/p/oud-for-greatness",
         "fragrancebuy": "https://fragrancebuy.ca/products/initiooudforgreatness-man",
         "maxaroma": "https://www.maxaroma.com/initio/oud-for-greatness-edp-90ml",
@@ -622,14 +612,14 @@
       ],
       "gender": "unisex",
       "retailer_urls": {
-        "notino": "https://www.notino.co.uk/initio/side-effect-eau-de-parfum/",
-        "nichegallerie": "https://nichegallerie.com/products/initio-side-effect",
+        "notino": "https://www.notino.co.uk/initio-parfums-prives/side-effect-eau-de-parfum-unisex/",
+        "nichegallerie": "https://nichegallerie.com/perfume/initio-side-effect-edp-90ml/",
         "douglas_de": "https://www.douglas.de/de/p/side-effect",
         "fragrancebuy": "https://fragrancebuy.ca/products/initiosideeffect-man",
         "maxaroma": "https://www.maxaroma.com/initio/side-effect-edp-90ml",
         "jomashop": "https://www.jomashop.com/initio-unisex-the-carnal-blend-side-effect-edp-spray-3-oz-fragrances-3701415900073.html",
         "fragrancenet": "https://www.fragrancenet.com/initio-side-effect-edp-90ml",
-        "seescents": "https://seescents.com/products/initio-side-effect"
+        "seescents": "https://seescents.com/products/initio-side-effect-90ml"
       },
       "notes": {
         "top": [
@@ -667,14 +657,13 @@
       ],
       "gender": "unisex",
       "retailer_urls": {
-        "notino": "https://www.notino.co.uk/xerjoff/naxos-eau-de-parfum/",
-        "nichegallerie": "https://nichegallerie.com/products/xerjoff-naxos",
+        "notino": "https://www.notino.co.uk/xerjoff/xj-1861-naxos-eau-de-parfum-unisex/",
         "douglas_de": "https://www.douglas.de/de/p/naxos",
         "fragrancebuy": "https://fragrancebuy.ca/products/xerjoff1861naxos-man",
         "maxaroma": "https://www.maxaroma.com/xerjoff/naxos-edp-100ml",
-        "jomashop": "https://www.jomashop.com/xerjoff-naxos-edp-100ml.html",
+        "jomashop": "https://www.jomashop.com/xerjoff-unisex-1861-naxos-edp-spray-3-4-oz-fragrances-8033488155070.html",
         "fragrancenet": "https://www.fragrancenet.com/xerjoff-naxos-edp-100ml",
-        "seescents": "https://seescents.com/products/xerjoff-naxos"
+        "seescents": "https://seescents.com/products/xerjoff-naxos-100ml"
       },
       "notes": {
         "top": [
@@ -713,14 +702,13 @@
       ],
       "gender": "unisex",
       "retailer_urls": {
-        "notino": "https://www.notino.co.uk/xerjoff/erba-pura-eau-de-parfum/",
-        "nichegallerie": "https://nichegallerie.com/products/xerjoff-erba-pura",
+        "notino": "https://www.notino.co.uk/xerjoff/erba-pura-eau-de-parfum-unisex/",
+        "nichegallerie": "https://nichegallerie.com/perfume/xerjoff-erba-pura-edp-100ml/",
         "douglas_de": "https://www.douglas.de/de/p/erba-pura",
         "fragrancebuy": "https://fragrancebuy.ca/products/xerjofferbapura-man",
         "maxaroma": "https://www.maxaroma.com/xerjoff/erba-pura-edp-100ml",
-        "jomashop": "https://www.jomashop.com/xerjoff-erba-pura-edp-100ml.html",
-        "fragrancenet": "https://www.fragrancenet.com/xerjoff-erba-pura-edp-100ml",
-        "seescents": "https://seescents.com/products/xerjoff-erba-pura"
+        "jomashop": "https://www.jomashop.com/xerjoff-unisex-erba-pura-edp-spray-3-4-oz-fragrances-8033488156329.html",
+        "fragrancenet": "https://www.fragrancenet.com/xerjoff-erba-pura-edp-100ml"
       },
       "notes": {
         "top": [
@@ -759,12 +747,11 @@
       ],
       "gender": "unisex",
       "retailer_urls": {
-        "notino": "https://www.notino.co.uk/le-labo/santal-33-eau-de-parfum/",
-        "nichegallerie": "https://nichegallerie.com/products/le-labo-santal-33",
+        "nichegallerie": "https://nichegallerie.com/perfume/le-labo-santal-33-edp-100ml/",
         "douglas_de": "https://www.douglas.de/de/p/santal-33",
         "fragrancebuy": "https://fragrancebuy.ca/products/lelabosantal-man",
         "maxaroma": "https://www.maxaroma.com/le-labo/santal-33-edp-100ml",
-        "jomashop": "https://www.jomashop.com/le-labo-santal-33-edp-100ml.html",
+        "jomashop": "https://www.jomashop.com/le-labo-unisex-santal-33-edp-spray-3-4-oz-fragrances-842185115861.html",
         "fragrancenet": "https://www.fragrancenet.com/le-labo-santal-33-edp-100ml"
       },
       "notes": {
@@ -804,14 +791,13 @@
       ],
       "gender": "unisex",
       "retailer_urls": {
-        "notino": "https://www.notino.co.uk/byredo/mojave-ghost-eau-de-parfum/",
-        "nichegallerie": "https://nichegallerie.com/products/byredo-mojave-ghost",
+        "notino": "https://www.notino.co.uk/byredo/mojave-ghost-eau-de-parfum-unisex/",
+        "nichegallerie": "https://nichegallerie.com/perfume/byredo-mojave-ghost-edp-100ml/",
         "douglas_de": "https://www.douglas.de/de/p/mojave-ghost",
         "fragrancebuy": "https://fragrancebuy.ca/products/byredomojaveghost-man",
         "maxaroma": "https://www.maxaroma.com/byredo/mojave-ghost-edp-100ml",
-        "jomashop": "https://www.jomashop.com/byredo-mojave-ghost-edp-100ml.html",
-        "fragrancenet": "https://www.fragrancenet.com/byredo-mojave-ghost-edp-100ml",
-        "seescents": "https://seescents.com/products/byredo-mojave-ghost"
+        "jomashop": "https://www.jomashop.com/byredo-unisex-mojave-ghost-edp-spray-3-4-oz-fragrances-7340032860740.html",
+        "fragrancenet": "https://www.fragrancenet.com/byredo-mojave-ghost-edp-100ml"
       },
       "notes": {
         "top": [
@@ -849,14 +835,13 @@
       ],
       "gender": "male",
       "retailer_urls": {
-        "notino": "https://www.notino.co.uk/parfums-de-marly/pegasus-eau-de-parfum/",
-        "nichegallerie": "https://nichegallerie.com/products/parfums-de-marly-pegasus",
+        "notino": "https://www.notino.co.uk/parfums-de-marly/pegasus-royal-essence-eau-de-parfum-unisex/",
+        "nichegallerie": "https://nichegallerie.com/perfume/parfums-de-marly-pegasus-eau-de-parfum-125ml/",
         "douglas_de": "https://www.douglas.de/de/p/pegasus",
         "fragrancebuy": "https://fragrancebuy.ca/products/pegasusmarly-man",
         "maxaroma": "https://www.maxaroma.com/fragrance/niche-fragrances/parfums-de-marly-pegasus/pid/14226/2",
         "jomashop": "https://www.jomashop.com/parfums-de-marly-mens-pegasus-edp-spray-4-2-oz-fragrances-3700578506009.html",
-        "fragrancenet": "https://www.fragrancenet.com/parfums-de-marly-pegasus-edp-125ml",
-        "seescents": "https://seescents.com/products/parfums-de-marly-pegasus"
+        "fragrancenet": "https://www.fragrancenet.com/parfums-de-marly-pegasus-edp-125ml"
       },
       "notes": {
         "top": [
@@ -895,14 +880,14 @@
       ],
       "gender": "male",
       "retailer_urls": {
-        "notino": "https://www.notino.co.uk/parfums-de-marly/herod-eau-de-parfum/",
-        "nichegallerie": "https://nichegallerie.com/products/parfums-de-marly-herod",
+        "notino": "https://www.notino.co.uk/parfums-de-marly/herod-royal-essence-eau-de-parfum-for-men/",
+        "nichegallerie": "https://nichegallerie.com/perfume/parfums-de-marly-herod-edp-125ml/",
         "douglas_de": "https://www.douglas.de/de/p/herod",
         "fragrancebuy": "https://fragrancebuy.ca/products/herodmarly-man",
         "maxaroma": "https://www.maxaroma.com/fragrance/niche-fragrances/parfums-de-marly-herod/pid/14223/2",
         "jomashop": "https://www.jomashop.com/herod-by-parfums-de-marly-for-men-4-2-oz-edp-spray-3700578507006.html",
         "fragrancenet": "https://www.fragrancenet.com/parfums-de-marly-herod-edp-125ml",
-        "seescents": "https://seescents.com/products/parfums-de-marly-herod"
+        "seescents": "https://seescents.com/products/parfums-de-marly-herod-125ml"
       },
       "notes": {
         "top": [
