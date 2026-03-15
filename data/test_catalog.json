@@ -1,0 +1,20 @@
+{
+  "products": [
+    {
+      "id": "pdm-layton-125-edp",
+      "brand": "Parfums de Marly",
+      "name": "Layton",
+      "size_ml": 125,
+      "concentration": "EDP",
+      "popularity": 1
+    },
+    {
+      "id": "creed-aventus-100-edp",
+      "brand": "Creed",
+      "name": "Aventus",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "popularity": 2
+    }
+  ]
+}

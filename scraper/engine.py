@@ -1,5 +1,5 @@
 """
-PriceHunter Scraper v3 Engine - Production Grade
+Olfex Scraper v3 Engine - Production Grade
 ==================================================
 Complete rewrite with 98-99% price accuracy, multi-layer validation,
 retry logic, circuit breakers, and async support.
@@ -1220,7 +1220,7 @@ class RateLimiter:
 # ORCHESTRATOR ENGINE
 # ============================================================================
 
-class PriceHunterEngine:
+class OlfexEngine:
     """Main orchestration engine - coordinates scrapers, validation, and pricing"""
 
     def __init__(self, catalog: Dict[str, ProductSKU] = None):
@@ -1449,7 +1449,7 @@ if __name__ == "__main__":
     }
 
     # Create engine
-    engine = PriceHunterEngine(catalog=DEMO_CATALOG)
+    engine = OlfexEngine(catalog=DEMO_CATALOG)
 
     # Scan a product
     sku = DEMO_CATALOG["pdm-layton-125-edp"]

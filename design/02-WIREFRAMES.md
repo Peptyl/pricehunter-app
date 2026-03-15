@@ -1,4 +1,4 @@
-# PriceHunter Wireframes
+# Olfex Wireframes
 ## Version 1.0 — 5 Key Screens
 
 ---
@@ -672,7 +672,7 @@ When user taps "Share a deal":
 │  ┌───────────────────────────────┐  │
 │  │ [IMG] Creed Aventus           │  │
 │  │ £189.99 (was £295)            │  │
-│  │ I saved £105 with PriceHunter!│  │
+│  │ I saved £105 with Olfex!│  │
 │  └───────────────────────────────┘  │
 │                                     │
 │  [Copy Link] [More Options]         │
@@ -703,7 +703,7 @@ When user taps "Share a deal":
 │  ┌───────────────────────────────┐  │
 │  │        🎯                     │  │
 │  │                               │  │
-│  │   Welcome to PriceHunter!     │  │
+│  │   Welcome to Olfex!     │  │
 │  │                               │  │
 │  │   Start tracking deals to     │  │
 │  │   unlock achievements         │  │
@@ -738,4 +738,4 @@ When user taps "Share a deal":
 
 ---
 
-*Version 1.0 | VISION Agent | PriceHunter Wireframes*
+*Version 1.0 | VISION Agent | Olfex Wireframes*

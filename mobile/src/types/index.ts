@@ -1,4 +1,4 @@
-// Types for PriceHunter Mobile App
+// Types for Olfex Mobile App
 
 export interface Perfume {
   id: string;

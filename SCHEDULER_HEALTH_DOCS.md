@@ -1,4 +1,4 @@
-# PriceHunter Production Scheduler & Health Monitor
+# Olfex Production Scheduler & Health Monitor
 
 Two production-grade modules for managing automated price scanning and monitoring system health.
 
@@ -99,11 +99,11 @@ python health_monitor.py --diagnose jomashop
 
 ```python
 import asyncio
-from scraper.scheduler import PriceHunterScheduler
+from scraper.scheduler import OlfexScheduler
 from scraper.health_monitor import HealthMonitor, SelfHealer, ScanResult
 
 async def main():
-    scheduler = PriceHunterScheduler()
+    scheduler = OlfexScheduler()
     monitor = HealthMonitor()
     healer = SelfHealer(monitor)
 
@@ -173,7 +173,7 @@ Kubernetes CronJob:
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: pricehunter-scan-6am
+  name: olfex-scan-6am
 spec:
   schedule: "0 6 * * *"
   jobTemplate:
@@ -182,7 +182,7 @@ spec:
         spec:
           containers:
           - name: scheduler
-            image: pricehunter:latest
+            image: olfex:latest
             args: ["--run-now"]
 ```
 
@@ -210,4 +210,4 @@ python scraper/health_monitor.py --dashboard
 - Circuit breaker reset plan ready
 
 Created: March 15, 2026
-Part of PriceHunter Production Infrastructure
+Part of Olfex Production Infrastructure

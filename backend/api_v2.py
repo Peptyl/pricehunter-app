@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-PriceHunter V2 API - Extended endpoints for product search, pricing, deals & alerts
+Olfex V2 API - Extended endpoints for product search, pricing, deals & alerts
 Includes product catalog, retailer health, price history, and Fragrantica integration
 """
 

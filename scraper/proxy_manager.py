@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-PriceHunter Proxy Manager
+Olfex Proxy Manager
 Rotates proxies to avoid blocks on aggressive sites
 """
 
@@ -159,6 +159,6 @@ PRODUCTION_STRATEGY = """
 """
 
 if __name__ == '__main__':
-    print("PriceHunter Proxy Manager")
+    print("Olfex Proxy Manager")
     print("="*50)
     print(PRODUCTION_STRATEGY)

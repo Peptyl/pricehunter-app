@@ -1,4 +1,4 @@
-// PriceHunter Mobile App - Main Entry Point
+// Olfex Mobile App - Main Entry Point
 import React, { useEffect } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { Provider as ReduxProvider } from 'react-redux';

@@ -3,11 +3,11 @@ version: '3.8'
 services:
   postgres:
     image: postgres:15-alpine
-    container_name: pricehunter-postgres
+    container_name: olfex-postgres
     environment:
-      POSTGRES_USER: pricehunter
-      POSTGRES_PASSWORD: pricehunter123
-      POSTGRES_DB: pricehunter
+      POSTGRES_USER: olfex
+      POSTGRES_PASSWORD: olfex123
+      POSTGRES_DB: olfex
     ports:
       - "5432:5432"
     volumes:
@@ -16,7 +16,7 @@ services:
 
   redis:
     image: redis:7-alpine
-    container_name: pricehunter-redis
+    container_name: olfex-redis
     ports:
       - "6379:6379"
     volumes:

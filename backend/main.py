@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-PriceHunter Backend API - Full Integration
+Olfex Backend API - Full Integration
 FastAPI server with Firebase, Clerk Auth, and RevenueCat
 """
 
@@ -27,9 +27,9 @@ load_dotenv()
 
 # Initialize FastAPI
 app = FastAPI(
-    title="PriceHunter API",
+    title="Olfex API",
     version="2.0.0",
-    description="PriceHunter Backend with Firebase, Clerk & RevenueCat"
+    description="Olfex Backend with Firebase, Clerk & RevenueCat"
 )
 
 # CORS - configured for mobile app
@@ -56,9 +56,9 @@ REVENUECAT_PROJECT_ID = os.getenv('REVENUECAT_PROJECT_ID', 'proj_funIsfnYUqsOUzc
 # Database config
 DB_HOST = os.getenv('DB_HOST', 'localhost')
 DB_PORT = os.getenv('DB_PORT', '5432')
-DB_NAME = os.getenv('DB_NAME', 'pricehunter')
-DB_USER = os.getenv('DB_USER', 'pricehunter')
-DB_PASS = os.getenv('DB_PASS', 'pricehunter123')
+DB_NAME = os.getenv('DB_NAME', 'olfex')
+DB_USER = os.getenv('DB_USER', 'olfex')
+DB_PASS = os.getenv('DB_PASS', 'olfex123')
 
 REDIS_HOST = os.getenv('REDIS_HOST', 'localhost')
 REDIS_PORT = int(os.getenv('REDIS_PORT', '6379'))
@@ -251,7 +251,7 @@ async def verify_clerk_token(credentials: HTTPAuthorizationCredentials = Depends
     except Exception as e:
         # For sprint: allow development mode
         if os.getenv('DEV_MODE', 'false').lower() == 'true':
-            return {'user_id': 'dev_user', 'email': 'dev@pricehunter.app', 'valid': True}
+            return {'user_id': 'dev_user', 'email': 'dev@olfex.app', 'valid': True}
         raise HTTPException(status_code=401, detail=f"Invalid token: {str(e)}")
 
 async def get_current_user(auth: Dict[str, Any] = Depends(verify_clerk_token)) -> Dict[str, Any]:
@@ -416,7 +416,7 @@ def root():
     """API root"""
     init_firebase()
     return {
-        "name": "PriceHunter API",
+        "name": "Olfex API",
         "version": "2.0.0",
         "status": "operational",
         "integrations": {
@@ -871,7 +871,7 @@ if __name__ == '__main__':
     import uvicorn
     
     print("=" * 60)
-    print("🚀 PriceHunter API v2.0")
+    print("🚀 Olfex API v2.0")
     print("=" * 60)
     print("✅ Firebase: Lazy-loaded (set FIREBASE_SERVICE_ACCOUNT_JSON)")
     print("✅ Clerk Auth: Enabled")

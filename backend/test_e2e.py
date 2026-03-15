@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-PriceHunter Backend - End-to-End Test Script
+Olfex Backend - End-to-End Test Script
 Tests the full flow: Auth → Subscription → Deals Access
 """
 
@@ -28,7 +28,7 @@ def test_endpoint(name, method, path, expected_status=200, headers=None, data=No
 
 def main():
     print("=" * 60)
-    print("PriceHunter Backend - E2E Test Suite")
+    print("Olfex Backend - E2E Test Suite")
     print("=" * 60)
     print(f"Testing: {BASE_URL}")
     print()

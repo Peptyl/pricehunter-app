@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-PriceHunter Production Scheduler
+Olfex Production Scheduler
 =================================
 Runs automated price scans on a configurable schedule.
 Default: 2x/day (06:00 and 18:00 GMT)
@@ -228,7 +228,7 @@ class ScanQueue:
         return stats
 
 
-class PriceHunterScheduler:
+class OlfexScheduler:
     """Main scheduler that orchestrates scan cycles"""
 
     def __init__(self, config: Optional[Dict] = None):
@@ -438,7 +438,7 @@ class PriceHunterScheduler:
             return
 
         self.running = True
-        logger.info("Starting PriceHunter scheduler")
+        logger.info("Starting Olfex scheduler")
 
         # Register signal handlers
         for sig in (signal.SIGTERM, signal.SIGINT):
@@ -532,7 +532,7 @@ class PriceHunterScheduler:
 if __name__ == "__main__":
     import argparse
 
-    parser = argparse.ArgumentParser(description="PriceHunter Production Scheduler")
+    parser = argparse.ArgumentParser(description="Olfex Production Scheduler")
     parser.add_argument("--run-now", action="store_true", help="Run a scan cycle immediately")
     parser.add_argument("--start", action="store_true", help="Start the scheduler daemon")
     parser.add_argument("--catalog", default="data/product_catalog_expanded.json",
@@ -541,7 +541,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # Initialize scheduler
-    scheduler = PriceHunterScheduler()
+    scheduler = OlfexScheduler()
     if args.config:
         scheduler.load_config(args.config)
 

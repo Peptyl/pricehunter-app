@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-PriceHunter Backend API - PostgreSQL Version
+Olfex Backend API - PostgreSQL Version
 FastAPI server for price tracking and alerts
 """
 
@@ -15,7 +15,7 @@ import json
 import redis
 import os
 
-app = FastAPI(title="PriceHunter API", version="1.0.0")
+app = FastAPI(title="Olfex API", version="1.0.0")
 
 # CORS for mobile app
 app.add_middleware(
@@ -28,9 +28,9 @@ app.add_middleware(
 # Database configuration
 DB_HOST = os.getenv('DB_HOST', 'localhost')
 DB_PORT = os.getenv('DB_PORT', '5432')
-DB_NAME = os.getenv('DB_NAME', 'pricehunter')
-DB_USER = os.getenv('DB_USER', 'pricehunter')
-DB_PASS = os.getenv('DB_PASS', 'pricehunter123')
+DB_NAME = os.getenv('DB_NAME', 'olfex')
+DB_USER = os.getenv('DB_USER', 'olfex')
+DB_PASS = os.getenv('DB_PASS', 'olfex123')
 
 REDIS_HOST = os.getenv('REDIS_HOST', 'localhost')
 REDIS_PORT = int(os.getenv('REDIS_PORT', '6379'))
@@ -143,7 +143,7 @@ def get_perfumes():
             return json.loads(cached)
     
     # Load from file
-    with open('/home/peptyl/.openclaw/workspace/pricehunter/data/perfumes.json') as f:
+    with open('/home/peptyl/.openclaw/workspace/olfex/data/perfumes.json') as f:
         data = json.load(f)
     
     # Cache for 5 minutes
@@ -497,7 +497,7 @@ def get_stats():
 
 if __name__ == '__main__':
     import uvicorn
-    print("🚀 Starting PriceHunter API...")
+    print("🚀 Starting Olfex API...")
     print("📊 PostgreSQL + Redis Enabled")
     print("🔧 Endpoints:")
     print("  GET  /api/perfumes")

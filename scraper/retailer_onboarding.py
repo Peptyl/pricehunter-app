@@ -2,7 +2,7 @@
 """
 Retailer Onboarding Pipeline
 ==============================
-Automates the process of adding new retailers to PriceHunter:
+Automates the process of adding new retailers to Olfex:
 1. Detect site platform (Shopify, WooCommerce, custom SSR, SPA)
 2. Test extraction methods (JSON-LD, Shopify API, HTML selectors, Playwright)
 3. Validate against known products
@@ -767,7 +767,7 @@ class RetailerOnboarder:
 async def main():
     """CLI entry point."""
     parser = argparse.ArgumentParser(
-        description="Retailer Onboarding Pipeline for PriceHunter"
+        description="Retailer Onboarding Pipeline for Olfex"
     )
     parser.add_argument(
         "--domain",

@@ -1,4 +1,4 @@
-// RTK Query API Slice for PriceHunter
+// RTK Query API Slice for Olfex
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { API_BASE_URL } from './client';
 import type {
@@ -11,8 +11,8 @@ import type {
 } from '../types';
 
 // Define the API slice
-export const priceHunterApi = createApi({
-  reducerPath: 'priceHunterApi',
+export const olfexApi = createApi({
+  reducerPath: 'olfexApi',
   baseQuery: fetchBaseQuery({
     baseUrl: API_BASE_URL,
     prepareHeaders: (headers) => {
@@ -97,4 +97,4 @@ export const {
   useGetRetailersQuery,
   useLazyGetDealsQuery,
   useLazyGetPerfumesQuery,
-} = priceHunterApi;
+} = olfexApi;

@@ -90,7 +90,7 @@ export const PaywallScreen: React.FC = () => {
           </View>
           <Text style={styles.proTitle}>You're a Pro Member!</Text>
           <Text style={styles.proSubtitle}>
-            Thanks for supporting PriceHunter. You have access to all premium features.
+            Thanks for supporting Olfex. You have access to all premium features.
           </Text>
           <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
             <Text style={styles.backButtonText}>Back to App</Text>
@@ -115,7 +115,7 @@ export const PaywallScreen: React.FC = () => {
             <Ionicons name="flame" size={48} color={theme.colors.primary} />
           </View>
           <Text style={styles.title}>Upgrade to Pro</Text>
-          <Text style={styles.subtitle}>Unlock the full power of PriceHunter</Text>
+          <Text style={styles.subtitle}>Unlock the full power of Olfex</Text>
         </View>
 
         {/* Features */}

@@ -1,4 +1,4 @@
-# PriceHunter - AGGRESSIVE RETAILER EXPANSION
+# Olfex - AGGRESSIVE RETAILER EXPANSION
 ## Complete: Sunday, Feb 22, 2026
 
 ---

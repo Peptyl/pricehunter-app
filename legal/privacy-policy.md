@@ -3,7 +3,7 @@
 **Effective Date:** February 23, 2026  
 **Last Updated:** February 23, 2026
 
-PriceHunter ("we", "us", or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and share your information when you use our mobile application and services.
+Olfex ("we", "us", or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and share your information when you use our mobile application and services.
 
 ## 1. What Data We Collect
 
@@ -52,7 +52,7 @@ PriceHunter ("we", "us", or "our") is committed to protecting your privacy. This
 
 ## 3. Third-Party Services
 
-We use trusted third-party services to operate PriceHunter:
+We use trusted third-party services to operate Olfex:
 
 ### Firebase (Google)
 - **Purpose:** Authentication, database, cloud functions, analytics
@@ -98,7 +98,7 @@ We use trusted third-party services to operate PriceHunter:
 - **Right to Non-Discrimination:** Equal service regardless of privacy choices
 
 ### Exercising Your Rights
-To exercise any of these rights, contact us at privacy@pricehunter.app. We will respond within 30 days.
+To exercise any of these rights, contact us at privacy@olfex.app. We will respond within 30 days.
 
 ## 6. Data Retention
 
@@ -109,7 +109,7 @@ To exercise any of these rights, contact us at privacy@pricehunter.app. We will 
 
 ## 7. Children's Privacy
 
-PriceHunter is not intended for users under 16 years of age. We do not knowingly collect data from children under 16. If you believe we have collected data from a child, contact us immediately.
+Olfex is not intended for users under 16 years of age. We do not knowingly collect data from children under 16. If you believe we have collected data from a child, contact us immediately.
 
 ## 8. International Data Transfers
 
@@ -123,12 +123,12 @@ We may update this Privacy Policy periodically. We will notify you of significan
 
 For privacy-related inquiries, data requests, or concerns:
 
-**Email:** privacy@pricehunter.app  
+**Email:** privacy@olfex.app  
 **Postal Address:**  
-PriceHunter Privacy Team  
+Olfex Privacy Team  
 London, United Kingdom
 
-**Data Protection Officer:** dpo@pricehunter.app
+**Data Protection Officer:** dpo@olfex.app
 
 ---
 

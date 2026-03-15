@@ -1,4 +1,4 @@
-# PriceHunter Mobile App
+# Olfex Mobile App
 
 React Native mobile app for niche perfume deal hunting. Built with Expo, React Navigation, and Redux Toolkit.
 

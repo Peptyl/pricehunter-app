@@ -1,4 +1,4 @@
-# PriceHunter — Live Price Validation Report
+# Olfex — Live Price Validation Report
 
 **Date:** 14 March 2026
 **Method:** Browser-based validation using Chrome JavaScript fetch() against live retailer sites

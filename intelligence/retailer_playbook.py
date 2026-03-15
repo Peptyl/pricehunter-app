@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-PriceHunter Retailer Intelligence Playbook
+Olfex Retailer Intelligence Playbook
 ============================================
 Encodes ALL lessons learned from live browser validation of 8 retailers × 20 products.
 Used to auto-detect site types, predict scraper strategy, and reduce onboarding failures.
@@ -867,7 +867,7 @@ FORWARDING_SERVICES = [
 if __name__ == "__main__":
     # Print summary of intelligence database
     print("=" * 60)
-    print("PRICEHUNTER RETAILER INTELLIGENCE PLAYBOOK")
+    print("OLFEX RETAILER INTELLIGENCE PLAYBOOK")
     print("=" * 60)
 
     print(f"\nSite Archetypes: {len(SiteArchetype)}")

@@ -1,4 +1,4 @@
-# PriceHunter Build Plan — 100K Downloads Target
+# Olfex Build Plan — 100K Downloads Target
 
 ## Mission
 Build a world-class fragrance price tracking app with exceptional UI/UX that achieves 100,000 downloads in Year 1.

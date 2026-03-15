@@ -1,4 +1,4 @@
-# PriceHunter - Intelligent Freemium Launch Strategy
+# Olfex - Intelligent Freemium Launch Strategy
 ## Complete Monetization & UX Plan
 
 ---
@@ -199,7 +199,7 @@
 ## 📧 EMAIL MARKETING SEQUENCE
 
 ### Day 1: Welcome (Free)
-Subject: "Welcome to PriceHunter 🎯"
+Subject: "Welcome to Olfex 🎯"
 - 3 best current deals
 - "Upgrade for instant alerts"
 

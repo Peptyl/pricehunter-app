@@ -1,6 +1,6 @@
 #!/usrusr/bin/env python3
 """
-PriceHunter Intelligent Features
+Olfex Intelligent Features
 AI-powered deal prediction and personalization
 """
 
@@ -16,7 +16,7 @@ class AIDealPredictor:
     Predicts when prices will drop based on historical patterns
     """
     
-    def __init__(self, db_path='pricehunter.db'):
+    def __init__(self, db_path='olfex.db'):
         self.db_path = db_path
     
     def predict_price_drop(self, perfume_id: str, retailer: str) -> Dict:
@@ -119,7 +119,7 @@ class PersonalizedRecommender:
     Scent Match - Personalized deal recommendations
     """
     
-    def __init__(self, db_path='pricehunter.db'):
+    def __init__(self, db_path='olfex.db'):
         self.db_path = db_path
         
         # Fragrance similarity matrix (simplified)
@@ -336,7 +336,7 @@ class MarketSentimentAnalyzer:
 
 if __name__ == '__main__':
     # Test AI features
-    print("🤖 PriceHunter Intelligence System")
+    print("🤖 Olfex Intelligence System")
     print("="*50)
     
     # Test deal predictor

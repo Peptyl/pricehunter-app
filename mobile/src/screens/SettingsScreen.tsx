@@ -116,7 +116,7 @@ export const SettingsScreen: React.FC = () => {
 
         {/* Version */}
         <View style={styles.versionContainer}>
-          <Text style={styles.versionText}>PriceHunter v1.0.0</Text>
+          <Text style={styles.versionText}>Olfex v1.0.0</Text>
           <Text style={styles.buildText}>Build 2024.02.23</Text>
         </View>
       </ScrollView>

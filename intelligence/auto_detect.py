@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-PriceHunter Auto-Detection Module
+Olfex Auto-Detection Module
 ===================================
 Automatically detects a new retailer's site type, URL patterns, and optimal
 scraping strategy. Run this BEFORE writing any new scraper code.

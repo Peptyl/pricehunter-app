@@ -1,4 +1,4 @@
-# PriceHunter Launch Checklist
+# Olfex Launch Checklist
 
 **Goal:** Submit to App Store and Play Store within 48 hours
 

@@ -1,15 +1,15 @@
-# PriceHunter
+# Olfex
 
 **Never overpay for niche perfumes again.**
 
-PriceHunter tracks fragrance prices across 10+ global retailers and alerts you when prices drop. Built with a v2 scraper engine achieving 98-99% accuracy across a curated top 20 niche fragrance catalog.
+Olfex tracks fragrance prices across 10+ global retailers and alerts you when prices drop. Built with a v2 scraper engine achieving 98-99% accuracy across a curated top 20 niche fragrance catalog.
 
 ## 🚀 Quick Start
 
 ```bash
 # Clone
-git clone https://github.com/Peptyl/pricehunter-app.git
-cd pricehunter-app
+git clone https://github.com/Peptyl/olfex-app.git
+cd olfex-app
 
 # Setup environment
 cp .env.example .env
@@ -121,9 +121,9 @@ DEV_MODE=false
 # Database
 DB_HOST=localhost
 DB_PORT=5432
-DB_NAME=pricehunter
-DB_USER=pricehunter
-DB_PASS=pricehunter123
+DB_NAME=olfex
+DB_USER=olfex
+DB_PASS=olfex123
 
 # Cache
 REDIS_HOST=localhost
@@ -188,10 +188,10 @@ MIT © Peptyl Ltd
 
 ## 🔗 Links
 
-- Website: https://pricehunter.app
-- Support: support@pricehunter.app
-- Twitter: @PriceHunterApp
-- GitHub: https://github.com/Peptyl/pricehunter-app
+- Website: https://olfex.app
+- Support: support@olfex.app
+- Twitter: @OlfexApp
+- GitHub: https://github.com/Peptyl/olfex-app
 
 ---
 

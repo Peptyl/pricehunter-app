@@ -8,7 +8,7 @@ Three main components:
 2. RetailerVerifier - Checks if a retailer is legitimate
 3. RetailerDiscoveryAgent - Finds new retailers automatically
 
-This system enables PriceHunter to:
+This system enables Olfex to:
 - Dynamically discover and verify new fragrance retailers
 - Automatically score trust based on multi-factor analysis
 - Identify and rank buying routes by total landed cost
@@ -181,7 +181,7 @@ class CountryRoute:
 
 class RetailerRegistry:
     """
-    Master database of all retailers PriceHunter knows about.
+    Master database of all retailers Olfex knows about.
 
     Handles CRUD operations and ranking logic.
     """
@@ -189,7 +189,7 @@ class RetailerRegistry:
     def __init__(self, registry_path: str = None):
         """Initialize registry from JSON file"""
         if registry_path is None:
-            registry_path = "/sessions/intelligent-bold-ptolemy/pricehunter-app/data/retailer_registry.json"
+            registry_path = "/sessions/intelligent-bold-ptolemy/olfex-app/data/retailer_registry.json"
 
         self.registry_path = Path(registry_path)
         self.data = {}

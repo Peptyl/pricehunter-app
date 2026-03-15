@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-PriceHunter Health Monitor
+Olfex Health Monitor
 ===========================
 Tracks scraper health metrics and triggers self-healing when issues detected.
 
@@ -632,7 +632,7 @@ class SelfHealer:
 if __name__ == "__main__":
     import argparse
 
-    parser = argparse.ArgumentParser(description="PriceHunter Health Monitor")
+    parser = argparse.ArgumentParser(description="Olfex Health Monitor")
     parser.add_argument("--dashboard", action="store_true", help="Show health dashboard")
     parser.add_argument("--diagnose", type=str, help="Run diagnostics on a retailer")
     parser.add_argument("--anomalies", action="store_true", help="Show recent anomalies")

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-PriceHunter Live Price Validation Test
+Olfex Live Price Validation Test
 ========================================
 Run this on YOUR machine (not sandbox) to validate real scraping.
 
@@ -27,7 +27,7 @@ from collections import defaultdict
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from scraper.engine import (
-    ProductSKU, PriceHunterEngine, MatchValidator, PlaywrightScraper
+    ProductSKU, OlfexEngine, MatchValidator, PlaywrightScraper
 )
 
 
@@ -56,14 +56,14 @@ def load_catalog():
 
 
 def main():
-    parser = argparse.ArgumentParser(description="PriceHunter Live Price Validation")
+    parser = argparse.ArgumentParser(description="Olfex Live Price Validation")
     parser.add_argument("--full", action="store_true", help="Test all 20 products")
     parser.add_argument("--retailer", type=str, help="Test only this retailer")
     parser.add_argument("--product", type=str, help="Test only this product ID")
     args = parser.parse_args()
 
     products = load_catalog()
-    engine = PriceHunterEngine()
+    engine = OlfexEngine()
 
     # Filter products
     if args.product:
@@ -82,7 +82,7 @@ def main():
         engine.scrapers = {args.retailer: engine.scrapers[args.retailer]}
 
     print("=" * 90)
-    print("PRICEHUNTER LIVE PRICE VALIDATION")
+    print("OLFEX LIVE PRICE VALIDATION")
     print(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"Products: {len(products)}")
     print(f"Retailers: {list(engine.scrapers.keys())}")

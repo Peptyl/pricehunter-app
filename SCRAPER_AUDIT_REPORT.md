@@ -1,4 +1,4 @@
-# PriceHunter Scraper Audit Report
+# Olfex Scraper Audit Report
 **Date:** 2026-03-14
 **Auditor:** CTO (Claude)
 **Scope:** All 8 scrapers × 20 products — code review + URL verification

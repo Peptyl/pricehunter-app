@@ -1,11 +1,11 @@
-# PriceHunter Backend - Deployment Guide
+# Olfex Backend - Deployment Guide
 
 ## Overview
 FastAPI backend with Firebase, Clerk authentication, and RevenueCat subscriptions.
 
 ## Quick Deploy to Render
 
-1. **Fork/Clone the repo**: https://github.com/Peptyl/pricehunter-app
+1. **Fork/Clone the repo**: https://github.com/Peptyl/olfex-app
 
 2. **Click Deploy to Render**:
    [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)

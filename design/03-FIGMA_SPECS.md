@@ -1,4 +1,4 @@
-# PriceHunter Figma-Ready Specifications
+# Olfex Figma-Ready Specifications
 ## Complete Design Specs for Development Handoff
 
 ---
@@ -84,7 +84,7 @@ Visual:
 ### Figma Variables Setup
 
 ```
-Collection: PriceHunter Colors
+Collection: Olfex Colors
 Mode: Dark (default)
 
 Primitives:
@@ -725,4 +725,4 @@ Examples:
 
 ---
 
-*Version 1.0 | VISION Agent | Figma Specifications for PriceHunter*
+*Version 1.0 | VISION Agent | Figma Specifications for Olfex*

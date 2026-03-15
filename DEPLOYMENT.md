@@ -1,6 +1,6 @@
 # Deployment Guide
 
-**Deploy PriceHunter backend and mobile apps**
+**Deploy Olfex backend and mobile apps**
 
 ## Prerequisites
 
@@ -54,7 +54,7 @@ cd mobile
 npm install
 
 # Configure app.json with your bundle ID
-# "bundleIdentifier": "com.peptyl.pricehunter"
+# "bundleIdentifier": "com.peptyl.olfex"
 
 # Build for production
 expo build:ios
@@ -75,7 +75,7 @@ cd mobile
 npm install
 
 # Configure app.json with your package name
-# "package": "com.peptyl.pricehunter"
+# "package": "com.peptyl.olfex"
 
 # Build for production
 expo build:android

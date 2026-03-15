@@ -3,13 +3,13 @@
 **Effective Date:** February 23, 2026  
 **Last Updated:** February 23, 2026
 
-Please read these Terms of Service ("Terms") carefully before using the PriceHunter mobile application and website (collectively, the "Service") operated by PriceHunter ("we", "us", or "our").
+Please read these Terms of Service ("Terms") carefully before using the Olfex mobile application and website (collectively, the "Service") operated by Olfex ("we", "us", or "our").
 
 By accessing or using the Service, you agree to be bound by these Terms. If you disagree with any part of the Terms, you may not access the Service.
 
 ## 1. Description of Service
 
-PriceHunter is a price tracking application designed specifically for fragrance enthusiasts. Our Service provides:
+Olfex is a price tracking application designed specifically for fragrance enthusiasts. Our Service provides:
 
 - **Price Monitoring:** Track product prices across multiple retailers
 - **Deal Alerts:** Notifications when prices drop on tracked items
@@ -24,14 +24,14 @@ PriceHunter is a price tracking application designed specifically for fragrance 
 
 ## 2. Affiliate Disclosure
 
-**Important:** PriceHunter participates in affiliate marketing programs.
+**Important:** Olfex participates in affiliate marketing programs.
 
 - We earn commission when you click on retailer links and make purchases
 - This does not affect the price you pay for products
 - Our price tracking and recommendations remain unbiased
 - Affiliate relationships help fund the free version of our Service
 
-By using our links to make purchases, you support PriceHunter at no additional cost to you.
+By using our links to make purchases, you support Olfex at no additional cost to you.
 
 ## 3. User Accounts
 
@@ -64,7 +64,7 @@ You agree NOT to:
 You may NOT:
 - Use bots, spiders, scrapers, or other automated means to access our Service
 - Copy, reproduce, or distribute our aggregated price data
-- Create competing services using data obtained from PriceHunter
+- Create competing services using data obtained from Olfex
 - Use our data for commercial price comparison websites without written consent
 
 Violations may result in immediate account termination and legal action.
@@ -72,7 +72,7 @@ Violations may result in immediate account termination and legal action.
 ## 5. Intellectual Property
 
 ### Our Content
-- All content, features, and functionality are owned by PriceHunter
+- All content, features, and functionality are owned by Olfex
 - This includes but is not limited to: price data aggregations, app design, logos, and software
 - You may not reproduce, distribute, or create derivative works without permission
 
@@ -112,7 +112,7 @@ TO THE MAXIMUM EXTENT PERMITTED BY LAW:
 
 ## 9. Indemnification
 
-You agree to indemnify and hold harmless PriceHunter and its officers, directors, employees, and agents from any claims arising from:
+You agree to indemnify and hold harmless Olfex and its officers, directors, employees, and agents from any claims arising from:
 - Your use of the Service
 - Your violation of these Terms
 - Your violation of any third-party rights
@@ -157,17 +157,17 @@ If any provision of these Terms is held invalid or unenforceable, the remaining 
 
 ## 14. Entire Agreement
 
-These Terms constitute the entire agreement between you and PriceHunter regarding the Service and supersede all prior agreements.
+These Terms constitute the entire agreement between you and Olfex regarding the Service and supersede all prior agreements.
 
 ## 15. Contact Information
 
 For questions about these Terms:
 
-**Email:** legal@pricehunter.app  
+**Email:** legal@olfex.app  
 **Postal Address:**  
-PriceHunter Legal Team  
+Olfex Legal Team  
 London, United Kingdom
 
 ---
 
-*By using PriceHunter, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.*
+*By using Olfex, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.*

@@ -1,5 +1,5 @@
 """
-PriceHunter Live Scraper Audit
+Olfex Live Scraper Audit
 ================================
 Tests every scraper against every product in the catalog.
 Reports: what works, what's broken, what's missing, accuracy issues.
@@ -217,7 +217,7 @@ def test_single_scraper(scraper, sku: ProductSKU, retailer_key: str, validator: 
 
 def run_audit():
     print("=" * 80)
-    print("PRICEHUNTER LIVE SCRAPER AUDIT")
+    print("OLFEX LIVE SCRAPER AUDIT")
     print(f"Started: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("=" * 80)
 

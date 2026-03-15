@@ -216,7 +216,7 @@ export const SignUpScreen: React.FC = () => {
               <Ionicons name="person-add" size={48} color={theme.colors.primary} />
             </View>
             <Text style={styles.title}>Create Account</Text>
-            <Text style={styles.subtitle}>Join PriceHunter and start saving</Text>
+            <Text style={styles.subtitle}>Join Olfex and start saving</Text>
           </View>
 
           {/* Form */}

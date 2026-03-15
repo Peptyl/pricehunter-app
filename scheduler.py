@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-PriceHunter Scheduler
+Olfex Scheduler
 Runs price scans twice daily at 12:00 and 18:00 GMT
 """
 
@@ -8,15 +8,15 @@ import schedule
 import time
 import logging
 from datetime import datetime
-from scraper.engine import PriceHunterScraper
+from scraper.engine import OlfexEngine
 import json
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-class PriceHunterScheduler:
+class OlfexScheduler:
     def __init__(self):
-        self.scraper = PriceHunterScraper()
+        self.scraper = OlfexEngine()
         self.running = False
         
     def run_price_scan(self):
@@ -26,7 +26,7 @@ class PriceHunterScheduler:
         logger.info("="*60)
         
         # Load perfumes
-        with open('/home/peptyl/.openclaw/workspace/pricehunter/data/perfumes.json') as f:
+        with open('/home/peptyl/.openclaw/workspace/olfex/data/perfumes.json') as f:
             data = json.load(f)
         
         perfumes = data['top_10_niche_perfumes']
@@ -35,7 +35,7 @@ class PriceHunterScheduler:
         results = self.scraper.scan_all(perfumes)
         
         # Save results
-        with open('/home/peptyl/.openclaw/workspace/pricehunter/data/latest_scan.json', 'w') as f:
+        with open('/home/peptyl/.openclaw/workspace/olfex/data/latest_scan.json', 'w') as f:
             json.dump(results, f, indent=2)
         
         logger.info(f"Scan complete. Deals found: {results['deals_found']}")
@@ -82,7 +82,7 @@ class PriceHunterScheduler:
 if __name__ == '__main__':
     import sys
     
-    scheduler = PriceHunterScheduler()
+    scheduler = OlfexScheduler()
     
     if len(sys.argv) > 1 and sys.argv[1] == '--once':
         # Run once now
@@ -100,7 +100,7 @@ if __name__ == '__main__':
             print(f"   Save £{deal['savings']:.2f}")
     else:
         # Run scheduler
-        print("Starting PriceHunter scheduler...")
+        print("Starting Olfex scheduler...")
         print("Scans at 12:00 and 18:00 GMT")
         print("Press Ctrl+C to stop")
         scheduler.schedule_daily()

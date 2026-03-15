@@ -1,4 +1,4 @@
-# PriceHunter Build Status
+# Olfex Build Status
 
 **Last Updated:** 2026-02-23 22:15  
 **Phase:** Phase 1 (Critical Integration)  

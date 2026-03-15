@@ -1,11 +1,11 @@
-# PriceHunter Design System
+# Olfex Design System
 ## Version 1.0 — 100K Download Edition
 
 ---
 
 ## 🎨 Philosophy
 
-PriceHunter exists at the intersection of **luxury** and **savvy**. Our users love Creed, Le Labo, and Tom Ford—but hate paying full price. The design must feel like a premium shopping experience while delivering dopamine hits through deal discovery.
+Olfex exists at the intersection of **luxury** and **savvy**. Our users love Creed, Le Labo, and Tom Ford—but hate paying full price. The design must feel like a premium shopping experience while delivering dopamine hits through deal discovery.
 
 ### Core Principles
 1. **Instant Luxury** — Dark mode first, gold accents, premium feel in 3 seconds
@@ -397,7 +397,7 @@ Sequence:
 
 ## 🌓 Dark Mode (Default)
 
-PriceHunter is **dark mode first**. The luxury aesthetic demands it.
+Olfex is **dark mode first**. The luxury aesthetic demands it.
 
 ### Why Dark Default?
 1. Premium feel (Creed/Tom Ford vibes)
@@ -487,4 +487,4 @@ If implemented:
 
 ---
 
-*Version 1.0 | VISION Agent | PriceHunter Design System*
+*Version 1.0 | VISION Agent | Olfex Design System*

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-PriceHunter Scraper Service
+Olfex Scraper Service
 Integration layer between FastAPI backend and v2 scraper engine.
 Handles product catalog, caching, and price discovery.
 """
@@ -84,8 +84,8 @@ class ScraperService:
         """Lazy-load scraper engine."""
         if self.scraper is None:
             try:
-                from scraper.engine import PriceHunterScraper
-                self.scraper = PriceHunterScraper()
+                from scraper.engine import OlfexEngine
+                self.scraper = OlfexEngine()
                 logger.info("✅ Scraper engine loaded")
             except Exception as e:
                 logger.error(f"Failed to load scraper engine: {e}")
@@ -94,7 +94,7 @@ class ScraperService:
 
     def _get_cache_key(self, key: str) -> str:
         """Generate Redis cache key."""
-        return f"pricehunter:{key}"
+        return f"olfex:{key}"
 
     def _get_cached(self, key: str) -> Optional[Dict]:
         """Get value from Redis cache."""
@@ -388,13 +388,13 @@ class ScraperService:
         if self.redis_client:
             if product_ids:
                 for product_id in product_ids:
-                    keys_to_delete = self.redis_client.keys(f"pricehunter:prices:{product_id}")
+                    keys_to_delete = self.redis_client.keys(f"olfex:prices:{product_id}")
                     if keys_to_delete:
                         self.redis_client.delete(*keys_to_delete)
             else:
                 # Clear all deal and price caches
-                keys = self.redis_client.keys("pricehunter:deals:*") + \
-                       self.redis_client.keys("pricehunter:prices:*")
+                keys = self.redis_client.keys("olfex:deals:*") + \
+                       self.redis_client.keys("olfex:prices:*")
                 if keys:
                     self.redis_client.delete(*keys)
 

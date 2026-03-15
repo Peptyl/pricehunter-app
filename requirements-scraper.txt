@@ -1,0 +1,11 @@
+# Olfex Scraper-Specific Requirements
+# These are in addition to requirements.txt
+
+# Browser automation with headless Chromium
+playwright>=1.40.0
+
+# Async utilities
+anyio>=4.0.0
+
+# Additional scraping utilities
+lxml>=4.9.0

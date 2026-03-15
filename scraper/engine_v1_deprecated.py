@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-PriceHunter Scraper Engine
+Olfex Scraper Engine
 Scrapes perfume prices from major EU retailers
 """
 
@@ -360,7 +360,7 @@ class MaxAromaScraper:
             return None
 
 
-class PriceHunterScraper:
+class OlfexEngine:
     """Main scraper coordinator"""
     
     def __init__(self):
@@ -464,10 +464,10 @@ class PriceHunterScraper:
 
 if __name__ == '__main__':
     # Test
-    hunter = PriceHunterScraper()
+    hunter = OlfexEngine()
     
     # Load perfume database
-    with open('/home/peptyl/.openclaw/workspace/pricehunter/data/perfumes.json') as f:
+    with open('/home/peptyl/.openclaw/workspace/olfex/data/perfumes.json') as f:
         data = json.load(f)
     
     # Scan top 3
@@ -475,7 +475,7 @@ if __name__ == '__main__':
     results = hunter.scan_all(test_perfumes)
     
     print(f"\n{'='*60}")
-    print(f"PriceHunter Scan Results")
+    print(f"Olfex Scan Results")
     print(f"{'='*60}")
     print(f"Deals found: {results['deals_found']}")
     

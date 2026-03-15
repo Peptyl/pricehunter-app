@@ -1,4 +1,4 @@
-# PriceHunter Backend API v2.0
+# Olfex Backend API v2.0
 
 Full-featured FastAPI backend with Firebase, Clerk authentication, and RevenueCat subscriptions.
 
@@ -90,4 +90,4 @@ REVENUECAT_API_KEY=...
 
 ## License
 
-Private - PriceHunter App
+Private - Olfex App

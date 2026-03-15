@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-PriceHunter Backend API
+Olfex Backend API
 FastAPI server for price tracking and alerts
 """
 
@@ -12,7 +12,7 @@ from datetime import datetime
 import sqlite3
 import json
 
-app = FastAPI(title="PriceHunter API", version="1.0")
+app = FastAPI(title="Olfex API", version="1.0")
 
 # CORS for mobile app
 app.add_middleware(
@@ -24,7 +24,7 @@ app.add_middleware(
 
 # Database setup
 def init_db():
-    conn = sqlite3.connect('pricehunter.db')
+    conn = sqlite3.connect('olfex.db')
     c = conn.cursor()
     
     c.execute('''
@@ -86,7 +86,7 @@ class TierUpgrade(BaseModel):
 # Authentication middleware
 async def check_tier_access(user_id: str, required_tier: str) -> bool:
     """Check if user has required tier access"""
-    conn = sqlite3.connect('pricehunter.db')
+    conn = sqlite3.connect('olfex.db')
     c = conn.cursor()
     
     c.execute('SELECT tier FROM users WHERE id = ?', (user_id,))
@@ -104,14 +104,14 @@ async def check_tier_access(user_id: str, required_tier: str) -> bool:
 @app.get("/api/perfumes")
 def get_perfumes():
     """Get list of tracked perfumes"""
-    with open('/home/peptyl/.openclaw/workspace/pricehunter/data/perfumes.json') as f:
+    with open('/home/peptyl/.openclaw/workspace/olfex/data/perfumes.json') as f:
         data = json.load(f)
     return data['top_10_niche_perfumes']
 
 @app.get("/api/perfumes/{perfume_id}/prices")
 def get_prices(perfume_id: str):
     """Get current prices from all retailers"""
-    conn = sqlite3.connect('pricehunter.db')
+    conn = sqlite3.connect('olfex.db')
     conn.row_factory = sqlite3.Row
     c = conn.cursor()
     
@@ -130,7 +130,7 @@ def get_prices(perfume_id: str):
 @app.post("/api/alerts")
 def create_alert(alert: AlertRequest):
     """Create price alert"""
-    conn = sqlite3.connect('pricehunter.db')
+    conn = sqlite3.connect('olfex.db')
     c = conn.cursor()
     
     c.execute('''
@@ -151,7 +151,7 @@ def create_alert(alert: AlertRequest):
 @app.get("/api/alerts/{user_id}")
 def get_user_alerts(user_id: str):
     """Get user's active alerts"""
-    conn = sqlite3.connect('pricehunter.db')
+    conn = sqlite3.connect('olfex.db')
     conn.row_factory = sqlite3.Row
     c = conn.cursor()
     
@@ -314,7 +314,7 @@ def create_user(user: UserCreate):
     import uuid
     user_id = str(uuid.uuid4())
     
-    conn = sqlite3.connect('pricehunter.db')
+    conn = sqlite3.connect('olfex.db')
     c = conn.cursor()
     
     try:
@@ -341,7 +341,7 @@ def health_check():
 
 if __name__ == '__main__':
     import uvicorn
-    print("Starting PriceHunter API...")
+    print("Starting Olfex API...")
     print("Endpoints:")
     print("  GET  /api/perfumes")
     print("  GET  /api/perfumes/{id}/prices")

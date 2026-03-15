@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-PriceHunter Scheduler Service
+Olfex Scheduler Service
 Runs price scans on schedule and manages the pipeline:
   1. Scan prices (6:00, 12:00, 18:00 GMT)
   2. Store results in PostgreSQL
@@ -29,9 +29,9 @@ logger = logging.getLogger(__name__)
 
 DB_HOST = os.getenv('DB_HOST', 'localhost')
 DB_PORT = os.getenv('DB_PORT', '5432')
-DB_NAME = os.getenv('DB_NAME', 'pricehunter')
-DB_USER = os.getenv('DB_USER', 'pricehunter')
-DB_PASS = os.getenv('DB_PASS', 'pricehunter123')
+DB_NAME = os.getenv('DB_NAME', 'olfex')
+DB_USER = os.getenv('DB_USER', 'olfex')
+DB_PASS = os.getenv('DB_PASS', 'olfex123')
 
 SCAN_TIMES = os.getenv('SCHEDULER_SCAN_TIMES', '06:00,12:00,18:00').split(',')
 TIMEZONE = os.getenv('SCHEDULER_TIMEZONE', 'UTC')

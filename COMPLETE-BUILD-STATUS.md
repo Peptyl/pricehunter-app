@@ -1,4 +1,4 @@
-# PriceHunter - COMPLETE BUILD STATUS
+# Olfex - COMPLETE BUILD STATUS
 ## Everything Built: Sunday, Feb 22 - Monday, Feb 23
 
 ---
@@ -200,7 +200,7 @@
 **Tomorrow (Monday):**
 1. Trading system live (8 AM)
 2. Global retailer report (CYPHER)
-3. PriceHunter deploy decision
+3. Olfex deploy decision
 
 **This Week:**
 - Deploy backend

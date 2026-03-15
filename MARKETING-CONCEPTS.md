@@ -1,4 +1,4 @@
-# PriceHunter - Marketing & UX Concepts
+# Olfex - Marketing & UX Concepts
 ## Hero Sections & Value Propositions
 
 ---
@@ -98,7 +98,7 @@ Savings: £90 (34%)
 ### Home Screen
 ```
 ┌─────────────────────────────┐
-│  🎯 PriceHunter              │
+│  🎯 Olfex              │
 │  Your fragrance deal finder  │
 ├─────────────────────────────┤
 │  💰 Today's Best Deals (3)   │
@@ -168,7 +168,7 @@ Savings: £90 (34%)
 │  Avg price at retail:        │
 │  £200 per bottle             │
 │                              │
-│  With PriceHunter:           │
+│  With Olfex:           │
 │  £140 per bottle (30% off)   │
 │                              │
 ├─────────────────────────────┤
@@ -214,7 +214,7 @@ Why trust this retailer?
 ✓ Ships to UK in 7-10 days
 
 Don't miss it.
-- The PriceHunter Team
+- The Olfex Team
 
 [Unsubscribe] | [Manage Alerts]
 ```
@@ -247,7 +247,7 @@ Top Deals This Week:
 Your next alert might be your holy grail.
 Stay tuned.
 
-- PriceHunter
+- Olfex
 ```
 
 ---
@@ -260,7 +260,7 @@ Stay tuned.
 SHOW: Harrods website, add to cart £265
 
 [3-6s] TEXT: "Then I found this..."
-SHOW: PriceHunter app showing £175
+SHOW: Olfex app showing £175
 
 [6-9s] TEXT: "Same perfume. Same batch. £90 less."
 SHOW: Side by side bottles, same batch code

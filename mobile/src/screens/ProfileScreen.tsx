@@ -259,7 +259,7 @@ export const ProfileScreen: React.FC = () => {
           
           <SettingItem
             icon="information-circle-outline"
-            title="About PriceHunter"
+            title="About Olfex"
             subtitle="Version 1.0.0"
           />
         </View>

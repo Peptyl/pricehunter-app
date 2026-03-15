@@ -1,0 +1,143 @@
+version: '3.8'
+
+services:
+  # Main API server
+  olfex-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://olfex:${DB_PASSWORD}@postgres:5432/olfex
+      - REDIS_URL=redis://redis:6379
+      - OLFEX_ENV=production
+      - PROXY_PROVIDER=${PROXY_PROVIDER}
+      - PROXY_API_KEY=${PROXY_API_KEY}
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - olfex-network
+
+  # Scraper worker (runs Playwright headless browsers)
+  olfex-scraper:
+    build:
+      context: .
+      dockerfile: Dockerfile.scraper
+    environment:
+      - DATABASE_URL=postgresql://olfex:${DB_PASSWORD}@postgres:5432/olfex
+      - REDIS_URL=redis://redis:6379
+      - OLFEX_ENV=production
+      - PROXY_PROVIDER=${PROXY_PROVIDER}
+      - PROXY_API_KEY=${PROXY_API_KEY}
+      - MAX_CONCURRENT_BROWSERS=3
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: always
+    networks:
+      - olfex-network
+
+  # Scheduler (triggers scan cycles)
+  olfex-scheduler:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python -m scraper.scheduler --start
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - DATABASE_URL=postgresql://olfex:${DB_PASSWORD}@postgres:5432/olfex
+      - OLFEX_ENV=production
+      - SCAN_TIMES=06:00,18:00
+      - TIMEZONE=Europe/London
+      - WEBHOOK_URL=${SLACK_WEBHOOK_URL}
+    depends_on:
+      redis:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+    restart: always
+    networks:
+      - olfex-network
+
+  # PostgreSQL for price history
+  postgres:
+    image: postgres:16-alpine
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      - POSTGRES_DB=olfex
+      - POSTGRES_USER=olfex
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    ports:
+      - "5432:5432"
+    restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U olfex -d olfex"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - olfex-network
+
+  # Redis for job queue + caching
+  redis:
+    image: redis:7-alpine
+    volumes:
+      - redisdata:/data
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD:-}
+    restart: always
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - olfex-network
+
+  # Caddy for reverse proxy + auto HTTPS
+  caddy:
+    image: caddy:2-alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - olfex-api
+    restart: always
+    networks:
+      - olfex-network
+
+networks:
+  olfex-network:
+    driver: bridge
+
+volumes:
+  pgdata:
+    driver: local
+  redisdata:
+    driver: local
+  caddy_data:
+    driver: local
+  caddy_config:
+    driver: local

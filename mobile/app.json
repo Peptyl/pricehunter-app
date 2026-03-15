@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "PriceHunter",
-    "slug": "pricehunter",
+    "name": "Olfex",
+    "slug": "olfex",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -16,7 +16,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.peptyl.pricehunter",
+      "bundleIdentifier": "com.peptyl.olfex",
       "usesAppleSignIn": true
     },
     "android": {
@@ -24,7 +24,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#0f172a"
       },
-      "package": "com.peptyl.pricehunter"
+      "package": "com.peptyl.olfex"
     },
     "web": {
       "favicon": "./assets/favicon.png"

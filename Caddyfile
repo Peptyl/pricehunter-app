@@ -1,0 +1,82 @@
+# Caddyfile for Olfex production deployment
+# Handles reverse proxy, HTTPS termination, and routing
+
+# API subdomain
+api.olfex.app {
+    encode gzip
+
+    # Reverse proxy to API service
+    reverse_proxy olfex-api:8000 {
+        # Health check
+        health_uri /health
+        health_interval 30s
+        health_timeout 5s
+
+        # Timeouts
+        timeout 30s
+
+        # Headers
+        header_up Host {upstream_hostport}
+    }
+
+    # Rate limiting
+    rate_limit /api/* 100/1m
+}
+
+# Frontend domain
+olfex.app {
+    encode gzip
+
+    # Serve frontend (if static files exist)
+    root * /srv/frontend
+
+    # Try to serve files, fall back to index.html for SPA routing
+    try_files {path} /index.html
+
+    # File server with caching
+    file_server {
+        disable_canonical_uris
+    }
+
+    # Cache headers for static assets
+    @static {
+        path_regexp ^/(js|css|images|assets)/
+    }
+    header @static Cache-Control "public, max-age=31536000, immutable"
+
+    # Cache headers for HTML
+    @html {
+        path_regexp \.html$
+    }
+    header @html Cache-Control "public, max-age=3600, must-revalidate"
+
+    # Security headers
+    header {
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "SAMEORIGIN"
+        X-XSS-Protection "1; mode=block"
+        Referrer-Policy "strict-origin-when-cross-origin"
+    }
+
+    # Enable HTTPS
+    header {
+        Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    }
+}
+
+# API redirect from www
+www.api.olfex.app {
+    redir https://api.olfex.app{uri} permanent
+}
+
+# Frontend redirect from www
+www.olfex.app {
+    redir https://olfex.app{uri} permanent
+}
+
+# Health check endpoint for load balancer
+localhost:8888 {
+    respond /health 200 {
+        body "OK"
+    }
+}

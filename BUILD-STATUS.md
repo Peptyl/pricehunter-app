@@ -1,4 +1,4 @@
-# PriceHunter - Build Status
+# Olfex - Build Status
 ## Niche Perfume Price Tracking App
 
 ---
@@ -45,14 +45,14 @@
 
 ### 1. Start Backend
 ```bash
-cd /home/peptyl/.openclaw/workspace/pricehunter/backend
+cd /home/peptyl/.openclaw/workspace/olfex/backend
 python3 api.py
 # API runs on http://localhost:8001
 ```
 
 ### 2. Run Price Scan
 ```bash
-cd /home/peptyl/.openclaw/workspace/pricehunter
+cd /home/peptyl/.openclaw/workspace/olfex
 python3 scheduler.py --once
 # Scans all retailers, finds deals
 ```
@@ -65,7 +65,7 @@ python3 scheduler.py
 
 ### 4. Mobile App
 ```bash
-cd /home/peptyl/.openclaw/workspace/pricehunter/mobile
+cd /home/peptyl/.openclaw/workspace/olfex/mobile
 # Install Expo: npm install -g expo-cli
 # expo start
 # Scan QR with phone
@@ -100,7 +100,7 @@ cd /home/peptyl/.openclaw/workspace/pricehunter/mobile
 - [x] API server built
 - [x] Database schema ready
 - [ ] Deploy to server (Railway/Render)
-- [ ] Set up domain (api.pricehunter.app)
+- [ ] Set up domain (api.olfex.app)
 
 ### Week 2: Mobile
 - [x] React Native app scaffold
