@@ -1,0 +1,2174 @@
+{
+  "catalog_version": "2.0",
+  "last_updated": "2026-03-15",
+  "catalog_description": "Expanded Niche & Designer Fragrances - UK Market Comprehensive Collection",
+  "total_products": 105,
+  "products": [
+    {
+      "id": "pdm-layton-125-edp",
+      "brand": "Parfums de Marly",
+      "name": "Layton",
+      "size_ml": 125,
+      "concentration": "EDP",
+      "typical_retail_gbp": 195,
+      "good_deal_threshold_gbp": 155,
+      "hot_deal_threshold_gbp": 140,
+      "aliases": ["PDM Layton", "Parfums De Marly Layton", "Parfums de Marly Layton Royal Essence", "Layton EDP"],
+      "size_variants_ml": [75, 125],
+      "gender": "unisex",
+      "fragrantica_slug": "Parfums-de-Marly-Layton",
+      "notes": {
+        "top": ["apple", "bergamot", "mandarin", "grapefruit"],
+        "heart": ["jasmine", "violet", "geranium", "rose"],
+        "base": ["vanilla", "sandalwood", "pepper", "oakmoss"]
+      }
+    },
+    {
+      "id": "pdm-carlisle-125-edp",
+      "brand": "Parfums de Marly",
+      "name": "Carlisle",
+      "size_ml": 125,
+      "concentration": "EDP",
+      "typical_retail_gbp": 215,
+      "good_deal_threshold_gbp": 170,
+      "hot_deal_threshold_gbp": 155,
+      "aliases": ["PDM Carlisle", "Parfums De Marly Carlisle", "Carlisle EDP"],
+      "size_variants_ml": [75, 125],
+      "gender": "male",
+      "fragrantica_slug": "Parfums-de-Marly-Carlisle",
+      "notes": {
+        "top": ["lemon", "bergamot", "grapefruit"],
+        "heart": ["lavender", "clary sage", "geranium"],
+        "base": ["cedarwood", "vetiver", "amber", "musk"]
+      }
+    },
+    {
+      "id": "pdm-pegasus-125-edp",
+      "brand": "Parfums de Marly",
+      "name": "Pegasus",
+      "size_ml": 125,
+      "concentration": "EDP",
+      "typical_retail_gbp": 195,
+      "good_deal_threshold_gbp": 155,
+      "hot_deal_threshold_gbp": 140,
+      "aliases": ["PDM Pegasus", "Parfums De Marly Pegasus", "Pegasus EDP"],
+      "size_variants_ml": [75, 125],
+      "gender": "male",
+      "fragrantica_slug": "Parfums-de-Marly-Pegasus",
+      "notes": {
+        "top": ["citrus", "grapefruit"],
+        "heart": ["florals", "jasmine"],
+        "base": ["sandalwood", "amber", "musk"]
+      }
+    },
+    {
+      "id": "pdm-herod-125-edp",
+      "brand": "Parfums de Marly",
+      "name": "Herod",
+      "size_ml": 125,
+      "concentration": "EDP",
+      "typical_retail_gbp": 195,
+      "good_deal_threshold_gbp": 155,
+      "hot_deal_threshold_gbp": 140,
+      "aliases": ["PDM Herod", "Parfums De Marly Herod", "Herod EDP", "Parfums de Marly Herod Eau de Parfum"],
+      "size_variants_ml": [75, 125],
+      "gender": "male",
+      "fragrantica_slug": "Parfums-de-Marly-Herod",
+      "notes": {
+        "top": ["lemon", "bergamot"],
+        "heart": ["jasmine", "geranium"],
+        "base": ["amber", "cedar", "vanilla"]
+      }
+    },
+    {
+      "id": "creed-aventus-100-edp",
+      "brand": "Creed",
+      "name": "Aventus",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 310,
+      "good_deal_threshold_gbp": 245,
+      "hot_deal_threshold_gbp": 220,
+      "aliases": ["Creed Aventus", "Aventus EDP", "Creed Aventus For Men"],
+      "size_variants_ml": [50, 100, 120],
+      "gender": "male",
+      "fragrantica_slug": "Creed-Aventus",
+      "notes": {
+        "top": ["pineapple", "bergamot", "blackcurrant"],
+        "heart": ["labdanum", "ambroxan", "jasmine"],
+        "base": ["oak moss", "sandalwood", "musk"]
+      }
+    },
+    {
+      "id": "creed-green-irish-tweed-100-edp",
+      "brand": "Creed",
+      "name": "Green Irish Tweed",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 230,
+      "good_deal_threshold_gbp": 185,
+      "hot_deal_threshold_gbp": 165,
+      "aliases": ["Creed GIT", "Green Irish Tweed EDP", "Creed Green Irish Tweed"],
+      "size_variants_ml": [50, 100, 120],
+      "gender": "male",
+      "fragrantica_slug": "Creed-Green-Irish-Tweed",
+      "notes": {
+        "top": ["verbena", "lemon", "grapefruit"],
+        "heart": ["geranium", "iris", "jasmine"],
+        "base": ["sandalwood", "cedar", "oak moss"]
+      }
+    },
+    {
+      "id": "creed-silver-mountain-water-100-edp",
+      "brand": "Creed",
+      "name": "Silver Mountain Water",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 230,
+      "good_deal_threshold_gbp": 185,
+      "hot_deal_threshold_gbp": 165,
+      "aliases": ["Creed SMW", "Silver Mountain Water EDP", "SMW Creed"],
+      "size_variants_ml": [50, 100, 120],
+      "gender": "unisex",
+      "fragrantica_slug": "Creed-Silver-Mountain-Water",
+      "notes": {
+        "top": ["grapefruit", "lemon", "bergamot"],
+        "heart": ["geranium", "lavender"],
+        "base": ["sandalwood", "oak moss", "musk"]
+      }
+    },
+    {
+      "id": "tf-tuscan-leather-100-edp",
+      "brand": "Tom Ford",
+      "name": "Tuscan Leather",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 270,
+      "good_deal_threshold_gbp": 215,
+      "hot_deal_threshold_gbp": 195,
+      "aliases": ["Tom Ford Tuscan Leather", "TF Tuscan Leather", "Tuscan Leather EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "male",
+      "fragrantica_slug": "Tom-Ford-Tuscan-Leather",
+      "notes": {
+        "top": ["galbanum", "hedione"],
+        "heart": ["leather", "birch", "incense"],
+        "base": ["sandalwood", "vetiver", "cedar"]
+      }
+    },
+    {
+      "id": "tf-oud-wood-100-edp",
+      "brand": "Tom Ford",
+      "name": "Oud Wood",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 240,
+      "good_deal_threshold_gbp": 190,
+      "hot_deal_threshold_gbp": 170,
+      "aliases": ["Tom Ford Oud Wood", "TF Oud Wood", "Oud Wood EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "unisex",
+      "fragrantica_slug": "Tom-Ford-Oud-Wood",
+      "notes": {
+        "top": ["cardamom", "rosewood"],
+        "heart": ["agarwood", "oud"],
+        "base": ["sandalwood", "cedar", "vetiver"]
+      }
+    },
+    {
+      "id": "tf-tobacco-vanille-100-edp",
+      "brand": "Tom Ford",
+      "name": "Tobacco Vanille",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 270,
+      "good_deal_threshold_gbp": 215,
+      "hot_deal_threshold_gbp": 195,
+      "aliases": ["Tom Ford Tobacco Vanille", "TF Tobacco Vanille", "Tobacco Vanille EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "unisex",
+      "fragrantica_slug": "Tom-Ford-Tobacco-Vanille",
+      "notes": {
+        "top": ["cinnamon", "spices"],
+        "heart": ["tobacco", "vanilla", "cocoa"],
+        "base": ["cedar", "sandalwood", "amber"]
+      }
+    },
+    {
+      "id": "mfk-baccarat-rouge-540-70-edp",
+      "brand": "Maison Francis Kurkdjian",
+      "name": "Baccarat Rouge 540",
+      "size_ml": 70,
+      "concentration": "EDP",
+      "typical_retail_gbp": 255,
+      "good_deal_threshold_gbp": 205,
+      "hot_deal_threshold_gbp": 185,
+      "aliases": ["MFK Baccarat Rouge 540", "Baccarat Rouge 540 EDP", "Francis Kurkdjian Baccarat"],
+      "size_variants_ml": [11, 70],
+      "gender": "unisex",
+      "fragrantica_slug": "Maison-Francis-Kurkdjian-Baccarat-Rouge-540",
+      "notes": {
+        "top": ["saffron", "orange blossom"],
+        "heart": ["ambroxan", "jasmine"],
+        "base": ["cedar", "sandalwood", "amber"]
+      }
+    },
+    {
+      "id": "mfk-grand-soir-70-edp",
+      "brand": "Maison Francis Kurkdjian",
+      "name": "Grand Soir",
+      "size_ml": 70,
+      "concentration": "EDP",
+      "typical_retail_gbp": 205,
+      "good_deal_threshold_gbp": 165,
+      "hot_deal_threshold_gbp": 150,
+      "aliases": ["MFK Grand Soir", "Grand Soir EDP", "Francis Kurkdjian Grand Soir"],
+      "size_variants_ml": [70],
+      "gender": "unisex",
+      "fragrantica_slug": "Maison-Francis-Kurkdjian-Grand-Soir",
+      "notes": {
+        "top": ["saffron", "ginger"],
+        "heart": ["leather", "incense", "spices"],
+        "base": ["sandalwood", "cedar", "musk"]
+      }
+    },
+    {
+      "id": "amouage-reflection-man-100-edp",
+      "brand": "Amouage",
+      "name": "Reflection Man",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 280,
+      "good_deal_threshold_gbp": 225,
+      "hot_deal_threshold_gbp": 205,
+      "aliases": ["Amouage Reflection Man", "Reflection Man EDP", "Amouage Reflection"],
+      "size_variants_ml": [50, 100],
+      "gender": "male",
+      "fragrantica_slug": "Amouage-Reflection-Man",
+      "notes": {
+        "top": ["lemon", "bergamot", "cardamom"],
+        "heart": ["jasmine", "rose", "incense"],
+        "base": ["sandalwood", "amber", "musk"]
+      }
+    },
+    {
+      "id": "amouage-interlude-man-100-edp",
+      "brand": "Amouage",
+      "name": "Interlude Man",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 280,
+      "good_deal_threshold_gbp": 225,
+      "hot_deal_threshold_gbp": 205,
+      "aliases": ["Amouage Interlude Man", "Interlude Man EDP", "Amouage Interlude"],
+      "size_variants_ml": [50, 100],
+      "gender": "male",
+      "fragrantica_slug": "Amouage-Interlude-Man",
+      "notes": {
+        "top": ["cardamom", "ginger", "pepper"],
+        "heart": ["leather", "incense"],
+        "base": ["oud", "sandalwood", "amber"]
+      }
+    },
+    {
+      "id": "initio-oud-for-greatness-90-edp",
+      "brand": "Initio",
+      "name": "Oud for Greatness",
+      "size_ml": 90,
+      "concentration": "EDP",
+      "typical_retail_gbp": 260,
+      "good_deal_threshold_gbp": 210,
+      "hot_deal_threshold_gbp": 190,
+      "aliases": ["Initio Oud For Greatness", "Oud For Greatness EDP", "Initio OFG"],
+      "size_variants_ml": [90],
+      "gender": "unisex",
+      "fragrantica_slug": "Initio-Parfums-Prives-Oud-for-Greatness",
+      "notes": {
+        "top": ["pepper", "cardamom"],
+        "heart": ["oud", "incense"],
+        "base": ["sandalwood", "ambroxan", "musk"]
+      }
+    },
+    {
+      "id": "initio-side-effect-90-edp",
+      "brand": "Initio",
+      "name": "Side Effect",
+      "size_ml": 90,
+      "concentration": "EDP",
+      "typical_retail_gbp": 260,
+      "good_deal_threshold_gbp": 210,
+      "hot_deal_threshold_gbp": 190,
+      "aliases": ["Initio Side Effect", "Side Effect EDP", "Initio SE"],
+      "size_variants_ml": [90],
+      "gender": "unisex",
+      "fragrantica_slug": "Initio-Parfums-Prives-Side-Effect",
+      "notes": {
+        "top": ["bergamot", "lemon"],
+        "heart": ["heliotrope", "almond", "tonka"],
+        "base": ["sandalwood", "vanilla", "ambroxan"]
+      }
+    },
+    {
+      "id": "xerjoff-naxos-100-edp",
+      "brand": "Xerjoff",
+      "name": "Naxos",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 235,
+      "good_deal_threshold_gbp": 190,
+      "hot_deal_threshold_gbp": 170,
+      "aliases": ["Xerjoff Naxos", "Naxos EDP", "Xerjoff Naxos The Golden Vault"],
+      "size_variants_ml": [100],
+      "gender": "unisex",
+      "fragrantica_slug": "Xerjoff-Naxos",
+      "notes": {
+        "top": ["honey", "nuts", "caramel"],
+        "heart": ["vanilla", "tonka", "almond"],
+        "base": ["sandalwood", "cedar", "amber"]
+      }
+    },
+    {
+      "id": "xerjoff-erba-pura-100-edp",
+      "brand": "Xerjoff",
+      "name": "Erba Pura",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 210,
+      "good_deal_threshold_gbp": 170,
+      "hot_deal_threshold_gbp": 155,
+      "aliases": ["Xerjoff Erba Pura", "Erba Pura EDP", "Xerjoff Pure Herbs"],
+      "size_variants_ml": [100],
+      "gender": "unisex",
+      "fragrantica_slug": "Xerjoff-Erba-Pura",
+      "notes": {
+        "top": ["herbs", "green tea", "ginger"],
+        "heart": ["herbs", "geranium"],
+        "base": ["cedarwood", "vetiver", "moss"]
+      }
+    },
+    {
+      "id": "lelabo-santal-33-100-edp",
+      "brand": "Le Labo",
+      "name": "Santal 33",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 225,
+      "good_deal_threshold_gbp": 180,
+      "hot_deal_threshold_gbp": 165,
+      "aliases": ["Le Labo Santal 33", "Santal 33 EDP", "Le Labo Santalwood"],
+      "size_variants_ml": [50, 100],
+      "gender": "unisex",
+      "fragrantica_slug": "Le-Labo-Santal-33",
+      "notes": {
+        "top": ["cardamom", "spice"],
+        "heart": ["iris", "violet", "leather"],
+        "base": ["sandalwood", "cedar", "vetiver"]
+      }
+    },
+    {
+      "id": "byredo-mojave-ghost-100-edp",
+      "brand": "Byredo",
+      "name": "Mojave Ghost",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 195,
+      "good_deal_threshold_gbp": 155,
+      "hot_deal_threshold_gbp": 140,
+      "aliases": ["Byredo Mojave Ghost", "Mojave Ghost EDP", "Byredo Desert Ghost"],
+      "size_variants_ml": [50, 100],
+      "gender": "unisex",
+      "fragrantica_slug": "Byredo-Mojave-Ghost",
+      "notes": {
+        "top": ["ambrette seed", "sandalwood"],
+        "heart": ["florals", "vanilla"],
+        "base": ["musk", "sandalwood", "cedar"]
+      }
+    },
+    {
+      "id": "pdm-sedley-125-edp",
+      "brand": "Parfums de Marly",
+      "name": "Sedley",
+      "size_ml": 125,
+      "concentration": "EDP",
+      "typical_retail_gbp": 195,
+      "good_deal_threshold_gbp": 155,
+      "hot_deal_threshold_gbp": 140,
+      "aliases": ["PDM Sedley", "Parfums de Marly Sedley"],
+      "size_variants_ml": [75, 125],
+      "gender": "male",
+      "fragrantica_slug": "Parfums-de-Marly-Sedley",
+      "notes": {
+        "top": ["bergamot", "lemon", "grapefruit"],
+        "heart": ["geranium", "clary sage"],
+        "base": ["vetiver", "cedarwood", "musk"]
+      }
+    },
+    {
+      "id": "pdm-percival-125-edp",
+      "brand": "Parfums de Marly",
+      "name": "Percival",
+      "size_ml": 125,
+      "concentration": "EDP",
+      "typical_retail_gbp": 195,
+      "good_deal_threshold_gbp": 155,
+      "hot_deal_threshold_gbp": 140,
+      "aliases": ["PDM Percival", "Parfums de Marly Percival"],
+      "size_variants_ml": [75, 125],
+      "gender": "male",
+      "fragrantica_slug": "Parfums-de-Marly-Percival",
+      "notes": {
+        "top": ["aldehydes", "bergamot", "grapefruit"],
+        "heart": ["geranium", "violet"],
+        "base": ["moss", "cedar", "vetiver"]
+      }
+    },
+    {
+      "id": "pdm-greenley-125-edp",
+      "brand": "Parfums de Marly",
+      "name": "Greenley",
+      "size_ml": 125,
+      "concentration": "EDP",
+      "typical_retail_gbp": 195,
+      "good_deal_threshold_gbp": 155,
+      "hot_deal_threshold_gbp": 140,
+      "aliases": ["PDM Greenley", "Parfums de Marly Greenley"],
+      "size_variants_ml": [75, 125],
+      "gender": "unisex",
+      "fragrantica_slug": "Parfums-de-Marly-Greenley",
+      "notes": {
+        "top": ["lime", "lemon", "galbanum"],
+        "heart": ["violet", "green notes"],
+        "base": ["cedarwood", "vetiver", "musk"]
+      }
+    },
+    {
+      "id": "pdm-godolphin-125-edp",
+      "brand": "Parfums de Marly",
+      "name": "Godolphin",
+      "size_ml": 125,
+      "concentration": "EDP",
+      "typical_retail_gbp": 195,
+      "good_deal_threshold_gbp": 155,
+      "hot_deal_threshold_gbp": 140,
+      "aliases": ["PDM Godolphin", "Parfums de Marly Godolphin"],
+      "size_variants_ml": [75, 125],
+      "gender": "male",
+      "fragrantica_slug": "Parfums-de-Marly-Godolphin",
+      "notes": {
+        "top": ["apple", "lemon", "grapefruit"],
+        "heart": ["florals", "rose"],
+        "base": ["sandalwood", "musk", "amber"]
+      }
+    },
+    {
+      "id": "pdm-habdan-125-edp",
+      "brand": "Parfums de Marly",
+      "name": "Habdan",
+      "size_ml": 125,
+      "concentration": "EDP",
+      "typical_retail_gbp": 195,
+      "good_deal_threshold_gbp": 155,
+      "hot_deal_threshold_gbp": 140,
+      "aliases": ["PDM Habdan", "Parfums de Marly Habdan"],
+      "size_variants_ml": [75, 125],
+      "gender": "male",
+      "fragrantica_slug": "Parfums-de-Marly-Habdan",
+      "notes": {
+        "top": ["cinnamon", "pepper", "ginger"],
+        "heart": ["clove", "cardamom", "incense"],
+        "base": ["sandalwood", "cedar", "amber"]
+      }
+    },
+    {
+      "id": "pdm-kalan-125-edp",
+      "brand": "Parfums de Marly",
+      "name": "Kalan",
+      "size_ml": 125,
+      "concentration": "EDP",
+      "typical_retail_gbp": 195,
+      "good_deal_threshold_gbp": 155,
+      "hot_deal_threshold_gbp": 140,
+      "aliases": ["PDM Kalan", "Parfums de Marly Kalan"],
+      "size_variants_ml": [75, 125],
+      "gender": "unisex",
+      "fragrantica_slug": "Parfums-de-Marly-Kalan",
+      "notes": {
+        "top": ["aldehyde", "citrus", "grapefruit"],
+        "heart": ["jasmine", "rose", "violet"],
+        "base": ["sandalwood", "musk", "amber"]
+      }
+    },
+    {
+      "id": "pdm-galloway-125-edp",
+      "brand": "Parfums de Marly",
+      "name": "Galloway",
+      "size_ml": 125,
+      "concentration": "EDP",
+      "typical_retail_gbp": 195,
+      "good_deal_threshold_gbp": 155,
+      "hot_deal_threshold_gbp": 140,
+      "aliases": ["PDM Galloway", "Parfums de Marly Galloway"],
+      "size_variants_ml": [75, 125],
+      "gender": "male",
+      "fragrantica_slug": "Parfums-de-Marly-Galloway",
+      "notes": {
+        "top": ["bergamot", "grapefruit", "lemon"],
+        "heart": ["lavender", "geranium", "clary sage"],
+        "base": ["vetiver", "sandalwood", "cedar"]
+      }
+    },
+    {
+      "id": "creed-viking-100-edp",
+      "brand": "Creed",
+      "name": "Viking",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 280,
+      "good_deal_threshold_gbp": 225,
+      "hot_deal_threshold_gbp": 200,
+      "aliases": ["Creed Viking", "Viking EDP"],
+      "size_variants_ml": [50, 100, 120],
+      "gender": "male",
+      "fragrantica_slug": "Creed-Viking",
+      "notes": {
+        "top": ["apple", "lime", "bergamot"],
+        "heart": ["ambroxan", "incense"],
+        "base": ["oak moss", "sandalwood", "musk"]
+      }
+    },
+    {
+      "id": "creed-millesime-imperial-100-edp",
+      "brand": "Creed",
+      "name": "Millésime Impérial",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 230,
+      "good_deal_threshold_gbp": 185,
+      "hot_deal_threshold_gbp": 165,
+      "aliases": ["Creed Millesime Imperial", "Millesime Imperial EDP"],
+      "size_variants_ml": [50, 100, 120],
+      "gender": "male",
+      "fragrantica_slug": "Creed-Millesime-Imperial",
+      "notes": {
+        "top": ["mandarin", "citrus", "bergamot"],
+        "heart": ["ambroxan", "incense"],
+        "base": ["sandalwood", "oak moss", "musk"]
+      }
+    },
+    {
+      "id": "creed-royal-oud-100-edp",
+      "brand": "Creed",
+      "name": "Royal Oud",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 300,
+      "good_deal_threshold_gbp": 240,
+      "hot_deal_threshold_gbp": 215,
+      "aliases": ["Creed Royal Oud", "Royal Oud EDP"],
+      "size_variants_ml": [50, 100, 120],
+      "gender": "male",
+      "fragrantica_slug": "Creed-Royal-Oud",
+      "notes": {
+        "top": ["lemon", "bergamot"],
+        "heart": ["oud", "incense"],
+        "base": ["sandalwood", "cedar", "musk"]
+      }
+    },
+    {
+      "id": "creed-original-vetiver-100-edp",
+      "brand": "Creed",
+      "name": "Original Vetiver",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 210,
+      "good_deal_threshold_gbp": 170,
+      "hot_deal_threshold_gbp": 150,
+      "aliases": ["Creed Original Vetiver", "Original Vetiver EDP"],
+      "size_variants_ml": [50, 100, 120],
+      "gender": "male",
+      "fragrantica_slug": "Creed-Original-Vetiver",
+      "notes": {
+        "top": ["grapefruit", "lemon"],
+        "heart": ["geranium", "iris"],
+        "base": ["vetiver", "cedarwood", "oak moss"]
+      }
+    },
+    {
+      "id": "creed-himalaya-100-edp",
+      "brand": "Creed",
+      "name": "Himalaya",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 230,
+      "good_deal_threshold_gbp": 185,
+      "hot_deal_threshold_gbp": 165,
+      "aliases": ["Creed Himalaya", "Himalaya EDP"],
+      "size_variants_ml": [50, 100, 120],
+      "gender": "male",
+      "fragrantica_slug": "Creed-Himalaya",
+      "notes": {
+        "top": ["citrus", "bergamot"],
+        "heart": ["floral notes"],
+        "base": ["sandalwood", "cedar", "musk"]
+      }
+    },
+    {
+      "id": "creed-royal-princess-oud-100-edp",
+      "brand": "Creed",
+      "name": "Royal Princess Oud",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 300,
+      "good_deal_threshold_gbp": 240,
+      "hot_deal_threshold_gbp": 215,
+      "aliases": ["Creed Royal Princess Oud", "Royal Princess Oud EDP"],
+      "size_variants_ml": [75, 100],
+      "gender": "female",
+      "fragrantica_slug": "Creed-Royal-Princess-Oud",
+      "notes": {
+        "top": ["raspberry", "bergamot"],
+        "heart": ["oud", "rose"],
+        "base": ["sandalwood", "musk", "amber"]
+      }
+    },
+    {
+      "id": "creed-wind-flowers-100-edp",
+      "brand": "Creed",
+      "name": "Wind Flowers",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 230,
+      "good_deal_threshold_gbp": 185,
+      "hot_deal_threshold_gbp": 165,
+      "aliases": ["Creed Wind Flowers", "Wind Flowers EDP"],
+      "size_variants_ml": [75, 100],
+      "gender": "female",
+      "fragrantica_slug": "Creed-Wind-Flowers",
+      "notes": {
+        "top": ["orange blossom", "citrus"],
+        "heart": ["white flowers", "rose"],
+        "base": ["sandalwood", "musk", "amber"]
+      }
+    },
+    {
+      "id": "tf-fucking-fabulous-50-edp",
+      "brand": "Tom Ford",
+      "name": "Fucking Fabulous",
+      "size_ml": 50,
+      "concentration": "EDP",
+      "typical_retail_gbp": 200,
+      "good_deal_threshold_gbp": 160,
+      "hot_deal_threshold_gbp": 145,
+      "aliases": ["Tom Ford Fucking Fabulous", "TF FF", "Fabulous EDP"],
+      "size_variants_ml": [50],
+      "gender": "male",
+      "fragrantica_slug": "Tom-Ford-Fucking-Fabulous",
+      "notes": {
+        "top": ["lavender", "cardamom"],
+        "heart": ["leather", "incense"],
+        "base": ["sandalwood", "cedar", "vanilla"]
+      }
+    },
+    {
+      "id": "tf-lost-cherry-100-edp",
+      "brand": "Tom Ford",
+      "name": "Lost Cherry",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 270,
+      "good_deal_threshold_gbp": 215,
+      "hot_deal_threshold_gbp": 195,
+      "aliases": ["Tom Ford Lost Cherry", "TF Lost Cherry", "Lost Cherry EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "unisex",
+      "fragrantica_slug": "Tom-Ford-Lost-Cherry",
+      "notes": {
+        "top": ["cherry", "rum"],
+        "heart": ["almond", "tonka"],
+        "base": ["sandalwood", "cedar", "vanilla"]
+      }
+    },
+    {
+      "id": "tf-ombre-leather-100-edp",
+      "brand": "Tom Ford",
+      "name": "Ombré Leather",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 270,
+      "good_deal_threshold_gbp": 215,
+      "hot_deal_threshold_gbp": 195,
+      "aliases": ["Tom Ford Ombre Leather", "TF Ombre Leather", "Ombre Leather EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "unisex",
+      "fragrantica_slug": "Tom-Ford-Ombre-Leather",
+      "notes": {
+        "top": ["rum", "cinnamon"],
+        "heart": ["leather", "birch"],
+        "base": ["sandalwood", "cedar", "vanilla"]
+      }
+    },
+    {
+      "id": "tf-soleil-blanc-100-edp",
+      "brand": "Tom Ford",
+      "name": "Soleil Blanc",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 270,
+      "good_deal_threshold_gbp": 215,
+      "hot_deal_threshold_gbp": 195,
+      "aliases": ["Tom Ford Soleil Blanc", "TF Soleil Blanc", "Soleil Blanc EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "female",
+      "fragrantica_slug": "Tom-Ford-Soleil-Blanc",
+      "notes": {
+        "top": ["bergamot", "coconut"],
+        "heart": ["tuberose", "jasmine"],
+        "base": ["sandalwood", "tonka", "vanilla"]
+      }
+    },
+    {
+      "id": "tf-neroli-portofino-100-edp",
+      "brand": "Tom Ford",
+      "name": "Neroli Portofino",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 270,
+      "good_deal_threshold_gbp": 215,
+      "hot_deal_threshold_gbp": 195,
+      "aliases": ["Tom Ford Neroli Portofino", "TF Neroli Portofino", "Neroli Portofino EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "unisex",
+      "fragrantica_slug": "Tom-Ford-Neroli-Portofino",
+      "notes": {
+        "top": ["neroli", "lemon", "bergamot"],
+        "heart": ["orange blossom", "ambroxan"],
+        "base": ["amber", "musk", "sandalwood"]
+      }
+    },
+    {
+      "id": "tf-black-orchid-100-edp",
+      "brand": "Tom Ford",
+      "name": "Black Orchid",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 270,
+      "good_deal_threshold_gbp": 215,
+      "hot_deal_threshold_gbp": 195,
+      "aliases": ["Tom Ford Black Orchid", "TF Black Orchid", "Black Orchid EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "unisex",
+      "fragrantica_slug": "Tom-Ford-Black-Orchid",
+      "notes": {
+        "top": ["cassis", "rum"],
+        "heart": ["black orchid", "florals"],
+        "base": ["sandalwood", "amber", "vanilla"]
+      }
+    },
+    {
+      "id": "tf-bitter-peach-100-edp",
+      "brand": "Tom Ford",
+      "name": "Bitter Peach",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 270,
+      "good_deal_threshold_gbp": 215,
+      "hot_deal_threshold_gbp": 195,
+      "aliases": ["Tom Ford Bitter Peach", "TF Bitter Peach", "Bitter Peach EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "unisex",
+      "fragrantica_slug": "Tom-Ford-Bitter-Peach",
+      "notes": {
+        "top": ["peach", "ginger"],
+        "heart": ["peach", "almond"],
+        "base": ["sandalwood", "cedar", "amber"]
+      }
+    },
+    {
+      "id": "tf-rose-prick-100-edp",
+      "brand": "Tom Ford",
+      "name": "Rose Prick",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 270,
+      "good_deal_threshold_gbp": 215,
+      "hot_deal_threshold_gbp": 195,
+      "aliases": ["Tom Ford Rose Prick", "TF Rose Prick", "Rose Prick EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "unisex",
+      "fragrantica_slug": "Tom-Ford-Rose-Prick",
+      "notes": {
+        "top": ["bergamot", "lemon"],
+        "heart": ["damascus rose", "spices"],
+        "base": ["sandalwood", "cedar", "musk"]
+      }
+    },
+    {
+      "id": "mfk-oud-satin-mood-70-edp",
+      "brand": "Maison Francis Kurkdjian",
+      "name": "Oud Satin Mood",
+      "size_ml": 70,
+      "concentration": "EDP",
+      "typical_retail_gbp": 245,
+      "good_deal_threshold_gbp": 195,
+      "hot_deal_threshold_gbp": 175,
+      "aliases": ["MFK Oud Satin Mood", "Oud Satin Mood EDP"],
+      "size_variants_ml": [70],
+      "gender": "unisex",
+      "fragrantica_slug": "Maison-Francis-Kurkdjian-Oud-Satin-Mood",
+      "notes": {
+        "top": ["bergamot", "grapefruit"],
+        "heart": ["oud", "incense"],
+        "base": ["sandalwood", "amber", "musk"]
+      }
+    },
+    {
+      "id": "mfk-aqua-universalis-70-edt",
+      "brand": "Maison Francis Kurkdjian",
+      "name": "Aqua Universalis",
+      "size_ml": 70,
+      "concentration": "EDT",
+      "typical_retail_gbp": 185,
+      "good_deal_threshold_gbp": 150,
+      "hot_deal_threshold_gbp": 135,
+      "aliases": ["MFK Aqua Universalis", "Aqua Universalis EDT"],
+      "size_variants_ml": [40, 70],
+      "gender": "unisex",
+      "fragrantica_slug": "Maison-Francis-Kurkdjian-Aqua-Universalis",
+      "notes": {
+        "top": ["citrus", "grapefruit"],
+        "heart": ["jasmine", "rose"],
+        "base": ["sandalwood", "musk"]
+      }
+    },
+    {
+      "id": "mfk-petit-matin-70-edp",
+      "brand": "Maison Francis Kurkdjian",
+      "name": "Petit Matin",
+      "size_ml": 70,
+      "concentration": "EDP",
+      "typical_retail_gbp": 205,
+      "good_deal_threshold_gbp": 165,
+      "hot_deal_threshold_gbp": 150,
+      "aliases": ["MFK Petit Matin", "Petit Matin EDP"],
+      "size_variants_ml": [70],
+      "gender": "unisex",
+      "fragrantica_slug": "Maison-Francis-Kurkdjian-Petit-Matin",
+      "notes": {
+        "top": ["neroli", "bergamot"],
+        "heart": ["grapefruit", "orange blossom"],
+        "base": ["sandalwood", "amber"]
+      }
+    },
+    {
+      "id": "mfk-gentle-fluidity-silver-70-edp",
+      "brand": "Maison Francis Kurkdjian",
+      "name": "Gentle Fluidity Silver",
+      "size_ml": 70,
+      "concentration": "EDP",
+      "typical_retail_gbp": 215,
+      "good_deal_threshold_gbp": 170,
+      "hot_deal_threshold_gbp": 155,
+      "aliases": ["MFK Gentle Fluidity Silver", "Gentle Fluidity Silver EDP"],
+      "size_variants_ml": [70],
+      "gender": "unisex",
+      "fragrantica_slug": "Maison-Francis-Kurkdjian-Gentle-Fluidity-Silver",
+      "notes": {
+        "top": ["apple", "bergamot"],
+        "heart": ["florals", "jasmine"],
+        "base": ["ambroxan", "sandalwood", "musk"]
+      }
+    },
+    {
+      "id": "mfk-gentle-fluidity-gold-70-edp",
+      "brand": "Maison Francis Kurkdjian",
+      "name": "Gentle Fluidity Gold",
+      "size_ml": 70,
+      "concentration": "EDP",
+      "typical_retail_gbp": 215,
+      "good_deal_threshold_gbp": 170,
+      "hot_deal_threshold_gbp": 155,
+      "aliases": ["MFK Gentle Fluidity Gold", "Gentle Fluidity Gold EDP"],
+      "size_variants_ml": [70],
+      "gender": "unisex",
+      "fragrantica_slug": "Maison-Francis-Kurkdjian-Gentle-Fluidity-Gold",
+      "notes": {
+        "top": ["mandarin", "bergamot"],
+        "heart": ["jasmine", "orchid"],
+        "base": ["sandalwood", "amber", "musk"]
+      }
+    },
+    {
+      "id": "mfk-a-la-rose-70-edp",
+      "brand": "Maison Francis Kurkdjian",
+      "name": "À la rose",
+      "size_ml": 70,
+      "concentration": "EDP",
+      "typical_retail_gbp": 205,
+      "good_deal_threshold_gbp": 165,
+      "hot_deal_threshold_gbp": 150,
+      "aliases": ["MFK A la rose", "À la rose EDP"],
+      "size_variants_ml": [70],
+      "gender": "female",
+      "fragrantica_slug": "Maison-Francis-Kurkdjian-A-la-rose",
+      "notes": {
+        "top": ["bergamot", "grapefruit"],
+        "heart": ["damascus rose", "geranium"],
+        "base": ["cedar", "sandalwood", "amber"]
+      }
+    },
+    {
+      "id": "amouage-jubilation-xxv-100-edp",
+      "brand": "Amouage",
+      "name": "Jubilation XXV",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 300,
+      "good_deal_threshold_gbp": 240,
+      "hot_deal_threshold_gbp": 215,
+      "aliases": ["Amouage Jubilation XXV", "Jubilation XXV EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "male",
+      "fragrantica_slug": "Amouage-Jubilation-XXV-Man",
+      "notes": {
+        "top": ["ginger", "cardamom"],
+        "heart": ["incense", "florals"],
+        "base": ["sandalwood", "oud", "amber"]
+      }
+    },
+    {
+      "id": "amouage-honour-man-100-edp",
+      "brand": "Amouage",
+      "name": "Honour Man",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 280,
+      "good_deal_threshold_gbp": 225,
+      "hot_deal_threshold_gbp": 205,
+      "aliases": ["Amouage Honour Man", "Honour Man EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "male",
+      "fragrantica_slug": "Amouage-Honour-Man",
+      "notes": {
+        "top": ["cardamom", "pepper"],
+        "heart": ["incense", "leather"],
+        "base": ["sandalwood", "oud", "musk"]
+      }
+    },
+    {
+      "id": "amouage-opus-vii-100-edp",
+      "brand": "Amouage",
+      "name": "Opus VII",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 280,
+      "good_deal_threshold_gbp": 225,
+      "hot_deal_threshold_gbp": 205,
+      "aliases": ["Amouage Opus VII", "Opus VII EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "male",
+      "fragrantica_slug": "Amouage-Opus-VII-Man",
+      "notes": {
+        "top": ["pepper", "cardamom"],
+        "heart": ["incense", "florals"],
+        "base": ["sandalwood", "oud", "amber"]
+      }
+    },
+    {
+      "id": "amouage-epic-man-100-edp",
+      "brand": "Amouage",
+      "name": "Epic Man",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 280,
+      "good_deal_threshold_gbp": 225,
+      "hot_deal_threshold_gbp": 205,
+      "aliases": ["Amouage Epic Man", "Epic Man EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "male",
+      "fragrantica_slug": "Amouage-Epic-Man",
+      "notes": {
+        "top": ["cinnamon", "pepper"],
+        "heart": ["incense", "leather"],
+        "base": ["oud", "sandalwood", "musk"]
+      }
+    },
+    {
+      "id": "amouage-memoir-man-100-edp",
+      "brand": "Amouage",
+      "name": "Memoir Man",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 280,
+      "good_deal_threshold_gbp": 225,
+      "hot_deal_threshold_gbp": 205,
+      "aliases": ["Amouage Memoir Man", "Memoir Man EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "male",
+      "fragrantica_slug": "Amouage-Memoir-Man",
+      "notes": {
+        "top": ["cardamom", "pepper"],
+        "heart": ["florals", "incense"],
+        "base": ["sandalwood", "oud", "amber"]
+      }
+    },
+    {
+      "id": "amouage-beach-hut-man-100-edp",
+      "brand": "Amouage",
+      "name": "Beach Hut Man",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 280,
+      "good_deal_threshold_gbp": 225,
+      "hot_deal_threshold_gbp": 205,
+      "aliases": ["Amouage Beach Hut Man", "Beach Hut Man EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "male",
+      "fragrantica_slug": "Amouage-Beach-Hut-Man",
+      "notes": {
+        "top": ["citrus", "bergamot"],
+        "heart": ["incense", "florals"],
+        "base": ["sandalwood", "amber", "musk"]
+      }
+    },
+    {
+      "id": "xerjoff-alexandria-ii-100-edp",
+      "brand": "Xerjoff",
+      "name": "Alexandria II",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 260,
+      "good_deal_threshold_gbp": 210,
+      "hot_deal_threshold_gbp": 190,
+      "aliases": ["Xerjoff Alexandria II", "Alexandria II EDP"],
+      "size_variants_ml": [100],
+      "gender": "unisex",
+      "fragrantica_slug": "Xerjoff-Alexandria-II",
+      "notes": {
+        "top": ["lemon", "grapefruit"],
+        "heart": ["iris", "rose"],
+        "base": ["sandalwood", "cedar", "amber"]
+      }
+    },
+    {
+      "id": "xerjoff-mefisto-100-edp",
+      "brand": "Xerjoff",
+      "name": "Mefisto",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 260,
+      "good_deal_threshold_gbp": 210,
+      "hot_deal_threshold_gbp": 190,
+      "aliases": ["Xerjoff Mefisto", "Mefisto EDP"],
+      "size_variants_ml": [100],
+      "gender": "male",
+      "fragrantica_slug": "Xerjoff-Mefisto",
+      "notes": {
+        "top": ["pepper", "cardamom"],
+        "heart": ["leather", "incense"],
+        "base": ["sandalwood", "oud", "amber"]
+      }
+    },
+    {
+      "id": "xerjoff-nio-100-edp",
+      "brand": "Xerjoff",
+      "name": "Nio",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 260,
+      "good_deal_threshold_gbp": 210,
+      "hot_deal_threshold_gbp": 190,
+      "aliases": ["Xerjoff Nio", "Nio EDP"],
+      "size_variants_ml": [100],
+      "gender": "male",
+      "fragrantica_slug": "Xerjoff-Nio",
+      "notes": {
+        "top": ["lemon", "grapefruit"],
+        "heart": ["incense", "florals"],
+        "base": ["sandalwood", "cedar", "musk"]
+      }
+    },
+    {
+      "id": "xerjoff-richwood-100-edp",
+      "brand": "Xerjoff",
+      "name": "Richwood",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 260,
+      "good_deal_threshold_gbp": 210,
+      "hot_deal_threshold_gbp": 190,
+      "aliases": ["Xerjoff Richwood", "Richwood EDP"],
+      "size_variants_ml": [100],
+      "gender": "unisex",
+      "fragrantica_slug": "Xerjoff-Richwood",
+      "notes": {
+        "top": ["bergamot", "grapefruit"],
+        "heart": ["cedarwood", "vetiver"],
+        "base": ["sandalwood", "amber", "musk"]
+      }
+    },
+    {
+      "id": "xerjoff-renaissance-100-edp",
+      "brand": "Xerjoff",
+      "name": "Renaissance",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 260,
+      "good_deal_threshold_gbp": 210,
+      "hot_deal_threshold_gbp": 190,
+      "aliases": ["Xerjoff Renaissance", "Renaissance EDP"],
+      "size_variants_ml": [100],
+      "gender": "unisex",
+      "fragrantica_slug": "Xerjoff-Renaissance",
+      "notes": {
+        "top": ["citrus", "bergamot"],
+        "heart": ["florals", "rose"],
+        "base": ["sandalwood", "cedar", "musk"]
+      }
+    },
+    {
+      "id": "xerjoff-40-knots-100-edp",
+      "brand": "Xerjoff",
+      "name": "40 Knots",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 260,
+      "good_deal_threshold_gbp": 210,
+      "hot_deal_threshold_gbp": 190,
+      "aliases": ["Xerjoff 40 Knots", "40 Knots EDP"],
+      "size_variants_ml": [100],
+      "gender": "male",
+      "fragrantica_slug": "Xerjoff-40-Knots",
+      "notes": {
+        "top": ["bergamot", "lemon"],
+        "heart": ["lavender", "geranium"],
+        "base": ["vetiver", "cedar", "musk"]
+      }
+    },
+    {
+      "id": "xerjoff-casamorati-lira-100-edp",
+      "brand": "Xerjoff",
+      "name": "Casamorati Lira",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 260,
+      "good_deal_threshold_gbp": 210,
+      "hot_deal_threshold_gbp": 190,
+      "aliases": ["Xerjoff Casamorati Lira", "Casamorati Lira EDP"],
+      "size_variants_ml": [100],
+      "gender": "female",
+      "fragrantica_slug": "Xerjoff-Casamorati-Lira",
+      "notes": {
+        "top": ["bergamot", "grapefruit"],
+        "heart": ["rose", "jasmine"],
+        "base": ["sandalwood", "cedar", "musk"]
+      }
+    },
+    {
+      "id": "initio-musk-therapy-90-edp",
+      "brand": "Initio",
+      "name": "Musk Therapy",
+      "size_ml": 90,
+      "concentration": "EDP",
+      "typical_retail_gbp": 280,
+      "good_deal_threshold_gbp": 225,
+      "hot_deal_threshold_gbp": 200,
+      "aliases": ["Initio Musk Therapy", "Musk Therapy EDP"],
+      "size_variants_ml": [90],
+      "gender": "unisex",
+      "fragrantica_slug": "Initio-Parfums-Prives-Musk-Therapy",
+      "notes": {
+        "top": ["musk", "vanilla"],
+        "heart": ["musk", "florals"],
+        "base": ["sandalwood", "amber", "musk"]
+      }
+    },
+    {
+      "id": "initio-rehab-90-edp",
+      "brand": "Initio",
+      "name": "Rehab",
+      "size_ml": 90,
+      "concentration": "EDP",
+      "typical_retail_gbp": 280,
+      "good_deal_threshold_gbp": 225,
+      "hot_deal_threshold_gbp": 200,
+      "aliases": ["Initio Rehab", "Rehab EDP"],
+      "size_variants_ml": [90],
+      "gender": "unisex",
+      "fragrantica_slug": "Initio-Parfums-Prives-Rehab",
+      "notes": {
+        "top": ["apple", "bergamot"],
+        "heart": ["floral notes"],
+        "base": ["sandalwood", "musk", "amber"]
+      }
+    },
+    {
+      "id": "initio-absolute-aphrodisiac-90-edp",
+      "brand": "Initio",
+      "name": "Absolute Aphrodisiac",
+      "size_ml": 90,
+      "concentration": "EDP",
+      "typical_retail_gbp": 280,
+      "good_deal_threshold_gbp": 225,
+      "hot_deal_threshold_gbp": 200,
+      "aliases": ["Initio Absolute Aphrodisiac", "Absolute Aphrodisiac EDP"],
+      "size_variants_ml": [90],
+      "gender": "unisex",
+      "fragrantica_slug": "Initio-Parfums-Prives-Absolute-Aphrodisiac",
+      "notes": {
+        "top": ["jasmine", "florals"],
+        "heart": ["florals", "musk"],
+        "base": ["sandalwood", "amber", "musk"]
+      }
+    },
+    {
+      "id": "initio-blessed-baraka-90-edp",
+      "brand": "Initio",
+      "name": "Blessed Baraka",
+      "size_ml": 90,
+      "concentration": "EDP",
+      "typical_retail_gbp": 280,
+      "good_deal_threshold_gbp": 225,
+      "hot_deal_threshold_gbp": 200,
+      "aliases": ["Initio Blessed Baraka", "Blessed Baraka EDP"],
+      "size_variants_ml": [90],
+      "gender": "unisex",
+      "fragrantica_slug": "Initio-Parfums-Prives-Blessed-Baraka",
+      "notes": {
+        "top": ["oud", "incense"],
+        "heart": ["oud", "florals"],
+        "base": ["sandalwood", "amber", "musk"]
+      }
+    },
+    {
+      "id": "initio-atomic-rose-90-edp",
+      "brand": "Initio",
+      "name": "Atomic Rose",
+      "size_ml": 90,
+      "concentration": "EDP",
+      "typical_retail_gbp": 280,
+      "good_deal_threshold_gbp": 225,
+      "hot_deal_threshold_gbp": 200,
+      "aliases": ["Initio Atomic Rose", "Atomic Rose EDP"],
+      "size_variants_ml": [90],
+      "gender": "female",
+      "fragrantica_slug": "Initio-Parfums-Prives-Atomic-Rose",
+      "notes": {
+        "top": ["bergamot", "citrus"],
+        "heart": ["damascus rose", "florals"],
+        "base": ["sandalwood", "cedar", "musk"]
+      }
+    },
+    {
+      "id": "lelabo-rose-31-100-edp",
+      "brand": "Le Labo",
+      "name": "Rose 31",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 225,
+      "good_deal_threshold_gbp": 180,
+      "hot_deal_threshold_gbp": 165,
+      "aliases": ["Le Labo Rose 31", "Rose 31 EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "female",
+      "fragrantica_slug": "Le-Labo-Rose-31",
+      "notes": {
+        "top": ["bergamot", "grapefruit"],
+        "heart": ["damascus rose", "geranium"],
+        "base": ["cedar", "sandalwood", "musk"]
+      }
+    },
+    {
+      "id": "lelabo-another-13-100-edp",
+      "brand": "Le Labo",
+      "name": "Another 13",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 225,
+      "good_deal_threshold_gbp": 180,
+      "hot_deal_threshold_gbp": 165,
+      "aliases": ["Le Labo Another 13", "Another 13 EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "unisex",
+      "fragrantica_slug": "Le-Labo-Another-13",
+      "notes": {
+        "top": ["bergamot", "lemon"],
+        "heart": ["florals", "incense"],
+        "base": ["sandalwood", "cedar", "amber"]
+      }
+    },
+    {
+      "id": "lelabo-bergamote-22-100-edp",
+      "brand": "Le Labo",
+      "name": "Bergamote 22",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 225,
+      "good_deal_threshold_gbp": 180,
+      "hot_deal_threshold_gbp": 165,
+      "aliases": ["Le Labo Bergamote 22", "Bergamote 22 EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "unisex",
+      "fragrantica_slug": "Le-Labo-Bergamote-22",
+      "notes": {
+        "top": ["bergamot", "grapefruit"],
+        "heart": ["cardamom", "lavender"],
+        "base": ["cedar", "sandalwood", "musk"]
+      }
+    },
+    {
+      "id": "lelabo-the-noir-29-100-edp",
+      "brand": "Le Labo",
+      "name": "Thé Noir 29",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 225,
+      "good_deal_threshold_gbp": 180,
+      "hot_deal_threshold_gbp": 165,
+      "aliases": ["Le Labo The Noir 29", "Thé Noir 29 EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "unisex",
+      "fragrantica_slug": "Le-Labo-The-Noir-29",
+      "notes": {
+        "top": ["bergamot", "tea notes"],
+        "heart": ["black tea", "spices"],
+        "base": ["cedar", "sandalwood", "musk"]
+      }
+    },
+    {
+      "id": "lelabo-tonka-25-100-edp",
+      "brand": "Le Labo",
+      "name": "Tonka 25",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 225,
+      "good_deal_threshold_gbp": 180,
+      "hot_deal_threshold_gbp": 165,
+      "aliases": ["Le Labo Tonka 25", "Tonka 25 EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "unisex",
+      "fragrantica_slug": "Le-Labo-Tonka-25",
+      "notes": {
+        "top": ["bergamot", "cinnamon"],
+        "heart": ["tonka", "vanilla"],
+        "base": ["sandalwood", "cedar", "musk"]
+      }
+    },
+    {
+      "id": "byredo-gypsy-water-100-edp",
+      "brand": "Byredo",
+      "name": "Gypsy Water",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 195,
+      "good_deal_threshold_gbp": 155,
+      "hot_deal_threshold_gbp": 140,
+      "aliases": ["Byredo Gypsy Water", "Gypsy Water EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "unisex",
+      "fragrantica_slug": "Byredo-Gypsy-Water",
+      "notes": {
+        "top": ["juniper", "bergamot"],
+        "heart": ["cardamom", "incense"],
+        "base": ["sandalwood", "cedar", "amber"]
+      }
+    },
+    {
+      "id": "byredo-bal-dafrique-100-edp",
+      "brand": "Byredo",
+      "name": "Bal d'Afrique",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 195,
+      "good_deal_threshold_gbp": 155,
+      "hot_deal_threshold_gbp": 140,
+      "aliases": ["Byredo Bal d'Afrique", "Bal d'Afrique EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "unisex",
+      "fragrantica_slug": "Byredo-Bal-d-Afrique",
+      "notes": {
+        "top": ["grapefruit", "lemon"],
+        "heart": ["cardamom", "florals"],
+        "base": ["sandalwood", "amber", "musk"]
+      }
+    },
+    {
+      "id": "byredo-blanche-100-edp",
+      "brand": "Byredo",
+      "name": "Blanche",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 195,
+      "good_deal_threshold_gbp": 155,
+      "hot_deal_threshold_gbp": 140,
+      "aliases": ["Byredo Blanche", "Blanche EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "unisex",
+      "fragrantica_slug": "Byredo-Blanche",
+      "notes": {
+        "top": ["bergamot", "cardamom"],
+        "heart": ["florals", "iris"],
+        "base": ["cedar", "sandalwood", "musk"]
+      }
+    },
+    {
+      "id": "byredo-black-saffron-100-edp",
+      "brand": "Byredo",
+      "name": "Black Saffron",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 195,
+      "good_deal_threshold_gbp": 155,
+      "hot_deal_threshold_gbp": 140,
+      "aliases": ["Byredo Black Saffron", "Black Saffron EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "unisex",
+      "fragrantica_slug": "Byredo-Black-Saffron",
+      "notes": {
+        "top": ["saffron", "pepper"],
+        "heart": ["florals", "spices"],
+        "base": ["sandalwood", "amber", "musk"]
+      }
+    },
+    {
+      "id": "byredo-bibliotheque-100-edp",
+      "brand": "Byredo",
+      "name": "Bibliothèque",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 195,
+      "good_deal_threshold_gbp": 155,
+      "hot_deal_threshold_gbp": 140,
+      "aliases": ["Byredo Bibliotheque", "Bibliothèque EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "unisex",
+      "fragrantica_slug": "Byredo-Bibliotheque",
+      "notes": {
+        "top": ["bergamot", "lemon"],
+        "heart": ["paper", "leather notes"],
+        "base": ["cedar", "sandalwood", "musk"]
+      }
+    },
+    {
+      "id": "nishane-ani-100-edp",
+      "brand": "Nishane",
+      "name": "Ani",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 230,
+      "good_deal_threshold_gbp": 185,
+      "hot_deal_threshold_gbp": 165,
+      "aliases": ["Nishane Ani", "Ani EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "female",
+      "fragrantica_slug": "Nishane-Ani",
+      "notes": {
+        "top": ["bergamot", "grapefruit"],
+        "heart": ["tuberose", "jasmine"],
+        "base": ["sandalwood", "musk", "amber"]
+      }
+    },
+    {
+      "id": "nishane-hacivat-100-edp",
+      "brand": "Nishane",
+      "name": "Hacivat",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 230,
+      "good_deal_threshold_gbp": 185,
+      "hot_deal_threshold_gbp": 165,
+      "aliases": ["Nishane Hacivat", "Hacivat EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "male",
+      "fragrantica_slug": "Nishane-Hacivat",
+      "notes": {
+        "top": ["ginger", "cardamom"],
+        "heart": ["incense", "leather"],
+        "base": ["oud", "sandalwood", "amber"]
+      }
+    },
+    {
+      "id": "nishane-fan-your-flames-100-edp",
+      "brand": "Nishane",
+      "name": "Fan Your Flames",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 230,
+      "good_deal_threshold_gbp": 185,
+      "hot_deal_threshold_gbp": 165,
+      "aliases": ["Nishane Fan Your Flames", "Fan Your Flames EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "unisex",
+      "fragrantica_slug": "Nishane-Fan-Your-Flames",
+      "notes": {
+        "top": ["pepper", "cardamom"],
+        "heart": ["incense", "florals"],
+        "base": ["oud", "sandalwood", "amber"]
+      }
+    },
+    {
+      "id": "nishane-hundred-silent-ways-100-edp",
+      "brand": "Nishane",
+      "name": "Hundred Silent Ways",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 230,
+      "good_deal_threshold_gbp": 185,
+      "hot_deal_threshold_gbp": 165,
+      "aliases": ["Nishane Hundred Silent Ways", "Hundred Silent Ways EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "unisex",
+      "fragrantica_slug": "Nishane-Hundred-Silent-Ways",
+      "notes": {
+        "top": ["citrus", "bergamot"],
+        "heart": ["florals", "woods"],
+        "base": ["sandalwood", "cedar", "musk"]
+      }
+    },
+    {
+      "id": "nishane-nanshe-100-edp",
+      "brand": "Nishane",
+      "name": "Nanshe",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 230,
+      "good_deal_threshold_gbp": 185,
+      "hot_deal_threshold_gbp": 165,
+      "aliases": ["Nishane Nanshe", "Nanshe EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "female",
+      "fragrantica_slug": "Nishane-Nanshe",
+      "notes": {
+        "top": ["grapefruit", "citrus"],
+        "heart": ["florals", "white flowers"],
+        "base": ["sandalwood", "musk", "amber"]
+      }
+    },
+    {
+      "id": "nishane-wulong-cha-100-edp",
+      "brand": "Nishane",
+      "name": "Wulong Cha",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 230,
+      "good_deal_threshold_gbp": 185,
+      "hot_deal_threshold_gbp": 165,
+      "aliases": ["Nishane Wulong Cha", "Wulong Cha EDP"],
+      "size_variants_ml": [50, 100],
+      "gender": "unisex",
+      "fragrantica_slug": "Nishane-Wulong-Cha",
+      "notes": {
+        "top": ["bergamot", "oolong tea"],
+        "heart": ["tea notes", "florals"],
+        "base": ["sandalwood", "cedar", "musk"]
+      }
+    },
+    {
+      "id": "memo-african-leather-75-edp",
+      "brand": "Memo Paris",
+      "name": "African Leather",
+      "size_ml": 75,
+      "concentration": "EDP",
+      "typical_retail_gbp": 215,
+      "good_deal_threshold_gbp": 170,
+      "hot_deal_threshold_gbp": 155,
+      "aliases": ["Memo Paris African Leather", "African Leather EDP"],
+      "size_variants_ml": [75],
+      "gender": "unisex",
+      "fragrantica_slug": "Memo-Paris-African-Leather",
+      "notes": {
+        "top": ["bergamot", "grapefruit"],
+        "heart": ["leather", "incense"],
+        "base": ["sandalwood", "cedar", "amber"]
+      }
+    },
+    {
+      "id": "memo-marfa-75-edp",
+      "brand": "Memo Paris",
+      "name": "Marfa",
+      "size_ml": 75,
+      "concentration": "EDP",
+      "typical_retail_gbp": 215,
+      "good_deal_threshold_gbp": 170,
+      "hot_deal_threshold_gbp": 155,
+      "aliases": ["Memo Paris Marfa", "Marfa EDP"],
+      "size_variants_ml": [75],
+      "gender": "unisex",
+      "fragrantica_slug": "Memo-Paris-Marfa",
+      "notes": {
+        "top": ["citrus", "herbs"],
+        "heart": ["leather", "woods"],
+        "base": ["sandalwood", "cedar", "musk"]
+      }
+    },
+    {
+      "id": "memo-italian-leather-75-edp",
+      "brand": "Memo Paris",
+      "name": "Italian Leather",
+      "size_ml": 75,
+      "concentration": "EDP",
+      "typical_retail_gbp": 215,
+      "good_deal_threshold_gbp": 170,
+      "hot_deal_threshold_gbp": 155,
+      "aliases": ["Memo Paris Italian Leather", "Italian Leather EDP"],
+      "size_variants_ml": [75],
+      "gender": "unisex",
+      "fragrantica_slug": "Memo-Paris-Italian-Leather",
+      "notes": {
+        "top": ["bergamot", "grapefruit"],
+        "heart": ["leather", "incense"],
+        "base": ["cedar", "sandalwood", "amber"]
+      }
+    },
+    {
+      "id": "memo-french-leather-75-edp",
+      "brand": "Memo Paris",
+      "name": "French Leather",
+      "size_ml": 75,
+      "concentration": "EDP",
+      "typical_retail_gbp": 215,
+      "good_deal_threshold_gbp": 170,
+      "hot_deal_threshold_gbp": 155,
+      "aliases": ["Memo Paris French Leather", "French Leather EDP"],
+      "size_variants_ml": [75],
+      "gender": "unisex",
+      "fragrantica_slug": "Memo-Paris-French-Leather",
+      "notes": {
+        "top": ["bergamot", "lemon"],
+        "heart": ["leather", "incense"],
+        "base": ["sandalwood", "cedar", "musk"]
+      }
+    },
+    {
+      "id": "kilian-angels-share-50-edp",
+      "brand": "Kilian",
+      "name": "Angels' Share",
+      "size_ml": 50,
+      "concentration": "EDP",
+      "typical_retail_gbp": 185,
+      "good_deal_threshold_gbp": 150,
+      "hot_deal_threshold_gbp": 135,
+      "aliases": ["Kilian Angels Share", "Angels Share EDP"],
+      "size_variants_ml": [50],
+      "gender": "unisex",
+      "fragrantica_slug": "Kilian-Angels-Share",
+      "notes": {
+        "top": ["cognac", "vanilla"],
+        "heart": ["tonka", "oak"],
+        "base": ["sandalwood", "amber", "musk"]
+      }
+    },
+    {
+      "id": "kilian-apple-brandy-50-edp",
+      "brand": "Kilian",
+      "name": "Apple Brandy",
+      "size_ml": 50,
+      "concentration": "EDP",
+      "typical_retail_gbp": 185,
+      "good_deal_threshold_gbp": 150,
+      "hot_deal_threshold_gbp": 135,
+      "aliases": ["Kilian Apple Brandy", "Apple Brandy EDP"],
+      "size_variants_ml": [50],
+      "gender": "unisex",
+      "fragrantica_slug": "Kilian-Apple-Brandy",
+      "notes": {
+        "top": ["apple", "brandy"],
+        "heart": ["tonka", "vanilla"],
+        "base": ["sandalwood", "cedar", "musk"]
+      }
+    },
+    {
+      "id": "kilian-love-dont-be-shy-50-edp",
+      "brand": "Kilian",
+      "name": "Love Don't Be Shy",
+      "size_ml": 50,
+      "concentration": "EDP",
+      "typical_retail_gbp": 185,
+      "good_deal_threshold_gbp": 150,
+      "hot_deal_threshold_gbp": 135,
+      "aliases": ["Kilian Love Don't Be Shy", "Love Don't Be Shy EDP"],
+      "size_variants_ml": [50],
+      "gender": "female",
+      "fragrantica_slug": "Kilian-Love-Don-t-Be-Shy",
+      "notes": {
+        "top": ["bergamot", "coconut"],
+        "heart": ["tuberose", "jasmine"],
+        "base": ["sandalwood", "tonka", "vanilla"]
+      }
+    },
+    {
+      "id": "kilian-straight-to-heaven-50-edp",
+      "brand": "Kilian",
+      "name": "Straight to Heaven",
+      "size_ml": 50,
+      "concentration": "EDP",
+      "typical_retail_gbp": 185,
+      "good_deal_threshold_gbp": 150,
+      "hot_deal_threshold_gbp": 135,
+      "aliases": ["Kilian Straight to Heaven", "Straight to Heaven EDP"],
+      "size_variants_ml": [50],
+      "gender": "unisex",
+      "fragrantica_slug": "Kilian-Straight-to-Heaven",
+      "notes": {
+        "top": ["vanilla", "tonka"],
+        "heart": ["florals", "incense"],
+        "base": ["sandalwood", "amber", "musk"]
+      }
+    },
+    {
+      "id": "kilian-good-girl-gone-bad-50-edp",
+      "brand": "Kilian",
+      "name": "Good Girl Gone Bad",
+      "size_ml": 50,
+      "concentration": "EDP",
+      "typical_retail_gbp": 185,
+      "good_deal_threshold_gbp": 150,
+      "hot_deal_threshold_gbp": 135,
+      "aliases": ["Kilian Good Girl Gone Bad", "Good Girl Gone Bad EDP"],
+      "size_variants_ml": [50],
+      "gender": "female",
+      "fragrantica_slug": "Kilian-Good-Girl-Gone-Bad",
+      "notes": {
+        "top": ["black pepper", "citrus"],
+        "heart": ["florals", "incense"],
+        "base": ["sandalwood", "tonka", "amber"]
+      }
+    },
+    {
+      "id": "kilian-black-phantom-50-edp",
+      "brand": "Kilian",
+      "name": "Black Phantom",
+      "size_ml": 50,
+      "concentration": "EDP",
+      "typical_retail_gbp": 185,
+      "good_deal_threshold_gbp": 150,
+      "hot_deal_threshold_gbp": 135,
+      "aliases": ["Kilian Black Phantom", "Black Phantom EDP"],
+      "size_variants_ml": [50],
+      "gender": "unisex",
+      "fragrantica_slug": "Kilian-Black-Phantom",
+      "notes": {
+        "top": ["pepper", "ginger"],
+        "heart": ["florals", "incense"],
+        "base": ["oud", "sandalwood", "amber"]
+      }
+    },
+    {
+      "id": "penhaligons-halfeti-100-edp",
+      "brand": "Penhaligon's",
+      "name": "Halfeti",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 240,
+      "good_deal_threshold_gbp": 190,
+      "hot_deal_threshold_gbp": 170,
+      "aliases": ["Penhaligons Halfeti", "Halfeti EDP"],
+      "size_variants_ml": [100],
+      "gender": "male",
+      "fragrantica_slug": "Penhaligon-s-Halfeti",
+      "notes": {
+        "top": ["bergamot", "lemon"],
+        "heart": ["rose", "incense"],
+        "base": ["sandalwood", "cedar", "musk"]
+      }
+    },
+    {
+      "id": "penhaligons-tragedy-lord-george-100-edp",
+      "brand": "Penhaligon's",
+      "name": "The Tragedy of Lord George",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 240,
+      "good_deal_threshold_gbp": 190,
+      "hot_deal_threshold_gbp": 170,
+      "aliases": ["Penhaligons Tragedy Lord George", "The Tragedy of Lord George EDP"],
+      "size_variants_ml": [100],
+      "gender": "male",
+      "fragrantica_slug": "Penhaligon-s-The-Tragedy-of-Lord-George",
+      "notes": {
+        "top": ["citrus", "grapefruit"],
+        "heart": ["leather", "incense"],
+        "base": ["sandalwood", "cedar", "amber"]
+      }
+    },
+    {
+      "id": "penhaligons-empressa-100-edp",
+      "brand": "Penhaligon's",
+      "name": "Empressa",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 240,
+      "good_deal_threshold_gbp": 190,
+      "hot_deal_threshold_gbp": 170,
+      "aliases": ["Penhaligons Empressa", "Empressa EDP"],
+      "size_variants_ml": [100],
+      "gender": "female",
+      "fragrantica_slug": "Penhaligon-s-Empressa",
+      "notes": {
+        "top": ["bergamot", "grapefruit"],
+        "heart": ["rose", "florals"],
+        "base": ["sandalwood", "cedar", "amber"]
+      }
+    },
+    {
+      "id": "penhaligons-sartorial-100-edp",
+      "brand": "Penhaligon's",
+      "name": "Sartorial",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 240,
+      "good_deal_threshold_gbp": 190,
+      "hot_deal_threshold_gbp": 170,
+      "aliases": ["Penhaligons Sartorial", "Sartorial EDP"],
+      "size_variants_ml": [100],
+      "gender": "male",
+      "fragrantica_slug": "Penhaligon-s-Sartorial",
+      "notes": {
+        "top": ["bergamot", "lemon"],
+        "heart": ["leather", "iris"],
+        "base": ["sandalwood", "cedar", "musk"]
+      }
+    },
+    {
+      "id": "roja-elysium-50-edp",
+      "brand": "Roja Parfums",
+      "name": "Elysium",
+      "size_ml": 50,
+      "concentration": "EDP",
+      "typical_retail_gbp": 260,
+      "good_deal_threshold_gbp": 210,
+      "hot_deal_threshold_gbp": 190,
+      "aliases": ["Roja Elysium", "Elysium EDP"],
+      "size_variants_ml": [50],
+      "gender": "male",
+      "fragrantica_slug": "Roja-Parfums-Elysium",
+      "notes": {
+        "top": ["grapefruit", "citrus"],
+        "heart": ["incense", "florals"],
+        "base": ["sandalwood", "cedar", "amber"]
+      }
+    },
+    {
+      "id": "roja-scandal-50-edp",
+      "brand": "Roja Parfums",
+      "name": "Scandal",
+      "size_ml": 50,
+      "concentration": "EDP",
+      "typical_retail_gbp": 260,
+      "good_deal_threshold_gbp": 210,
+      "hot_deal_threshold_gbp": 190,
+      "aliases": ["Roja Scandal", "Scandal EDP"],
+      "size_variants_ml": [50],
+      "gender": "female",
+      "fragrantica_slug": "Roja-Parfums-Scandal",
+      "notes": {
+        "top": ["bergamot", "lemon"],
+        "heart": ["florals", "tuberose"],
+        "base": ["sandalwood", "musk", "amber"]
+      }
+    },
+    {
+      "id": "roja-enigma-50-edp",
+      "brand": "Roja Parfums",
+      "name": "Enigma",
+      "size_ml": 50,
+      "concentration": "EDP",
+      "typical_retail_gbp": 260,
+      "good_deal_threshold_gbp": 210,
+      "hot_deal_threshold_gbp": 190,
+      "aliases": ["Roja Enigma", "Enigma EDP"],
+      "size_variants_ml": [50],
+      "gender": "unisex",
+      "fragrantica_slug": "Roja-Parfums-Enigma",
+      "notes": {
+        "top": ["saffron", "bergamot"],
+        "heart": ["incense", "florals"],
+        "base": ["sandalwood", "amber", "musk"]
+      }
+    },
+    {
+      "id": "acqua-colonia-100-edc",
+      "brand": "Acqua di Parma",
+      "name": "Colonia",
+      "size_ml": 100,
+      "concentration": "EDT",
+      "typical_retail_gbp": 150,
+      "good_deal_threshold_gbp": 120,
+      "hot_deal_threshold_gbp": 110,
+      "aliases": ["Acqua di Parma Colonia", "Colonia EDT"],
+      "size_variants_ml": [50, 100, 180],
+      "gender": "unisex",
+      "fragrantica_slug": "Acqua-di-Parma-Colonia",
+      "notes": {
+        "top": ["bergamot", "lemon", "orange"],
+        "heart": ["lavender", "rosemary"],
+        "base": ["sandalwood", "cedar", "musk"]
+      }
+    },
+    {
+      "id": "acqua-oud-spice-100-edp",
+      "brand": "Acqua di Parma",
+      "name": "Oud & Spice",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 185,
+      "good_deal_threshold_gbp": 150,
+      "hot_deal_threshold_gbp": 135,
+      "aliases": ["Acqua di Parma Oud & Spice", "Oud & Spice EDP"],
+      "size_variants_ml": [100],
+      "gender": "male",
+      "fragrantica_slug": "Acqua-di-Parma-Oud-Spice",
+      "notes": {
+        "top": ["pepper", "cardamom"],
+        "heart": ["oud", "incense"],
+        "base": ["sandalwood", "amber", "musk"]
+      }
+    },
+    {
+      "id": "acqua-signatures-sun-oud-100-edp",
+      "brand": "Acqua di Parma",
+      "name": "Signatures of the Sun Oud",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 185,
+      "good_deal_threshold_gbp": 150,
+      "hot_deal_threshold_gbp": 135,
+      "aliases": ["Acqua di Parma Signatures Sun Oud", "Signatures Sun Oud EDP"],
+      "size_variants_ml": [100],
+      "gender": "unisex",
+      "fragrantica_slug": "Acqua-di-Parma-Signatures-of-the-Sun-Oud",
+      "notes": {
+        "top": ["saffron", "bergamot"],
+        "heart": ["oud", "incense"],
+        "base": ["sandalwood", "amber", "musk"]
+      }
+    },
+    {
+      "id": "mancera-cedrat-boise-120-edp",
+      "brand": "Mancera",
+      "name": "Cedrat Boise",
+      "size_ml": 120,
+      "concentration": "EDP",
+      "typical_retail_gbp": 160,
+      "good_deal_threshold_gbp": 130,
+      "hot_deal_threshold_gbp": 115,
+      "aliases": ["Mancera Cedrat Boise", "Cedrat Boise EDP"],
+      "size_variants_ml": [120],
+      "gender": "male",
+      "fragrantica_slug": "Mancera-Cedrat-Boise",
+      "notes": {
+        "top": ["grapefruit", "lemon"],
+        "heart": ["cedar", "woods"],
+        "base": ["sandalwood", "vetiver", "musk"]
+      }
+    },
+    {
+      "id": "mancera-roses-vanille-120-edp",
+      "brand": "Mancera",
+      "name": "Roses Vanille",
+      "size_ml": 120,
+      "concentration": "EDP",
+      "typical_retail_gbp": 160,
+      "good_deal_threshold_gbp": 130,
+      "hot_deal_threshold_gbp": 115,
+      "aliases": ["Mancera Roses Vanille", "Roses Vanille EDP"],
+      "size_variants_ml": [120],
+      "gender": "female",
+      "fragrantica_slug": "Mancera-Roses-Vanille",
+      "notes": {
+        "top": ["bergamot", "grapefruit"],
+        "heart": ["rose", "vanilla"],
+        "base": ["sandalwood", "musk", "amber"]
+      }
+    },
+    {
+      "id": "mancera-instant-crush-120-edp",
+      "brand": "Mancera",
+      "name": "Instant Crush",
+      "size_ml": 120,
+      "concentration": "EDP",
+      "typical_retail_gbp": 160,
+      "good_deal_threshold_gbp": 130,
+      "hot_deal_threshold_gbp": 115,
+      "aliases": ["Mancera Instant Crush", "Instant Crush EDP"],
+      "size_variants_ml": [120],
+      "gender": "female",
+      "fragrantica_slug": "Mancera-Instant-Crush",
+      "notes": {
+        "top": ["bergamot", "citrus"],
+        "heart": ["florals", "peach"],
+        "base": ["sandalwood", "tonka", "musk"]
+      }
+    },
+    {
+      "id": "mancera-aoud-lemon-mint-120-edp",
+      "brand": "Mancera",
+      "name": "Aoud Lemon Mint",
+      "size_ml": 120,
+      "concentration": "EDP",
+      "typical_retail_gbp": 160,
+      "good_deal_threshold_gbp": 130,
+      "hot_deal_threshold_gbp": 115,
+      "aliases": ["Mancera Aoud Lemon Mint", "Aoud Lemon Mint EDP"],
+      "size_variants_ml": [120],
+      "gender": "unisex",
+      "fragrantica_slug": "Mancera-Aoud-Lemon-Mint",
+      "notes": {
+        "top": ["lemon", "mint"],
+        "heart": ["oud", "spices"],
+        "base": ["sandalwood", "cedar", "musk"]
+      }
+    },
+    {
+      "id": "mancera-red-tobacco-120-edp",
+      "brand": "Mancera",
+      "name": "Red Tobacco",
+      "size_ml": 120,
+      "concentration": "EDP",
+      "typical_retail_gbp": 160,
+      "good_deal_threshold_gbp": 130,
+      "hot_deal_threshold_gbp": 115,
+      "aliases": ["Mancera Red Tobacco", "Red Tobacco EDP"],
+      "size_variants_ml": [120],
+      "gender": "male",
+      "fragrantica_slug": "Mancera-Red-Tobacco",
+      "notes": {
+        "top": ["bergamot", "grapefruit"],
+        "heart": ["tobacco", "incense"],
+        "base": ["sandalwood", "cedar", "amber"]
+      }
+    },
+    {
+      "id": "montale-intense-cafe-100-edp",
+      "brand": "Montale",
+      "name": "Intense Café",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 155,
+      "good_deal_threshold_gbp": 125,
+      "hot_deal_threshold_gbp": 110,
+      "aliases": ["Montale Intense Cafe", "Intense Café EDP"],
+      "size_variants_ml": [100],
+      "gender": "unisex",
+      "fragrantica_slug": "Montale-Intense-Cafe",
+      "notes": {
+        "top": ["coffee", "cardamom"],
+        "heart": ["tonka", "vanilla"],
+        "base": ["sandalwood", "amber", "musk"]
+      }
+    },
+    {
+      "id": "montale-chocolate-greedy-100-edp",
+      "brand": "Montale",
+      "name": "Chocolate Greedy",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 155,
+      "good_deal_threshold_gbp": 125,
+      "hot_deal_threshold_gbp": 110,
+      "aliases": ["Montale Chocolate Greedy", "Chocolate Greedy EDP"],
+      "size_variants_ml": [100],
+      "gender": "unisex",
+      "fragrantica_slug": "Montale-Chocolate-Greedy",
+      "notes": {
+        "top": ["cinnamon", "spices"],
+        "heart": ["chocolate", "tonka"],
+        "base": ["sandalwood", "amber", "vanilla"]
+      }
+    },
+    {
+      "id": "montale-arabians-tonka-100-edp",
+      "brand": "Montale",
+      "name": "Arabians Tonka",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 155,
+      "good_deal_threshold_gbp": 125,
+      "hot_deal_threshold_gbp": 110,
+      "aliases": ["Montale Arabians Tonka", "Arabians Tonka EDP"],
+      "size_variants_ml": [100],
+      "gender": "unisex",
+      "fragrantica_slug": "Montale-Arabians-Tonka",
+      "notes": {
+        "top": ["cardamom", "spices"],
+        "heart": ["tonka", "vanilla"],
+        "base": ["sandalwood", "cedar", "amber"]
+      }
+    },
+    {
+      "id": "montale-oud-tobacco-100-edp",
+      "brand": "Montale",
+      "name": "Oud Tobacco",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 155,
+      "good_deal_threshold_gbp": 125,
+      "hot_deal_threshold_gbp": 110,
+      "aliases": ["Montale Oud Tobacco", "Oud Tobacco EDP"],
+      "size_variants_ml": [100],
+      "gender": "male",
+      "fragrantica_slug": "Montale-Oud-Tobacco",
+      "notes": {
+        "top": ["tobacco", "spices"],
+        "heart": ["oud", "incense"],
+        "base": ["sandalwood", "cedar", "amber"]
+      }
+    },
+    {
+      "id": "tiziana-terenzi-kirke-100-edp",
+      "brand": "Tiziana Terenzi",
+      "name": "Kirke",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 250,
+      "good_deal_threshold_gbp": 200,
+      "hot_deal_threshold_gbp": 180,
+      "aliases": ["Tiziana Terenzi Kirke", "Kirke EDP"],
+      "size_variants_ml": [100],
+      "gender": "female",
+      "fragrantica_slug": "Tiziana-Terenzi-Kirke",
+      "notes": {
+        "top": ["bergamot", "grapefruit"],
+        "heart": ["florals", "rose"],
+        "base": ["sandalwood", "musk", "amber"]
+      }
+    },
+    {
+      "id": "tiziana-terenzi-andromeda-100-edp",
+      "brand": "Tiziana Terenzi",
+      "name": "Andromeda",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 250,
+      "good_deal_threshold_gbp": 200,
+      "hot_deal_threshold_gbp": 180,
+      "aliases": ["Tiziana Terenzi Andromeda", "Andromeda EDP"],
+      "size_variants_ml": [100],
+      "gender": "female",
+      "fragrantica_slug": "Tiziana-Terenzi-Andromeda",
+      "notes": {
+        "top": ["bergamot", "citrus"],
+        "heart": ["florals", "jasmine"],
+        "base": ["sandalwood", "musk", "amber"]
+      }
+    },
+    {
+      "id": "tiziana-terenzi-spirito-fiorentino-100-edp",
+      "brand": "Tiziana Terenzi",
+      "name": "Spirito Fiorentino",
+      "size_ml": 100,
+      "concentration": "EDP",
+      "typical_retail_gbp": 250,
+      "good_deal_threshold_gbp": 200,
+      "hot_deal_threshold_gbp": 180,
+      "aliases": ["Tiziana Terenzi Spirito Fiorentino", "Spirito Fiorentino EDP"],
+      "size_variants_ml": [100],
+      "gender": "unisex",
+      "fragrantica_slug": "Tiziana-Terenzi-Spirito-Fiorentino",
+      "notes": {
+        "top": ["bergamot", "lemon"],
+        "heart": ["florals", "incense"],
+        "base": ["sandalwood", "cedar", "musk"]
+      }
+    }
+  ]
+}
