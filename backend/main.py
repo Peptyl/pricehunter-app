@@ -53,13 +53,16 @@ CLERK_JWT_KEY = os.getenv('CLERK_JWT_KEY', '')  # JWKS endpoint
 REVENUECAT_API_KEY = os.getenv('REVENUECAT_API_KEY', 'sk_funIsfnYUqsOUzcVbQmHwncNpqBQw')
 REVENUECAT_PROJECT_ID = os.getenv('REVENUECAT_PROJECT_ID', 'proj_funIsfnYUqsOUzcVbQmHwncNpqBQw')
 
-# Database config
+# Database config — Railway injects DATABASE_URL; fallback to individual vars for local dev
+DATABASE_URL = os.getenv('DATABASE_URL', '')
 DB_HOST = os.getenv('DB_HOST', 'localhost')
 DB_PORT = os.getenv('DB_PORT', '5432')
 DB_NAME = os.getenv('DB_NAME', 'olfex')
 DB_USER = os.getenv('DB_USER', 'olfex')
 DB_PASS = os.getenv('DB_PASS', 'olfex123')
 
+# Redis — Railway injects REDIS_URL; fallback to individual vars
+REDIS_URL = os.getenv('REDIS_URL', '')
 REDIS_HOST = os.getenv('REDIS_HOST', 'localhost')
 REDIS_PORT = int(os.getenv('REDIS_PORT', '6379'))
 
@@ -102,16 +105,21 @@ def init_firebase():
 # ============================================================================
 
 def get_db_conn():
-    """Get PostgreSQL connection"""
+    """Get PostgreSQL connection — uses DATABASE_URL if available (Railway), else individual vars"""
+    if DATABASE_URL:
+        return psycopg2.connect(DATABASE_URL)
     return psycopg2.connect(
         host=DB_HOST, port=DB_PORT, database=DB_NAME,
         user=DB_USER, password=DB_PASS
     )
 
 def get_redis():
-    """Get Redis connection"""
+    """Get Redis connection — uses REDIS_URL if available (Railway), else individual vars"""
     try:
-        r = redis.Redis(host=REDIS_HOST, port=REDIS_PORT, decode_responses=True)
+        if REDIS_URL:
+            r = redis.from_url(REDIS_URL, decode_responses=True)
+        else:
+            r = redis.Redis(host=REDIS_HOST, port=REDIS_PORT, decode_responses=True)
         r.ping()
         return r
     except:
@@ -428,13 +436,30 @@ def root():
 
 @app.get("/health")
 def health_check():
-    """Health check endpoint — fast response, no blocking I/O"""
+    """Health check endpoint — fast response, no blocking I/O.
+    DB/Redis status reported but failures don't block the response."""
+    db_ok = False
+    redis_ok = False
+    try:
+        if DATABASE_URL:
+            conn = psycopg2.connect(DATABASE_URL, connect_timeout=3)
+            conn.close()
+            db_ok = True
+    except:
+        pass
+    try:
+        r = get_redis()
+        redis_ok = r is not None
+    except:
+        pass
     return {
         'status': 'ok',
         'app': 'Olfex API',
         'version': '2.0.0',
         'time': datetime.now().isoformat(),
         'env': os.getenv('OLFEX_ENV', 'unknown'),
+        'db': 'connected' if db_ok else 'unavailable',
+        'redis': 'connected' if redis_ok else 'unavailable',
     }
 
 # ============================================================================
