@@ -428,35 +428,14 @@ def root():
 
 @app.get("/health")
 def health_check():
-    """Health check endpoint"""
-    status = {
+    """Health check endpoint — fast response, no blocking I/O"""
+    return {
         'status': 'ok',
+        'app': 'Olfex API',
+        'version': '2.0.0',
         'time': datetime.now().isoformat(),
-        'services': {}
+        'env': os.getenv('OLFEX_ENV', 'unknown'),
     }
-    
-    # Check PostgreSQL
-    try:
-        conn = get_db_conn()
-        c = conn.cursor()
-        c.execute('SELECT 1')
-        conn.close()
-        status['services']['postgres'] = 'connected'
-    except Exception as e:
-        status['services']['postgres'] = f'error: {str(e)}'
-    
-    # Check Redis
-    try:
-        r = get_redis()
-        status['services']['redis'] = 'connected' if r else 'not available'
-    except Exception as e:
-        status['services']['redis'] = f'error: {str(e)}'
-    
-    # Check Firebase
-    init_firebase()
-    status['services']['firebase'] = 'connected' if db else 'mock/limited'
-    
-    return status
 
 # ============================================================================
 # AUTH ENDPOINTS
