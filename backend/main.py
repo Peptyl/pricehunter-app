@@ -422,16 +422,37 @@ class WebhookPayload(BaseModel):
 @app.get("/")
 def root():
     """API root"""
-    init_firebase()
     return {
         "name": "Olfex API",
         "version": "2.0.0",
-        "status": "operational",
-        "integrations": {
-            "firebase": db is not None,
-            "clerk": True,
-            "revenuecat": True
-        }
+        "status": "operational"
+    }
+
+@app.get("/api/status")
+def public_status():
+    """Public status endpoint — use this to check app + DB connectivity"""
+    db_ok = False
+    redis_ok = False
+    try:
+        if DATABASE_URL:
+            conn = psycopg2.connect(DATABASE_URL, connect_timeout=3)
+            conn.close()
+            db_ok = True
+    except:
+        pass
+    try:
+        r = get_redis()
+        redis_ok = r is not None
+    except:
+        pass
+    return {
+        'status': 'ok',
+        'app': 'Olfex API',
+        'version': '2.0.0',
+        'time': datetime.now().isoformat(),
+        'env': os.getenv('OLFEX_ENV', 'unknown'),
+        'db': 'connected' if db_ok else 'unavailable',
+        'redis': 'connected' if redis_ok else 'unavailable',
     }
 
 @app.get("/health")
