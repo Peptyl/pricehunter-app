@@ -263,10 +263,21 @@ def init_db():
         CREATE TABLE IF NOT EXISTS waitlist (
             id SERIAL PRIMARY KEY,
             email VARCHAR(255) UNIQUE NOT NULL,
-            name VARCHAR(255),
+            name VARCHAR(255) DEFAULT '',
+            brands TEXT DEFAULT '',
             source VARCHAR(50) DEFAULT 'website',
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
+    ''')
+
+    # Add brands column to waitlist if it doesn't exist (migration for existing tables)
+    c.execute('''
+        DO $$
+        BEGIN
+            IF NOT EXISTS (SELECT 1 FROM information_schema.columns WHERE table_name='waitlist' AND column_name='brands') THEN
+                ALTER TABLE waitlist ADD COLUMN brands TEXT DEFAULT '';
+            END IF;
+        END $$;
     ''')
 
     # Create indexes for fast queries
@@ -491,7 +502,9 @@ class UserProfileUpdate(BaseModel):
 
 class WaitlistRequest(BaseModel):
     email: str
-    name: str
+    name: str = ""
+    brands: List[str] = []
+    source: str = "website"
 
 class WebhookPayload(BaseModel):
     event: Dict[str, Any]
@@ -793,12 +806,18 @@ async def add_to_waitlist(request: WaitlistRequest):
         conn = get_db_conn()
         c = conn.cursor()
 
-        # Try to insert; if email exists (UNIQUE constraint), just return success
+        # Store brands as comma-separated string
+        brands_str = ','.join(request.brands) if request.brands else ''
+
+        # Try to insert; if email exists (UNIQUE constraint), update their info
         c.execute('''
-            INSERT INTO waitlist (email, name, source)
-            VALUES (%s, %s, 'website')
-            ON CONFLICT (email) DO NOTHING
-        ''', (request.email, request.name))
+            INSERT INTO waitlist (email, name, brands, source)
+            VALUES (%s, %s, %s, %s)
+            ON CONFLICT (email) DO UPDATE SET
+                name = COALESCE(NULLIF(EXCLUDED.name, ''), waitlist.name),
+                brands = COALESCE(NULLIF(EXCLUDED.brands, ''), waitlist.brands),
+                source = EXCLUDED.source
+        ''', (request.email, request.name, brands_str, request.source))
 
         conn.commit()
         conn.close()
@@ -840,7 +859,7 @@ def admin_get_waitlist():
     try:
         conn = get_db_conn()
         c = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
-        c.execute('SELECT id, email, name, source, created_at FROM waitlist ORDER BY created_at DESC')
+        c.execute('SELECT id, email, name, brands, source, created_at FROM waitlist ORDER BY created_at DESC')
         rows = c.fetchall()
         conn.close()
         return {'waitlist': [dict(r) for r in rows], 'count': len(rows)}
