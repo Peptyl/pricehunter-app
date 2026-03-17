@@ -35,7 +35,15 @@ app = FastAPI(
 # CORS - configured for mobile app and landing page
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Open during dev — lock to olfex.app domains before production
+    allow_origins=[
+        "https://olfex-scent-quest.lovable.app",
+        "https://olfex.app",
+        "https://www.olfex.app",
+        "http://localhost:3000",
+        "http://localhost:5173",
+        "http://localhost:8080",
+    ],
+    allow_origin_regex=r"https://.*\.lovable\.app",  # All Lovable preview domains
     allow_methods=["*"],
     allow_headers=["*"],
     allow_credentials=True
