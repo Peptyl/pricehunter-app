@@ -270,12 +270,30 @@ def init_db():
         )
     ''')
 
-    # Add brands column to waitlist if it doesn't exist (migration for existing tables)
+    # Migrations — add missing columns to existing tables
     c.execute('''
         DO $$
         BEGIN
             IF NOT EXISTS (SELECT 1 FROM information_schema.columns WHERE table_name='waitlist' AND column_name='brands') THEN
                 ALTER TABLE waitlist ADD COLUMN brands TEXT DEFAULT '';
+            END IF;
+            IF NOT EXISTS (SELECT 1 FROM information_schema.columns WHERE table_name='products' AND column_name='size_ml') THEN
+                ALTER TABLE products ADD COLUMN size_ml INTEGER;
+            END IF;
+            IF NOT EXISTS (SELECT 1 FROM information_schema.columns WHERE table_name='products' AND column_name='rrp_gbp') THEN
+                ALTER TABLE products ADD COLUMN rrp_gbp DECIMAL(10,2);
+            END IF;
+            IF NOT EXISTS (SELECT 1 FROM information_schema.columns WHERE table_name='products' AND column_name='gender') THEN
+                ALTER TABLE products ADD COLUMN gender VARCHAR(20) DEFAULT 'unisex';
+            END IF;
+            IF NOT EXISTS (SELECT 1 FROM information_schema.columns WHERE table_name='products' AND column_name='fragrantica_rating') THEN
+                ALTER TABLE products ADD COLUMN fragrantica_rating DECIMAL(3,2);
+            END IF;
+            IF NOT EXISTS (SELECT 1 FROM information_schema.columns WHERE table_name='retailers' AND column_name='shipping_gbp_estimate') THEN
+                ALTER TABLE retailers ADD COLUMN shipping_gbp_estimate DECIMAL(6,2) DEFAULT 0;
+            END IF;
+            IF NOT EXISTS (SELECT 1 FROM information_schema.columns WHERE table_name='price_scans' AND column_name='landed_cost_gbp') THEN
+                ALTER TABLE price_scans ADD COLUMN landed_cost_gbp DECIMAL(10,2);
             END IF;
         END $$;
     ''')
@@ -556,13 +574,13 @@ def admin_seed_products():
             notes = p.get('notes', {})
             try:
                 c.execute('''
-                    INSERT INTO products (brand, name, concentration, size_ml, rrp_gbp,
+                    INSERT INTO products (id, brand, name, concentration, size_ml, rrp_gbp,
                         fragrantica_slug, fragrantica_rating, gender,
                         top_notes, mid_notes, base_notes)
-                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
-                    ON CONFLICT DO NOTHING
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                    ON CONFLICT (id) DO NOTHING
                 ''', (
-                    p.get('brand'), p.get('name'), p.get('concentration'),
+                    p.get('id'), p.get('brand'), p.get('name'), p.get('concentration'),
                     p.get('size_ml'), p.get('typical_retail_gbp'),
                     p.get('fragrantica_slug'), None, p.get('gender', 'unisex'),
                     notes.get('top', []), notes.get('heart', []), notes.get('base', [])
@@ -608,16 +626,25 @@ def admin_seed_retailers():
         inserted = 0
         for r in retailers:
             try:
+                shipping = r.get('shipping', {})
+                scraper = r.get('scraper_config', {})
                 c.execute('''
-                    INSERT INTO retailers (name, domain, country, currency, tier, type,
-                        platform, scraper_status, ships_to_uk, shipping_gbp_estimate)
-                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
-                    ON CONFLICT DO NOTHING
+                    INSERT INTO retailers (id, name, domain, country, currency, tier, type,
+                        trust_score, platform, scraper_status, ships_to_uk,
+                        shipping_cost_gbp, free_shipping_threshold, vat_included,
+                        shipping_gbp_estimate)
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                    ON CONFLICT (id) DO NOTHING
                 ''', (
-                    r.get('name'), r.get('domain'), r.get('country'), r.get('currency'),
-                    r.get('tier', 2), r.get('type', 'authorized'),
-                    r.get('platform', 'unknown'), 'active',
-                    r.get('ships_to_uk', True), r.get('shipping_gbp_estimate', 0)
+                    r.get('id'), r.get('name'), r.get('domain'), r.get('country'),
+                    r.get('currency'), r.get('tier', 2), r.get('type', 'authorized'),
+                    r.get('trust_score'), r.get('platform', 'unknown'),
+                    scraper.get('status', 'planned'),
+                    shipping.get('ships_to_uk', True),
+                    shipping.get('base_cost_gbp', 0),
+                    shipping.get('free_shipping_threshold'),
+                    r.get('vat_included', True),
+                    shipping.get('base_cost_gbp', 0)
                 ))
                 if c.rowcount > 0:
                     inserted += 1
