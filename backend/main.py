@@ -809,10 +809,7 @@ async def add_to_waitlist(request: WaitlistRequest):
         }
     except Exception as e:
         print(f"Waitlist error: {str(e)}")
-        return {
-            'status': 'ok',
-            'message': "You're on the list!"
-        }
+        raise HTTPException(status_code=500, detail=f"Waitlist error: {str(e)}")
 
 @app.get("/api/waitlist/count")
 async def get_waitlist_count():
