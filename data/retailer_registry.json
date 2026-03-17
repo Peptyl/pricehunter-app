@@ -1,6 +1,6 @@
 {
-  "registry_version": "2.0",
-  "last_updated": "2026-03-15T00:00:00Z",
+  "registry_version": "3.0",
+  "last_updated": "2026-03-17T00:00:00Z",
   "retailers": [
     {
       "id": "notino_uk",
@@ -392,7 +392,7 @@
       "country": "UK",
       "currency": "GBP",
       "type": "authorized_reseller",
-      "tier": 2,
+      "tier": 1,
       "trust_score": 86,
       "platform": "custom_ssr",
       "trust_signals": {
@@ -440,7 +440,7 @@
       "country": "DE",
       "currency": "EUR",
       "type": "authorized_reseller",
-      "tier": 2,
+      "tier": 1,
       "trust_score": 88,
       "platform": "custom_ssr",
       "trust_signals": {
@@ -728,7 +728,7 @@
       "country": "UK",
       "currency": "GBP",
       "type": "grey_market",
-      "tier": 2,
+      "tier": 1,
       "trust_score": 81,
       "platform": "shopify",
       "trust_signals": {
@@ -914,115 +914,115 @@
       "notes": "French niche boutique. Curated indie and designer brands. Good for European discovery, smaller inventory."
     },
     {
-      "id": "firstinfragrance_de",
-      "name": "First in Fragrance",
-      "domain": "firstinfragrance.com",
+      "id": "parfumo_de",
+      "name": "Parfumo",
+      "domain": "parfumo.net",
       "country": "DE",
       "currency": "EUR",
-      "type": "authorized_reseller",
-      "tier": 3,
-      "trust_score": 68,
+      "type": "specialist_retailer",
+      "tier": 2,
+      "trust_score": 79,
       "platform": "custom_ssr",
       "trust_signals": {
-        "domain_age_years": 4,
-        "trustpilot_score": 3.8,
-        "trustpilot_reviews": 580,
+        "domain_age_years": 6,
+        "trustpilot_score": 4.4,
+        "trustpilot_reviews": 2800,
         "ssl_valid": true,
         "has_return_policy": true,
         "payment_methods": ["visa", "mastercard", "paypal"],
         "company_registered": true,
         "physical_address": true,
-        "phone_support": false
+        "phone_support": true
       },
       "pricing": {
-        "avg_discount_vs_rrp_pct": 21,
-        "price_competitiveness_rank": 5
+        "avg_discount_vs_rrp_pct": 17,
+        "price_competitiveness_rank": 9
       },
       "shipping": {
         "ships_to_uk": true,
-        "base_cost_gbp": 3.5,
-        "free_shipping_threshold": 35,
+        "base_cost_gbp": 4.0,
+        "free_shipping_threshold": 45,
         "free_shipping_currency": "EUR",
-        "estimated_delivery_days": "3-5"
+        "estimated_delivery_days": "2-4"
       },
       "vat_included": true,
       "scraper_config": {
-        "status": "needs_research",
+        "status": "planned",
         "method": "html_parse",
-        "fallback_methods": ["json_ld"],
+        "fallback_methods": ["json_ld", "playwright"],
         "difficulty": "medium",
         "needs_proxy": false,
         "needs_playwright": false,
-        "rate_limit_rpm": 15,
-        "avg_response_ms": 850,
+        "rate_limit_rpm": 18,
+        "avg_response_ms": 950,
         "last_successful_scrape": null,
         "success_rate_30d": null,
-        "search_url_template": "https://www.firstinfragrance.com/search?q={query}"
+        "search_url_template": "https://www.parfumo.net/search?q={query}"
       },
-      "notes": "Newer German retailer. Lower review count but good prices. Needs manual verification before heavy scraping."
+      "notes": "German niche fragrance community/marketplace. Ships to UK. Specialist in niche and indie brands."
     },
     {
-      "id": "venba_uk",
-      "name": "Venba",
-      "domain": "venba.co.uk",
-      "country": "UK",
-      "currency": "GBP",
-      "type": "grey_market",
-      "tier": 3,
-      "trust_score": 70,
-      "platform": "shopify",
+      "id": "parfumgroup_de",
+      "name": "ParfumGroup",
+      "domain": "parfumgroup.de",
+      "country": "DE",
+      "currency": "EUR",
+      "type": "authorized_reseller",
+      "tier": 2,
+      "trust_score": 82,
+      "platform": "custom_ssr",
       "trust_signals": {
-        "domain_age_years": 3,
-        "trustpilot_score": 3.9,
-        "trustpilot_reviews": 420,
+        "domain_age_years": 7,
+        "trustpilot_score": 4.3,
+        "trustpilot_reviews": 5600,
         "ssl_valid": true,
         "has_return_policy": true,
-        "payment_methods": ["visa", "mastercard", "paypal"],
+        "payment_methods": ["visa", "mastercard", "paypal", "klarna"],
         "company_registered": true,
         "physical_address": true,
-        "phone_support": false
+        "phone_support": true
       },
       "pricing": {
-        "avg_discount_vs_rrp_pct": 13,
-        "price_competitiveness_rank": 16
+        "avg_discount_vs_rrp_pct": 24,
+        "price_competitiveness_rank": 2
       },
       "shipping": {
         "ships_to_uk": true,
-        "base_cost_gbp": 2.99,
-        "free_shipping_threshold": 50,
-        "free_shipping_currency": "GBP",
-        "estimated_delivery_days": "2-3"
+        "base_cost_gbp": 3.0,
+        "free_shipping_threshold": 25,
+        "free_shipping_currency": "EUR",
+        "estimated_delivery_days": "2-4"
       },
       "vat_included": true,
       "scraper_config": {
-        "status": "needs_research",
-        "method": "shopify_json_api",
-        "fallback_methods": ["html_css"],
-        "difficulty": "low",
+        "status": "planned",
+        "method": "html_parse",
+        "fallback_methods": ["json_ld", "playwright"],
+        "difficulty": "medium",
         "needs_proxy": false,
         "needs_playwright": false,
         "rate_limit_rpm": 20,
-        "avg_response_ms": 700,
+        "avg_response_ms": 1000,
         "last_successful_scrape": null,
         "success_rate_30d": null,
-        "search_url_template": "https://www.venba.co.uk/search?q={query}"
+        "search_url_template": "https://www.parfumgroup.de/search?q={query}"
       },
-      "notes": "Newer UK online retailer. Limited history but decent pricing. Monitor for fraud signals before trusting."
+      "notes": "Often cheapest in EU for niche fragrances. Ships to UK with ~EUR 3 shipping. Strong niche selection."
     },
     {
-      "id": "beautinow_eu",
-      "name": "BeautiNow",
-      "domain": "beautinow.com",
-      "country": "EU",
+      "id": "origines_fr",
+      "name": "Origines Parfums",
+      "domain": "origines-parfums.com",
+      "country": "FR",
       "currency": "EUR",
-      "type": "grey_market",
-      "tier": 3,
-      "trust_score": 69,
+      "type": "authorized_reseller",
+      "tier": 2,
+      "trust_score": 84,
       "platform": "custom_ssr",
       "trust_signals": {
-        "domain_age_years": 4,
-        "trustpilot_score": 3.6,
-        "trustpilot_reviews": 2400,
+        "domain_age_years": 8,
+        "trustpilot_score": 4.4,
+        "trustpilot_reviews": 3200,
         "ssl_valid": true,
         "has_return_policy": true,
         "payment_methods": ["visa", "mastercard", "paypal"],
@@ -1036,74 +1036,122 @@
       },
       "shipping": {
         "ships_to_uk": true,
-        "base_cost_gbp": 4.5,
-        "free_shipping_threshold": 40,
+        "base_cost_gbp": 5.0,
+        "free_shipping_threshold": 50,
         "free_shipping_currency": "EUR",
-        "estimated_delivery_days": "3-5"
+        "estimated_delivery_days": "2-4"
       },
       "vat_included": true,
       "scraper_config": {
-        "status": "needs_research",
+        "status": "planned",
         "method": "html_parse",
-        "fallback_methods": ["json_ld"],
+        "fallback_methods": ["json_ld", "playwright"],
         "difficulty": "medium",
         "needs_proxy": false,
         "needs_playwright": false,
-        "rate_limit_rpm": 15,
+        "rate_limit_rpm": 18,
         "avg_response_ms": 950,
         "last_successful_scrape": null,
         "success_rate_30d": null,
-        "search_url_template": "https://www.beautinow.com/search?q={query}"
+        "search_url_template": "https://www.origines-parfums.com/search?q={query}"
       },
-      "notes": "Multi-country EU retailer. Decent prices but lower trust signals. Needs verification before priority scraping."
+      "notes": "French authorized retailer with excellent niche selection. Good pricing and reliable shipping to UK."
     },
     {
-      "id": "strawberrynet_hk",
-      "name": "Strawberrynet",
-      "domain": "strawberrynet.com",
-      "country": "HK",
-      "currency": "USD",
-      "type": "grey_market",
-      "tier": 3,
-      "trust_score": 73,
+      "id": "selfridges_uk",
+      "name": "Selfridges",
+      "domain": "selfridges.com",
+      "country": "UK",
+      "currency": "GBP",
+      "type": "authorized_reseller",
+      "tier": 2,
+      "trust_score": 93,
       "platform": "custom_ssr",
       "trust_signals": {
-        "domain_age_years": 10,
-        "trustpilot_score": 3.8,
-        "trustpilot_reviews": 8900,
+        "domain_age_years": 12,
+        "trustpilot_score": 4.4,
+        "trustpilot_reviews": 52000,
         "ssl_valid": true,
         "has_return_policy": true,
-        "payment_methods": ["visa", "mastercard", "paypal"],
+        "payment_methods": ["visa", "mastercard", "amex", "paypal", "klarna"],
         "company_registered": true,
         "physical_address": true,
         "phone_support": true
       },
       "pricing": {
-        "avg_discount_vs_rrp_pct": 28,
-        "price_competitiveness_rank": 10
+        "avg_discount_vs_rrp_pct": 8,
+        "price_competitiveness_rank": 35
       },
       "shipping": {
         "ships_to_uk": true,
-        "base_cost_gbp": 5.0,
-        "free_shipping_threshold": 0,
-        "free_shipping_currency": "USD",
-        "estimated_delivery_days": "7-21"
+        "base_cost_gbp": 4.0,
+        "free_shipping_threshold": 100,
+        "free_shipping_currency": "GBP",
+        "estimated_delivery_days": "1-2"
       },
-      "vat_included": false,
+      "vat_included": true,
       "scraper_config": {
-        "status": "needs_research",
+        "status": "planned",
         "method": "html_parse",
-        "fallback_methods": ["json_ld"],
-        "difficulty": "medium",
+        "fallback_methods": ["json_ld", "playwright"],
+        "difficulty": "high",
         "needs_proxy": false,
         "needs_playwright": false,
         "rate_limit_rpm": 15,
-        "avg_response_ms": 1200,
+        "avg_response_ms": 1300,
         "last_successful_scrape": null,
         "success_rate_30d": null,
-        "search_url_template": "https://www.strawberrynet.com/search?q={query}"
+        "search_url_template": "https://www.selfridges.com/GB/en/search/?q={query}"
       },
-      "notes": "Hong Kong grey market. Good global pricing but slower shipping. Use for rare items."
+      "notes": "Premium UK department store with excellent niche selection (Byredo, Le Labo, etc). Essential for RRP baseline."
+    },
+    {
+      "id": "theperfumeshop_uk",
+      "name": "The Perfume Shop",
+      "domain": "theperfumeshop.com",
+      "country": "UK",
+      "currency": "GBP",
+      "type": "authorized_reseller",
+      "tier": 2,
+      "trust_score": 82,
+      "platform": "custom_ssr",
+      "trust_signals": {
+        "domain_age_years": 9,
+        "trustpilot_score": 4.2,
+        "trustpilot_reviews": 12500,
+        "ssl_valid": true,
+        "has_return_policy": true,
+        "payment_methods": ["visa", "mastercard", "paypal", "klarna"],
+        "company_registered": true,
+        "physical_address": true,
+        "phone_support": true
+      },
+      "pricing": {
+        "avg_discount_vs_rrp_pct": 15,
+        "price_competitiveness_rank": 18
+      },
+      "shipping": {
+        "ships_to_uk": true,
+        "base_cost_gbp": 2.95,
+        "free_shipping_threshold": 50,
+        "free_shipping_currency": "GBP",
+        "estimated_delivery_days": "1-3"
+      },
+      "vat_included": true,
+      "scraper_config": {
+        "status": "planned",
+        "method": "html_parse",
+        "fallback_methods": ["json_ld", "playwright"],
+        "difficulty": "low",
+        "needs_proxy": false,
+        "needs_playwright": false,
+        "rate_limit_rpm": 22,
+        "avg_response_ms": 850,
+        "last_successful_scrape": null,
+        "success_rate_30d": null,
+        "search_url_template": "https://www.theperfumeshop.com/search?q={query}"
+      },
+      "notes": "UK high street chain with growing niche selection. Useful for price baseline and stock checks."
     },
     {
       "id": "notino_de",
