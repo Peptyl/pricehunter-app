@@ -32,10 +32,15 @@ app = FastAPI(
     description="Olfex Backend with Firebase, Clerk & RevenueCat"
 )
 
-# CORS - configured for mobile app
+# CORS - configured for mobile app and landing page
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Update for production
+    allow_origins=[
+        "https://olfex.app",
+        "https://www.olfex.app",
+        "http://localhost:3000",
+        "http://localhost:5173"
+    ],
     allow_methods=["*"],
     allow_headers=["*"],
     allow_credentials=True
@@ -258,11 +263,23 @@ def init_db():
         )
     ''')
 
+    # Waitlist table
+    c.execute('''
+        CREATE TABLE IF NOT EXISTS waitlist (
+            id SERIAL PRIMARY KEY,
+            email VARCHAR(255) UNIQUE NOT NULL,
+            name VARCHAR(255),
+            source VARCHAR(50) DEFAULT 'website',
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
     # Create indexes for fast queries
     c.execute('CREATE INDEX IF NOT EXISTS idx_price_scans_product ON price_scans(product_id)')
     c.execute('CREATE INDEX IF NOT EXISTS idx_price_scans_retailer ON price_scans(retailer_id)')
     c.execute('CREATE INDEX IF NOT EXISTS idx_price_scans_scanned ON price_scans(scanned_at DESC)')
     c.execute('CREATE INDEX IF NOT EXISTS idx_products_brand ON products(brand)')
+    c.execute('CREATE INDEX IF NOT EXISTS idx_waitlist_email ON waitlist(email)')
 
     conn.commit()
     conn.close()
@@ -477,6 +494,10 @@ class UserProfileUpdate(BaseModel):
     country: Optional[str] = 'UK'
     phone: Optional[str] = None
 
+class WaitlistRequest(BaseModel):
+    email: str
+    name: str
+
 class WebhookPayload(BaseModel):
     event: Dict[str, Any]
 
@@ -612,12 +633,12 @@ async def clerk_webhook(payload: WebhookPayload):
     """Handle Clerk webhooks for user sync"""
     event = payload.event
     event_type = event.get('type')
-    
+
     if event_type == 'user.created':
         data = event.get('data', {})
         clerk_id = data.get('id')
         email = data.get('email_addresses', [{}])[0].get('email_address')
-        
+
         conn = get_db_conn()
         c = conn.cursor()
         c.execute('''
@@ -627,29 +648,97 @@ async def clerk_webhook(payload: WebhookPayload):
         ''', (clerk_id, email))
         conn.commit()
         conn.close()
-        
+
         # Create RevenueCat customer
         try:
             await revenuecat.get_or_create_customer(clerk_id)
         except:
             pass
-        
+
         return {'success': True, 'action': 'user_created'}
-    
+
     elif event_type == 'user.updated':
         data = event.get('data', {})
         clerk_id = data.get('id')
         email = data.get('email_addresses', [{}])[0].get('email_address')
-        
+
         conn = get_db_conn()
         c = conn.cursor()
         c.execute('UPDATE users SET email = %s WHERE clerk_id = %s', (email, clerk_id))
         conn.commit()
         conn.close()
-        
+
         return {'success': True, 'action': 'user_updated'}
-    
+
     return {'success': True, 'action': 'ignored'}
+
+@app.post("/api/auth/clerk-webhook")
+async def clerk_webhook_stub(request: Request):
+    """Handle Clerk webhooks (stub for webhook signing verification)"""
+    try:
+        body = await request.body()
+        payload = json.loads(body)
+        event_type = payload.get('type')
+        print(f"[Clerk Webhook] Received event: {event_type}")
+        return {'status': 'ok', 'message': 'Webhook logged'}
+    except Exception as e:
+        print(f"[Clerk Webhook Error] {str(e)}")
+        return {'status': 'ok', 'message': 'Webhook logged'}
+
+# ============================================================================
+# WAITLIST ENDPOINTS
+# ============================================================================
+
+@app.post("/api/waitlist")
+async def add_to_waitlist(request: WaitlistRequest):
+    """Add email to waitlist - handles duplicates gracefully"""
+    try:
+        conn = get_db_conn()
+        c = conn.cursor()
+
+        # Try to insert; if email exists (UNIQUE constraint), just return success
+        c.execute('''
+            INSERT INTO waitlist (email, name, source)
+            VALUES (%s, %s, 'website')
+            ON CONFLICT (email) DO NOTHING
+        ''', (request.email, request.name))
+
+        conn.commit()
+        conn.close()
+
+        return {
+            'status': 'ok',
+            'message': "You're on the list!"
+        }
+    except Exception as e:
+        print(f"Waitlist error: {str(e)}")
+        return {
+            'status': 'ok',
+            'message': "You're on the list!"
+        }
+
+@app.get("/api/waitlist/count")
+async def get_waitlist_count():
+    """Get current waitlist count"""
+    try:
+        conn = get_db_conn()
+        c = conn.cursor()
+
+        c.execute('SELECT COUNT(*) FROM waitlist')
+        count = c.fetchone()[0]
+        conn.close()
+
+        return {
+            'count': count,
+            'status': 'ok'
+        }
+    except Exception as e:
+        print(f"Waitlist count error: {str(e)}")
+        return {
+            'count': 0,
+            'status': 'error',
+            'error': str(e)
+        }
 
 # ============================================================================
 # SUBSCRIPTION ENDPOINTS
