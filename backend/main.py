@@ -528,6 +528,108 @@ def admin_init_db():
     except Exception as e:
         return {'status': 'error', 'message': str(e)}
 
+@app.get("/api/admin/seed-products")
+def admin_seed_products():
+    """Seed products table from product_catalog_expanded.json"""
+    try:
+        # Load product catalog
+        import pathlib
+        catalog_path = pathlib.Path(__file__).parent.parent / 'data' / 'product_catalog_expanded.json'
+        with open(catalog_path) as f:
+            catalog = json.load(f)
+
+        products = catalog.get('products', [])
+        conn = get_db_conn()
+        c = conn.cursor()
+
+        inserted = 0
+        skipped = 0
+        for p in products:
+            notes = p.get('notes', {})
+            try:
+                c.execute('''
+                    INSERT INTO products (brand, name, concentration, size_ml, rrp_gbp,
+                        fragrantica_slug, fragrantica_rating, gender,
+                        top_notes, mid_notes, base_notes)
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                    ON CONFLICT DO NOTHING
+                ''', (
+                    p.get('brand'), p.get('name'), p.get('concentration'),
+                    p.get('size_ml'), p.get('typical_retail_gbp'),
+                    p.get('fragrantica_slug'), None, p.get('gender', 'unisex'),
+                    notes.get('top', []), notes.get('heart', []), notes.get('base', [])
+                ))
+                if c.rowcount > 0:
+                    inserted += 1
+                else:
+                    skipped += 1
+            except Exception as e:
+                skipped += 1
+                continue
+
+        conn.commit()
+
+        # Get count
+        c.execute('SELECT COUNT(*) FROM products')
+        total = c.fetchone()[0]
+        conn.close()
+
+        return {
+            'status': 'ok',
+            'message': f'Seeded {inserted} products ({skipped} skipped/existing)',
+            'inserted': inserted,
+            'skipped': skipped,
+            'total_in_db': total
+        }
+    except Exception as e:
+        return {'status': 'error', 'message': str(e)}
+
+@app.get("/api/admin/seed-retailers")
+def admin_seed_retailers():
+    """Seed retailers table from retailer_registry.json"""
+    try:
+        import pathlib
+        registry_path = pathlib.Path(__file__).parent.parent / 'data' / 'retailer_registry.json'
+        with open(registry_path) as f:
+            registry = json.load(f)
+
+        retailers = registry.get('retailers', [])
+        conn = get_db_conn()
+        c = conn.cursor()
+
+        inserted = 0
+        for r in retailers:
+            try:
+                c.execute('''
+                    INSERT INTO retailers (name, domain, country, currency, tier, type,
+                        platform, scraper_status, ships_to_uk, shipping_gbp_estimate)
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                    ON CONFLICT DO NOTHING
+                ''', (
+                    r.get('name'), r.get('domain'), r.get('country'), r.get('currency'),
+                    r.get('tier', 2), r.get('type', 'authorized'),
+                    r.get('platform', 'unknown'), 'active',
+                    r.get('ships_to_uk', True), r.get('shipping_gbp_estimate', 0)
+                ))
+                if c.rowcount > 0:
+                    inserted += 1
+            except:
+                continue
+
+        conn.commit()
+        c.execute('SELECT COUNT(*) FROM retailers')
+        total = c.fetchone()[0]
+        conn.close()
+
+        return {
+            'status': 'ok',
+            'message': f'Seeded {inserted} retailers',
+            'inserted': inserted,
+            'total_in_db': total
+        }
+    except Exception as e:
+        return {'status': 'error', 'message': str(e)}
+
 @app.get("/")
 def root():
     """API root"""
@@ -1057,13 +1159,152 @@ async def get_user_alerts(current_user: Dict = Depends(get_current_user)):
 
 @app.get("/api/perfumes")
 def get_perfumes():
-    """Get list of tracked perfumes"""
+    """Get list of tracked perfumes (legacy)"""
     return [
         {"id": "creed_aventus", "name": "Creed Aventus", "brand": "Creed", "sizes": [50, 100]},
         {"id": "pdm_layton", "name": "Layton", "brand": "Parfums de Marley", "sizes": [75, 125]},
         {"id": "mfk_baccarat", "name": "Baccarat Rouge 540", "brand": "MFK", "sizes": [35, 70]},
         {"id": "tf_oud_wood", "name": "Oud Wood", "brand": "Tom Ford", "sizes": [50, 100]}
     ]
+
+# ============================================================================
+# PRODUCTS & PRICES — Public API for frontend
+# ============================================================================
+
+@app.get("/api/products")
+def get_products(brand: Optional[str] = None, limit: int = 50, offset: int = 0):
+    """Get all tracked products with latest best prices"""
+    try:
+        conn = get_db_conn()
+        c = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+
+        query = '''
+            SELECT p.*,
+                   (SELECT MIN(ps.price_gbp) FROM price_scans ps
+                    WHERE ps.product_id = p.id AND ps.in_stock = true
+                    AND ps.scanned_at > NOW() - INTERVAL '48 hours') as best_price,
+                   (SELECT COUNT(DISTINCT ps.retailer_id) FROM price_scans ps
+                    WHERE ps.product_id = p.id AND ps.in_stock = true
+                    AND ps.scanned_at > NOW() - INTERVAL '48 hours') as retailer_count
+            FROM products p
+        '''
+        params = []
+        if brand:
+            query += ' WHERE p.brand = %s'
+            params.append(brand)
+        query += ' ORDER BY p.brand, p.name LIMIT %s OFFSET %s'
+        params.extend([limit, offset])
+
+        c.execute(query, params)
+        products = c.fetchall()
+
+        # Get total count
+        count_query = 'SELECT COUNT(*) FROM products'
+        if brand:
+            count_query += ' WHERE brand = %s'
+            c.execute(count_query, [brand] if brand else [])
+        else:
+            c.execute(count_query)
+        total = c.fetchone()['count']
+
+        conn.close()
+        return {'products': [dict(p) for p in products], 'total': total, 'limit': limit, 'offset': offset}
+    except Exception as e:
+        return {'products': [], 'total': 0, 'error': str(e)}
+
+@app.get("/api/products/{product_id}")
+def get_product(product_id: int):
+    """Get a single product with all price data"""
+    try:
+        conn = get_db_conn()
+        c = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+
+        c.execute('SELECT * FROM products WHERE id = %s', (product_id,))
+        product = c.fetchone()
+        if not product:
+            raise HTTPException(status_code=404, detail="Product not found")
+
+        # Get latest prices from all retailers
+        c.execute('''
+            SELECT ps.*, r.name as retailer_name, r.domain, r.country, r.type as retailer_type
+            FROM price_scans ps
+            JOIN retailers r ON ps.retailer_id = r.id
+            WHERE ps.product_id = %s AND ps.scanned_at > NOW() - INTERVAL '48 hours'
+            ORDER BY ps.landed_cost_gbp ASC NULLS LAST
+        ''', (product_id,))
+        prices = c.fetchall()
+
+        conn.close()
+        return {'product': dict(product), 'prices': [dict(p) for p in prices]}
+    except HTTPException:
+        raise
+    except Exception as e:
+        return {'error': str(e)}
+
+@app.get("/api/products/{product_id}/history")
+def get_price_history(product_id: int, days: int = 90):
+    """Get price history for a product"""
+    try:
+        conn = get_db_conn()
+        c = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+
+        c.execute('''
+            SELECT DATE(scanned_at) as date, MIN(price_gbp) as min_price,
+                   AVG(price_gbp) as avg_price, COUNT(DISTINCT retailer_id) as retailers
+            FROM price_scans
+            WHERE product_id = %s AND scanned_at > NOW() - INTERVAL '%s days'
+            GROUP BY DATE(scanned_at)
+            ORDER BY date ASC
+        ''', (product_id, days))
+        history = c.fetchall()
+        conn.close()
+
+        return {'history': [dict(h) for h in history], 'product_id': product_id, 'days': days}
+    except Exception as e:
+        return {'history': [], 'error': str(e)}
+
+@app.get("/api/retailers")
+def get_retailers():
+    """Get all active retailers"""
+    try:
+        conn = get_db_conn()
+        c = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+        c.execute("SELECT * FROM retailers WHERE scraper_status = 'active' ORDER BY tier, name")
+        retailers = c.fetchall()
+        conn.close()
+        return {'retailers': [dict(r) for r in retailers], 'count': len(retailers)}
+    except Exception as e:
+        return {'retailers': [], 'error': str(e)}
+
+@app.get("/api/deals")
+def get_deals(min_savings: int = 20):
+    """Get products with biggest price drops"""
+    try:
+        conn = get_db_conn()
+        c = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+
+        c.execute('''
+            SELECT p.id, p.brand, p.name, p.concentration, p.size_ml,
+                   p.fragrantica_rating as rating,
+                   MIN(ps.price_gbp) as best_price,
+                   p.rrp_gbp as rrp,
+                   ROUND((1 - MIN(ps.price_gbp) / NULLIF(p.rrp_gbp, 0)) * 100) as savings_pct,
+                   COUNT(DISTINCT ps.retailer_id) as retailer_count
+            FROM products p
+            JOIN price_scans ps ON ps.product_id = p.id
+            WHERE ps.in_stock = true AND ps.scanned_at > NOW() - INTERVAL '48 hours'
+                  AND p.rrp_gbp > 0
+            GROUP BY p.id
+            HAVING ROUND((1 - MIN(ps.price_gbp) / NULLIF(p.rrp_gbp, 0)) * 100) >= %s
+            ORDER BY savings_pct DESC
+            LIMIT 20
+        ''', (min_savings,))
+        deals = c.fetchall()
+        conn.close()
+
+        return {'deals': [dict(d) for d in deals], 'count': len(deals)}
+    except Exception as e:
+        return {'deals': [], 'error': str(e)}
 
 # ============================================================================
 # MAIN
