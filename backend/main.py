@@ -199,6 +199,71 @@ def init_db():
         )
     ''')
     
+    # Products table
+    c.execute('''
+        CREATE TABLE IF NOT EXISTS products (
+            id VARCHAR(255) PRIMARY KEY,
+            brand VARCHAR(255) NOT NULL,
+            name VARCHAR(255) NOT NULL,
+            concentration VARCHAR(50),
+            sizes_ml INTEGER[],
+            fragrantica_slug VARCHAR(255),
+            image_url TEXT,
+            accords JSONB,
+            top_notes TEXT[],
+            mid_notes TEXT[],
+            base_notes TEXT[],
+            longevity_score DECIMAL(3,1),
+            sillage_score DECIMAL(3,1),
+            rating DECIMAL(3,2),
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Retailers table
+    c.execute('''
+        CREATE TABLE IF NOT EXISTS retailers (
+            id VARCHAR(255) PRIMARY KEY,
+            name VARCHAR(255) NOT NULL,
+            domain VARCHAR(255) NOT NULL,
+            country VARCHAR(10),
+            currency VARCHAR(10),
+            type VARCHAR(50),
+            tier INTEGER DEFAULT 1,
+            trust_score INTEGER,
+            platform VARCHAR(50),
+            ships_to_uk BOOLEAN DEFAULT true,
+            shipping_cost_gbp DECIMAL(6,2),
+            free_shipping_threshold DECIMAL(6,2),
+            vat_included BOOLEAN DEFAULT true,
+            scraper_status VARCHAR(50) DEFAULT 'planned',
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Price scans table (the core data)
+    c.execute('''
+        CREATE TABLE IF NOT EXISTS price_scans (
+            id SERIAL PRIMARY KEY,
+            product_id VARCHAR(255) REFERENCES products(id),
+            retailer_id VARCHAR(255) REFERENCES retailers(id),
+            price DECIMAL(10,2) NOT NULL,
+            currency VARCHAR(10) NOT NULL,
+            price_gbp DECIMAL(10,2),
+            size_ml INTEGER,
+            in_stock BOOLEAN DEFAULT true,
+            url TEXT,
+            scanned_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Create indexes for fast queries
+    c.execute('CREATE INDEX IF NOT EXISTS idx_price_scans_product ON price_scans(product_id)')
+    c.execute('CREATE INDEX IF NOT EXISTS idx_price_scans_retailer ON price_scans(retailer_id)')
+    c.execute('CREATE INDEX IF NOT EXISTS idx_price_scans_scanned ON price_scans(scanned_at DESC)')
+    c.execute('CREATE INDEX IF NOT EXISTS idx_products_brand ON products(brand)')
+
     conn.commit()
     conn.close()
     print("✅ PostgreSQL database initialized")
@@ -418,6 +483,29 @@ class WebhookPayload(BaseModel):
 # ============================================================================
 # API ENDPOINTS
 # ============================================================================
+
+@app.get("/api/admin/init-db")
+def admin_init_db():
+    """One-time DB initialization — creates all tables. Safe to call multiple times."""
+    try:
+        init_db()
+        # Verify tables were created
+        conn = get_db_conn()
+        c = conn.cursor()
+        c.execute("""
+            SELECT table_name FROM information_schema.tables
+            WHERE table_schema = 'public' ORDER BY table_name
+        """)
+        tables = [row[0] for row in c.fetchall()]
+        conn.close()
+        return {
+            'status': 'ok',
+            'message': 'Database initialized successfully',
+            'tables': tables,
+            'count': len(tables)
+        }
+    except Exception as e:
+        return {'status': 'error', 'message': str(e)}
 
 @app.get("/")
 def root():
