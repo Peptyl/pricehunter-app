@@ -35,18 +35,10 @@ app = FastAPI(
 # CORS - configured for mobile app and landing page
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "https://olfex-scent-quest.lovable.app",
-        "https://olfex.app",
-        "https://www.olfex.app",
-        "http://localhost:3000",
-        "http://localhost:5173",
-        "http://localhost:8080",
-    ],
-    allow_origin_regex=r"https://.*\.lovable\.app",  # All Lovable preview domains
+    allow_origins=["*"],  # Wide open — no credentials mode so wildcard is safe
     allow_methods=["*"],
     allow_headers=["*"],
-    allow_credentials=True
+    allow_credentials=False  # Must be False when using wildcard origins
 )
 
 # ============================================================================
@@ -808,14 +800,32 @@ async def clerk_webhook_stub(request: Request):
 # ============================================================================
 
 @app.post("/api/waitlist")
-async def add_to_waitlist(request: WaitlistRequest):
-    """Add email to waitlist - handles duplicates gracefully"""
+async def add_to_waitlist(request: Request):
+    """Add email to waitlist - accepts flexible JSON, handles duplicates gracefully"""
     try:
+        body = await request.json()
+        print(f"[Waitlist] Received body: {json.dumps(body)}")
+
+        # Extract email — required
+        email = body.get('email', '').strip()
+        if not email:
+            raise HTTPException(status_code=400, detail="Email is required")
+
+        # Extract name — accept 'name', 'firstName', 'first_name', 'fullName'
+        name = (body.get('name') or body.get('firstName') or body.get('first_name')
+                or body.get('fullName') or body.get('full_name') or '').strip()
+
+        # Extract brands — accept list or comma-separated string
+        brands_raw = body.get('brands') or body.get('favouriteBrands') or body.get('favorite_brands') or []
+        if isinstance(brands_raw, list):
+            brands_str = ','.join(str(b) for b in brands_raw)
+        else:
+            brands_str = str(brands_raw)
+
+        source = body.get('source', 'website')
+
         conn = get_db_conn()
         c = conn.cursor()
-
-        # Store brands as comma-separated string
-        brands_str = ','.join(request.brands) if request.brands else ''
 
         # Try to insert; if email exists (UNIQUE constraint), update their info
         c.execute('''
@@ -825,7 +835,7 @@ async def add_to_waitlist(request: WaitlistRequest):
                 name = COALESCE(NULLIF(EXCLUDED.name, ''), waitlist.name),
                 brands = COALESCE(NULLIF(EXCLUDED.brands, ''), waitlist.brands),
                 source = EXCLUDED.source
-        ''', (request.email, request.name, brands_str, request.source))
+        ''', (email, name, brands_str, source))
 
         conn.commit()
         conn.close()
@@ -834,6 +844,8 @@ async def add_to_waitlist(request: WaitlistRequest):
             'status': 'ok',
             'message': "You're on the list!"
         }
+    except HTTPException:
+        raise
     except Exception as e:
         print(f"Waitlist error: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Waitlist error: {str(e)}")
