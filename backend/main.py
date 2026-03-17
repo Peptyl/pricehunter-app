@@ -35,12 +35,7 @@ app = FastAPI(
 # CORS - configured for mobile app and landing page
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "https://olfex.app",
-        "https://www.olfex.app",
-        "http://localhost:3000",
-        "http://localhost:5173"
-    ],
+    allow_origins=["*"],  # Open during dev — lock to olfex.app domains before production
     allow_methods=["*"],
     allow_headers=["*"],
     allow_credentials=True
