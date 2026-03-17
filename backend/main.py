@@ -837,6 +837,19 @@ async def get_waitlist_count():
             'error': str(e)
         }
 
+@app.get("/api/admin/waitlist")
+def admin_get_waitlist():
+    """View all waitlist signups"""
+    try:
+        conn = get_db_conn()
+        c = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+        c.execute('SELECT id, email, name, source, created_at FROM waitlist ORDER BY created_at DESC')
+        rows = c.fetchall()
+        conn.close()
+        return {'waitlist': [dict(r) for r in rows], 'count': len(rows)}
+    except Exception as e:
+        return {'waitlist': [], 'error': str(e)}
+
 # ============================================================================
 # SUBSCRIPTION ENDPOINTS
 # ============================================================================
